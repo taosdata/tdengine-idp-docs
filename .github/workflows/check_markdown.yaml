@@ -16,17 +16,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # - name: Install markdownlint
-      #   run: sudo npm install -g markdownlint-cli
+      - name: Install markdownlint
+        run: sudo npm install -g markdownlint-cli
 
-      # - name: Markdown Lint
-      #   run: markdownlint -c .github/workflows/markdown_config.json ./
+      - name: Markdown Lint
+        run: markdownlint -c .github/workflows/markdown_config.json ./
 
-      # - name: Typos Check (zh config)
-      #   uses: crate-ci/typos@v1.31.1
-      #   with:
-      #     files: 'docs/**/*.md'
-      #     config: .github/workflows/typos.toml
+      - name: Typos Check (zh config)
+        uses: crate-ci/typos@v1.31.1
+        with:
+          files: 'docs/**/*.md'
+          config: .github/workflows/typos.toml
 
       # - name: AutoCorrect
       #   uses: huacnlee/autocorrect-action@v2
@@ -41,3 +41,21 @@ jobs:
       #   with:
       #     reviewdog: true
       #     args: ./docs/**/*.md
+  check-docs-linter-formatter:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: AutoCorrect
+        uses: huacnlee/autocorrect-action@v2
+        with:
+          args: --lint $(find docs -name "*.md")
+      - name: Report ReviewDog
+        if: always()
+        uses: tomchon/autocorrect-action@fix/review-dog
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          reviewdog: true
+          args: ./docs/**/*.md
