@@ -1,0 +1,68 @@
+name: Check Docs
+
+on: [push, pull_request]
+
+jobs:
+  markdown_check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check out code
+      uses: actions/checkout@main
+
+    - name: install markdownlint
+      run: sudo npm install -g markdownlint-cli
+
+    - name: check markdown
+      run: markdownlint -c .github/workflows/markdown_config.json ./
+
+  directory_check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check out code
+      uses: actions/checkout@main
+
+    - name: check directory config
+      run: python3 .github/scripts/directory_check.py directory.json $(pwd)
+  
+  check-docs-typos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Actions Repository
+        uses: actions/checkout@v4
+
+      - name: Use custom zh config file
+        uses: crate-ci/typos@v1.31.1
+        with:
+          files: 'zh_CN/**/*.md'
+          config: .github/workflows/typos.toml
+
+      - name: Use custom en config file
+        uses: crate-ci/typos@v1.31.1
+        with:
+          files: 'en_US/**/*.md'
+          config: .github/workflows/typos.toml
+
+      - name: Use custom en config file
+        uses: crate-ci/typos@v1.31.1
+        with:
+          files: '**/*.md'
+          config: .github/workflows/typos.toml
+
+  check-docs-linter-formatter:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: AutoCorrect
+        uses: huacnlee/autocorrect-action@v2
+        with:
+          args: --lint docs/zh/* docs/en/*
+      - name: Report ReviewDog
+        if: always()
+        uses: tomchon/autocorrect-action@fix/review-dog
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          reviewdog: true
+          args: ./zh_CN/*  ./en_US/*  **/*.md
