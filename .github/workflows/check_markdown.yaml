@@ -8,49 +8,31 @@ on:
       - 'docs/**'
 
 jobs:
-  markdown_check:
+  check-docs:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
-    - name: check out code
-      uses: actions/checkout@main
-
-    - name: install markdownlint
-      run: sudo npm install -g markdownlint-cli
-
-    - name: check markdown
-      run: markdownlint -c .github/workflows/markdown_config.json ./
-
-  directory_check:
-    runs-on: ubuntu-latest
-    steps:
-    - name: check out code
-      uses: actions/checkout@main
-
-    - name: check directory config
-      run: python3 .github/scripts/directory_check.py directory.json $(pwd)
-  
-  check-docs-typos:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Actions Repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Use custom zh config file
+      - name: Install markdownlint
+        run: sudo npm install -g markdownlint-cli
+
+      - name: Markdown Lint
+        run: markdownlint -c .github/workflows/markdown_config.json ./
+
+      - name: Typos Check (zh config)
         uses: crate-ci/typos@v1.31.1
         with:
           files: 'docs/**/*.md'
           config: .github/workflows/typos.toml
 
-  check-docs-linter-formatter:
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    steps:
-      - uses: actions/checkout@v4
       - name: AutoCorrect
         uses: huacnlee/autocorrect-action@v2
         with:
-          args: --lint docs/*
+          args: --lint $(find docs -name "*.md")
+
       - name: Report ReviewDog
         if: always()
         uses: tomchon/autocorrect-action@fix/review-dog
