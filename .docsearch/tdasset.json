@@ -32,7 +32,7 @@
     "lvl3": "article h3, .markdown h3",
     "lvl4": "article h4, .markdown h4",
     "lvl5": "article h5, .markdown h5",
-    "text": "article p, article li, .markdown p, .markdown li"
+    "text": "article p, article li, .markdown p, .markdown li, article pre, .markdown pre"
   },
   "custom_settings": {
     "attributesForFaceting": [
