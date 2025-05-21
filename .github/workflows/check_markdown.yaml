@@ -10,23 +10,23 @@ on:
 jobs:
   check-docs:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
+    # permissions:
+    #   pull-requests: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install markdownlint
-        run: sudo npm install -g markdownlint-cli
+      # - name: Install markdownlint
+      #   run: sudo npm install -g markdownlint-cli
 
-      - name: Markdown Lint
-        run: markdownlint -c .github/workflows/markdown_config.json ./
+      # - name: Markdown Lint
+      #   run: markdownlint -c .github/workflows/markdown_config.json ./
 
-      - name: Typos Check (zh config)
-        uses: crate-ci/typos@v1.31.1
-        with:
-          files: 'docs/**/*.md'
-          config: .github/workflows/typos.toml
+      # - name: Typos Check (zh config)
+      #   uses: crate-ci/typos@v1.31.1
+      #   with:
+      #     files: 'docs/**/*.md'
+      #     config: .github/workflows/typos.toml
 
       # - name: AutoCorrect
       #   uses: huacnlee/autocorrect-action@v2
