@@ -59,7 +59,7 @@ jobs:
     - name: upload docs to Azure Blob Storage
       uses: azure/cli@v2
       with:
-        azcliversion: 2.30.0
+        azcliversion: 2.73.0
         inlineScript: |
           az storage blob upload-batch \
             --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} \
@@ -72,7 +72,7 @@ jobs:
     - name: purge Azure CDN endpoint
       uses: azure/cli@v2
       with:
-        azcliversion: 2.30.0
+        azcliversion: 2.73.0
         inlineScript: |
           az cdn endpoint purge \
             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
