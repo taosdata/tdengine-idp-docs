@@ -1,0 +1,95 @@
+name: Deploy Docs
+
+concurrency: 
+  group: ${{ github.ref_name }}
+  cancel-in-progress: true
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+      - '.github/workflows/deploy_docs.yaml'
+      - '.docsearch/**'
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: clone docs
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: use node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: use pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 9
+
+    - name: use python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - name: set env
+      run: |
+         echo "VERSION=latest" >> $GITHUB_ENV
+         echo "DOCS_TYPE=tdasset" >> $GITHUB_ENV
+
+    - name: generate version config
+      run: |
+        python3 .github/scripts/generate_version.py $(git tag | egrep "v(.*)$" | xargs echo -n) > test_versions.json
+        cat test_versions.json
+
+    - name: build docs
+      run: |
+        pnpm install
+        pnpm run build
+
+    - name: Azure Login
+      uses: azure/login@v2
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: upload docs to Azure Blob Storage
+      uses: azure/cli@v2
+      with:
+        azcliversion: 2.73.0
+        inlineScript: |
+          az storage blob upload-batch \
+            --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} \
+            --destination '$web' \
+            --source build \
+            --overwrite \
+            --auth-mode key
+          echo "Uploaded EN docs to Azure Blob Storage"
+
+    - name: purge Azure CDN endpoint
+      uses: azure/cli@v2
+      with:
+        azcliversion: 2.73.0
+        inlineScript: |
+          az cdn endpoint purge \
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+            --profile-name ${{ secrets.AZURE_CDN_PROFILE }} \
+            --name ${{ secrets.AZURE_CDN_ENDPOINT }} \
+            --content-paths  "/*" "/index.html" "/"
+          echo "Azure CDN purged for docs.tdasset.ai"
+
+    - name: Run docsearch-scraper
+      env:
+        APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+        API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+      run: |
+        CONFIG="$(cat ${{ github.workspace }}/.docsearch/tdasset.json | jq -c '.')"
+        docker run --rm \
+          -e APPLICATION_ID \
+          -e API_KEY \
+          -e CONFIG="$CONFIG" \
+          algolia/docsearch-scraper
