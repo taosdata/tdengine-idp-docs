@@ -84,7 +84,7 @@ const config = {
       algolia: {
           appId: "FP08SIOFZ3",
           apiKey: "89d4d983122a141b426e52fdca50e3a0",
-          indexName: "tdasset_pages",
+          indexName: "tdasset_index",
           searchPagePath: false
       },
       metadata: [

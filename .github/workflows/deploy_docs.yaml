@@ -9,8 +9,8 @@ on:
     paths:
       - 'docs/**'
       - '.github/workflows/deploy_docs.yaml'
+      - '.docsearch/**'
     branches:
-      - init/chr/tdasset-docs
       - main
 
 jobs:
@@ -81,12 +81,6 @@ jobs:
             --name ${{ secrets.AZURE_CDN_ENDPOINT }} \
             --content-paths  "/*" "/index.html" "/"
           echo "Azure CDN purged for docs.tdasset.ai"
-
-    - name: Debug config file
-      run: |
-        echo "workspace: ${{ github.workspace }}"
-        ls -l ${{ github.workspace }}
-        cat ${{ github.workspace }}/.docsearch/tdasset.json
 
     - name: Run docsearch-scraper
       env:
