@@ -1,5 +1,5 @@
 {
-  "index_name": "tdasset_pages",
+  "index_name": "tdasset_index",
   "start_urls": [
     {
       "url": "https://docs.tdasset.ai/",
@@ -38,6 +38,9 @@
     "attributesForFaceting": [
       "language",
       "docusaurus_tag"
-    ]
+    ],
+    "typoTolerance": false,
+    "queryType": "prefixAll",
+    "removeWordsIfNoResults": "none"
   }
 }
