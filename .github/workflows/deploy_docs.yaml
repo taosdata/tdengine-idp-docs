@@ -12,6 +12,7 @@ on:
       - '.docsearch/**'
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
