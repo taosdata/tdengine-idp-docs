@@ -16,7 +16,7 @@ tar xf TDasset-0.9.4.tar.gz && cd TDasset-0.9.4 \
 安装完成后，可通过如下命令启动 TDasset 的服务
 
  ```bash
-./svc-start start 
+./svc-tdasset start 
 ```
 
-通过 `./svc-start status ` 查看服务状态
+通过 `./svc-tdasset status ` 查看服务状态
