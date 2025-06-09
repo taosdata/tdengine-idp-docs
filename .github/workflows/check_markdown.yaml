@@ -27,12 +27,19 @@ jobs:
         with:
           files: 'docs/**/*.md'
           config: .github/workflows/typos.toml
-  
-      - name: check docs linter formatter
+          
+  check-docs-linter-formatter:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: AutoCorrect
         uses: tomchon/autocorrect-action@fix/review-dog
         with:
           args: --lint docs/**/*.md
-
       - name: Report ReviewDog
         if: always()
         uses: tomchon/autocorrect-action@fix/review-dog
