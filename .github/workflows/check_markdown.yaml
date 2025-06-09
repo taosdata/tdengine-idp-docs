@@ -1,4 +1,4 @@
-name: TDasset Dosc Check and Build
+name: TDasset Docs Check and Build
 
 on:
   pull_request:
