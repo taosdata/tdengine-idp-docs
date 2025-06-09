@@ -10,6 +10,8 @@ on:
 jobs:
   check-docs:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,17 +27,12 @@ jobs:
         with:
           files: 'docs/**/*.md'
           config: .github/workflows/typos.toml
-          
-  check-docs-linter-formatter:
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    steps:
-      - uses: actions/checkout@v4
-      - name: AutoCorrect
+  
+      - name: check docs linter formatter
         uses: huacnlee/autocorrect-action@v2
         with:
           args: --lint docs/**/*.md
+          
       - name: Report ReviewDog
         if: always()
         uses: tomchon/autocorrect-action@fix/review-dog
@@ -48,7 +45,7 @@ jobs:
   build-doc:
     runs-on: ubuntu-latest
     steps:
-    - name: clone docs
+    - name: Checkout code
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
