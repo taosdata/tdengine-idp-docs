@@ -1,7 +1,7 @@
 ---
 sidebar_label: 用 Docker 快速体验
-title: 使用 Docker快速体验 TDengine AI
-description: 使用 Docker快速体验 TDengine AI
+title: 使用 Docker 快速体验 TDengine AI
+description: 使用 Docker 快速体验 TDengine AI
 ---
 
 # 用 Docker 快速体验 TDengine AI
