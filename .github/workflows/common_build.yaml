@@ -1,0 +1,61 @@
+name: Common TDasset Docs Build
+
+on:
+  workflow_call:
+    inputs:
+      build_docs:
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: '18'
+      PNPM_VERSION: '9'
+      PYTHON_VERSION: '3.10'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: use node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: use pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: use python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: set env
+        run: |
+          echo "VERSION=latest" >> $GITHUB_ENV
+          echo "DOCS_TYPE=tdasset" >> $GITHUB_ENV
+
+      - name: generate version config
+        run: |
+          python3 .github/scripts/generate_version.py $(git tag | egrep "v(.*)$" | xargs echo -n) > test_versions.json
+          cat test_versions.json
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: build docs
+        if: ${{ inputs.build_docs }}
+        run: |
+          pnpm install
+          pnpm run build
