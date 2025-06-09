@@ -129,7 +129,12 @@ systemctl restart tdasset
 
 <TabItem label="Windows 系统" value="windows">
 
-安装后，可以在拥有管理员权限的 cmd 窗口执行 `sc start tdasset` 或在 `C:\TDasset` 目录下，运行 `taosd.exe` 来启动 TDengine 服务进程。如需使用 http/REST 服务，请执行 `sc start taosadapter` 或运行 `taosadapter.exe` 来启动 taosAdapter 服务进程。
+安装后，可以在拥有管理员权限的 cmd 窗口执行以下命令来启动 TDengine 服务进程。。
+```cmd
+sc start tdasset-h2
+sc start tdasset-ai
+sc start tdasset
+```
 
 </TabItem>
 
@@ -158,8 +163,8 @@ sudo launchctl print system/com.taosdata.tdasset
 
 :::info
 
-- `launchctl` 命令管理 `com.taosdata.taosset` 需要管理员权限，务必在前面加 `sudo` 来增强安全性。
-- `sudo launchctl list | grep taosset` 指令返回的第一列是 `taosset` 程序的 PID, 若为 `-` 则说明 TDasset 服务未运行。
+- `launchctl` 命令管理 `com.taosdata.tdasset` 需要管理员权限，务必在前面加 `sudo` 来增强安全性。
+- `sudo launchctl list | grep tdasset` 指令返回的第一列是 `tdasset` 程序的 PID, 若为 `-` 则说明 TDasset 服务未运行。
 - 故障排查：
 - 如果服务异常请查看系统日志 `launchd.log` 或者 `/usr/local/tdasset` 目录下 `logs` 日志获取更多信息。
 
