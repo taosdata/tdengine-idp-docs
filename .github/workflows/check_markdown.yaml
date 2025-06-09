@@ -35,7 +35,7 @@ jobs:
           config: .github/workflows/typos.toml
           
       - name: check docs linter-formatter using AutoCorrect
-        uses: tomchon/autocorrect-action@fix/review-dog
+        uses: huacnlee/autocorrect-action@v2
         with:
           args: --lint docs/**/*.md
 
