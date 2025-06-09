@@ -12,7 +12,7 @@ jobs:
   build-docs:
     runs-on: ubuntu-latest
     env:
-      NODE_VERSION: '18'
+      NODE_VERSION: '20'
       PNPM_VERSION: '9'
       PYTHON_VERSION: '3.10'
     steps:
@@ -48,18 +48,18 @@ jobs:
           python3 .github/scripts/generate_version.py $(git tag | egrep "v(.*)$" | xargs echo -n) > test_versions.json
           cat test_versions.json
 
-      - name: Cache pnpm store
-        uses: actions/cache@v4
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
+      # - name: Cache pnpm store
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: ~/.pnpm-store
+      #     key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-pnpm-
               
-      - name: Verify cache status
-        run: |
-          echo "Cache Hit: ${{ steps.pnpm-cache.outputs.cache-hit == 'true' }}"
-          # 若为 true,表示命中缓存；若为 false,表示重新生成
+      # - name: Verify cache status
+      #   run: |
+      #     echo "Cache Hit: ${{ steps.pnpm-cache.outputs.cache-hit == 'true' }}"
+      #     # 若为 true,表示命中缓存；若为 false,表示重新生成
 
       - name: build docs
         if: ${{ inputs.build_docs }}
