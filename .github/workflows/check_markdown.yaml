@@ -52,6 +52,6 @@ jobs:
   build-doc:
     needs:
       - check-docs
-    uses: common_build.yaml
+    uses: ./.github/workflows/common_build.yaml
     with:
       build_docs: true
