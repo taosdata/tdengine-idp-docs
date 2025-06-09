@@ -9,7 +9,7 @@ on:
         default: true
 
 jobs:
-  build:
+  build-docs:
     runs-on: ubuntu-latest
     env:
       NODE_VERSION: '18'
