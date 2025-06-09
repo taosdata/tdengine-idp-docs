@@ -63,7 +63,7 @@ TDasset 计划支持其他时序数据库，但与 TDengine 的集成更加高�
 
 ## 与其他产品的对比
 
-单纯从功能上看，TDasset 与 PI System 中的 PI Asset Framework + PI Vision 对应。如果把TDengine 也考虑进来，那么 TDengine + TDasset 相当于 PI System (包含PI Interface + PI Data Archieve + PI Asset Framework + PI Vision)。市场上很多实时库也是对标 PI System。
+单纯从功能上看，TDasset 与 PI System 中的 PI Asset Framework + PI Vision 对应。如果把TDengine 也考虑进来，那么 TDengine + TDasset 相当于 PI System (包含PI Interface + PI Data Archive + PI Asset Framework + PI Vision)。市场上很多实时库也是对标 PI System。
 
 与 PI System 以及其他实时数据库相比，TDengine  + TDasset的优势是：
 1. 借助AI，TDasset能自动生成实时分析、看板与报表
