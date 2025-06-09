@@ -7,6 +7,10 @@ on:
     paths:
       - 'docs/**'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+  
 jobs:
   check-docs:
     runs-on: ubuntu-latest
@@ -30,19 +34,11 @@ jobs:
           files: 'docs/**/*.md'
           config: .github/workflows/typos.toml
           
-  check-docs-linter-formatter:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: AutoCorrect
+      - name: check docs linter-formatter using AutoCorrect
         uses: tomchon/autocorrect-action@fix/review-dog
         with:
           args: --lint docs/**/*.md
+
       - name: Report ReviewDog
         if: always()
         uses: tomchon/autocorrect-action@fix/review-dog
