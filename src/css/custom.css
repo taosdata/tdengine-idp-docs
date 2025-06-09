@@ -33,6 +33,14 @@ body {
   counter-reset: section
 }
 
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.2rem !important;
+}
+
+.markdown>h2 {
+  --ifm-h2-font-size: 1.8rem !important;
+}
+
 ul.theme-doc-sidebar-menu li {
   counter-reset: sub-section
 }
