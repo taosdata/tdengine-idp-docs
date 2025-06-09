@@ -50,6 +50,8 @@ jobs:
           args: ./docs/**/*.md
 
   build-doc:
+    needs:
+      - check-docs
     uses: ./.github/workflows/common_build.yaml
     with:
       build_docs: true
