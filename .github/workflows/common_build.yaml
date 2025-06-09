@@ -51,7 +51,6 @@ jobs:
         with:
           path: |
             ~/.pnpm-store
-            node_modules
           key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
@@ -59,7 +58,7 @@ jobs:
       - name: Verify cache status
         run: |
           echo "Cache Hit: ${{ steps.pnpm-cache.outputs.cache-hit == 'true' }}"
-          # 若为 true，表示命中缓存；若为 false，表示重新生成
+          # 若为 true,表示命中缓存；若为 false,表示重新生成
 
       - name: build docs
         if: ${{ inputs.build_docs }}
