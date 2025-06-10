@@ -1,0 +1,51 @@
+name: Build Docs
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_VERSION: '20'
+      PNPM_VERSION: '9'
+      PYTHON_VERSION: '3.10'
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          run_install: false 
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Set Env
+        run: |
+          echo "VERSION=latest" >> $GITHUB_ENV
+          echo "DOCS_TYPE=tdasset" >> $GITHUB_ENV
+
+      - name: generate version config
+        run: |
+          python3 .github/scripts/generate_version.py \
+            $(git tag | egrep "v(.*)$" | xargs echo -n) > \
+            test_versions.json
+          cat test_versions.json
+
+      - name: Build Docs
+        run: |
+          pnpm install
+          pnpm run build

@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TDasset 文档 | 涛思数据',
+  title: 'TDengine AI 文档 | 涛思数据',
   tagline: '工业互联网全量设备的元数据可视化管理系统',
   favicon: 'img/tdengine.ico',
 
