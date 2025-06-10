@@ -1,4 +1,4 @@
-name: TDasset Docs Check and Build
+name: Check Docs
 
 on:
   pull_request:
@@ -16,26 +16,26 @@ permissions:
   pull-requests: write
 
 jobs:
-  check-docs:
+  check:
     runs-on: ubuntu-latest
       
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Install markdownlint
         run: sudo npm install -g markdownlint-cli
 
-      - name: Markdown Lint
+      - name: Run Markdown Lint
         run: markdownlint -c .github/workflows/markdown_config.json ./
 
-      - name: Typos Check (zh config)
+      - name: Check Typos
         uses: crate-ci/typos@v1.31.1
         with:
           files: 'docs/**/*.md'
           config: .github/workflows/typos.toml
           
-      - name: check docs linter-formatter using AutoCorrect
+      - name: Check with AutoCorrect
         uses: huacnlee/autocorrect-action@v2
         with:
           args: --lint docs/**/*.md
@@ -49,9 +49,7 @@ jobs:
           reviewdog: true
           args: ./docs/**/*.md
 
-  build-doc:
+  build:
     needs:
-      - check-docs
-    uses: ./.github/workflows/common_build.yaml
-    with:
-      build_docs: true
+      - check
+    uses: ./.github/workflows/build_docs.yaml

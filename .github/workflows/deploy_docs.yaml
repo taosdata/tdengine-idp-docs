@@ -1,7 +1,7 @@
 name: Deploy Docs
 
 concurrency: 
-  group: ${{ github.ref_name }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 on:
@@ -16,23 +16,25 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/common_build.yaml
-    with:
-      build_docs: true
+    uses: ./.github/workflows/build_docs.yaml
       
   deploy:
+    needs: build
     runs-on: ubuntu-latest
-    steps:
 
+    env:
+      AZ_CLI_VERSION: 2.73.0
+
+    steps:
     - name: Azure Login
       uses: azure/login@v2
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: upload docs to Azure Blob Storage
+    - name: Upload Docs to Azure Blob Storage
       uses: azure/cli@v2
       with:
-        azcliversion: 2.73.0
+        azcliversion: ${{ env.AZ_CLI_VERSION }}
         inlineScript: |
           az storage blob upload-batch \
             --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} \
@@ -42,10 +44,10 @@ jobs:
             --auth-mode key
           echo "Uploaded EN docs to Azure Blob Storage"
 
-    - name: purge Azure CDN endpoint
+    - name: Purge Azure CDN Endpoint
       uses: azure/cli@v2
       with:
-        azcliversion: 2.73.0
+        azcliversion: ${{ env.AZ_CLI_VERSION }}
         inlineScript: |
           az cdn endpoint purge \
             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
@@ -54,7 +56,7 @@ jobs:
             --content-paths  "/*" "/index.html" "/"
           echo "Azure CDN purged for docs.tdasset.ai"
 
-    - name: Run docsearch-scraper
+    - name: Run Docsearch Scraper
       env:
         APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
         API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
