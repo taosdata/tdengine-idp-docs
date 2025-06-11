@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 2. python：3.10 及以上版本
 3. java：21 及以上版本
 
-# 安装
+## 安装
 请根据您的操作系统类型，选择合适的安装方式，安装 TDengine AI。以下是不同安装方式的详细步骤:
 <Tabs>
 
@@ -97,11 +97,11 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-# 启动
+## 启动
+
 <Tabs>
 <TabItem label="Linux 系统" value="linux">
 
-## 启动服务
 安装完成后，你可以使用 `svc-tdasset` 命令来启动 TDengine AI 的服务进程。
 
  ```bash
@@ -119,7 +119,6 @@ import TabItem from '@theme/TabItem';
 ./svc-tdasset stop
 ``` 
 
-## 手动管理服务
 如果你想手动管理这些服务，可以使用以下命令，以下示例使用 `tdasset`:
 ```bash
 systemctl start tdasset
@@ -197,7 +196,7 @@ sudo launchctl print system/com.taosdata.tdasset
 </TabItem>
 </Tabs>
 
-# 卸载
+## 卸载
 1. 可通过如下命令卸载 TDasset 的服务
 
  ```bash
