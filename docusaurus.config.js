@@ -14,7 +14,7 @@ const config = {
   tagline: '工业互联网全量设备的元数据可视化管理系统',
   favicon: 'img/tdengine.ico',
 
-  url: 'https://docs.tdasset.ai',
+  url: 'https://docs.tdengine.ai',
   baseUrl: '/',
   onBrokenAnchors: 'warn',
   onBrokenLinks: 'warn',
