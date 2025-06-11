@@ -30,7 +30,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: docs-build
-        path: build
+        path: build-artifacts
 
     - name: Azure Login
       uses: azure/login@v2
@@ -45,7 +45,7 @@ jobs:
           az storage blob upload-batch \
             --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} \
             --destination '$web' \
-            --source build \
+            --source build-artifacts/build \
             --overwrite \
             --auth-mode key
           echo "Uploaded EN docs to Azure Blob Storage"
@@ -67,7 +67,7 @@ jobs:
         APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
         API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       run: |
-        CONFIG="$(cat ${{ github.workspace }}/.docsearch/tdasset.json | jq -c '.')"
+        CONFIG="$(cat ${{ github.workspace }}/build-artifacts/.docsearch/tdasset.json | jq -c '.')"
         docker run --rm \
           -e APPLICATION_ID \
           -e API_KEY \
