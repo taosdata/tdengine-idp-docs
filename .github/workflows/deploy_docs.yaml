@@ -60,7 +60,7 @@ jobs:
             --profile-name ${{ secrets.AZURE_CDN_PROFILE }} \
             --name ${{ secrets.AZURE_CDN_ENDPOINT }} \
             --content-paths  "/*" "/index.html" "/"
-          echo "Azure CDN purged for docs.tdasset.ai"
+          echo "Azure CDN purged for docs.tdengine.ai"
 
     - name: Run Docsearch Scraper
       env:

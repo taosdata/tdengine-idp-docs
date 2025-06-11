@@ -2,14 +2,14 @@
   "index_name": "tdasset_index",
   "start_urls": [
     {
-      "url": "https://docs.tdasset.ai/",
+      "url": "https://docs.tdengine.ai/",
       "custom_fields": {
         "language": "zh-Hans",
         "docusaurus_tag": "docs-default-current"
       }
     },
     {
-      "url": "https://docs.tdasset.ai/en/",
+      "url": "https://docs.tdengine.ai/en/",
       "custom_fields": {
         "language": "en",
         "docusaurus_tag": "docs-default-current"
@@ -17,8 +17,8 @@
     }
   ],
   "sitemap_urls": [
-    "https://docs.tdasset.ai/sitemap.xml",
-    "https://docs.tdasset.ai/en/sitemap.xml"
+    "https://docs.tdengine.ai/sitemap.xml",
+    "https://docs.tdengine.ai/en/sitemap.xml"
   ],
   "stop_urls": [],
   "selectors": {
