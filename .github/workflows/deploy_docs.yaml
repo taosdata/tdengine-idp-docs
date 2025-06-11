@@ -26,11 +26,17 @@ jobs:
       AZ_CLI_VERSION: 2.73.0
 
     steps:
-    - name: Download Build Artifacts
+    - name: Download Build Artifacts - build
       uses: actions/download-artifact@v4
       with:
         name: docs-build
         path: build
+
+    - name: Download Build Artifacts - config
+      uses: actions/download-artifact@v4
+      with:
+        name: crawl-config
+        path: .docsearch
 
     - name: Azure Login
       uses: azure/login@v2
