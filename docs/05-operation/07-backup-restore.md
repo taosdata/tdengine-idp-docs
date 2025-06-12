@@ -1,8 +1,3 @@
----
-sidebar_label: 备份恢复
-title: 备份恢复
-description: 'TDengine AI 的备份恢复功能'
----
-
 # 备份恢复
+
 TDengine AI 的备份恢复功能允许用户定期备份数据和配置，以防止数据丢失或损坏。用户可以根据需要恢复到特定的备份点。

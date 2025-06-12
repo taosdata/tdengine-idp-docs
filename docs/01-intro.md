@@ -1,10 +1,8 @@
 ---
 slug: /
-sidebar_label: 产品简介
-title: TDengine AI 产品简介
 ---
 
-# TDengine AI 产品简介
+# 产品简介
 
 ## 什么是 TDengine AI？
 
