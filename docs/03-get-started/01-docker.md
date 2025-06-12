@@ -1,10 +1,4 @@
----
-sidebar_label: 用 Docker 快速体验
-title: 使用 Docker 快速体验 TDengine AI
-description: 使用 Docker 快速体验 TDengine AI
----
-
-# 用 Docker 快速体验 TDengine AI
+# 用 Docker 快速体验
 
 本节首先介绍如何通过 Docker 快速体验 TDengine AI，然后介绍如何在 Docker 环境下体验 TDengine 的写入和查询功能。如果你不熟悉 Docker，请使用安装包的方式快速体验。如果您希望为 TDengine 贡献代码或对内部技术实现感兴趣，请参考 TDengine GitHub 主页下载源码构建和安装。
 

@@ -1,11 +1,4 @@
----
-sidebar_label: 基本概念
-title: TDengine AI 基本概念
-description: TDengine AI 基本概念
-toc_max_heading_level: 4
----
-
-# TDengine AI 基本概念
+# 基本概念
 
 ## 元素 (Element)
 

@@ -1,8 +1,3 @@
----
-sidebar_label: 事件
-title: 事件
-description: 'TDengine AI 的事件功能'
----
-
 # 事件
+
 TDengine AI 的事件功能允许用户在特定条件下触发操作或响应。事件可以是系统生成的，也可以是用户自定义的。以下是 TDengine AI 中事件的主要功能和用法：
