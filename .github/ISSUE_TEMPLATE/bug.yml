@@ -1,0 +1,54 @@
+name: 🐛 Bug Report
+description: Submit a bug report to help us improve
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing your issue, please:
+        - Open "Developer Tools" of your browser
+        - Go to "Network" tab
+        - Check "Disable cache"
+        - Refresh the page to check if the issue still exists
+
+        When filling your issue, please provide browser console logs and network request details with us.
+
+        To collect console logs:
+        - Open "Developer Tools" of your browser
+        - Go to "Console" tab
+        - Right click the error in the console (if any), and select "Save as" to save the errors in a file
+
+        To collect network request details:
+        - Open "Developer Tools" of your browser
+        - Go to "Network" tab
+        - Right click the failed requests, and select Copy
+        - Copy requeest headers, response headers, response, stack trace if available and save them to a file
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+      value: |
+        - TDengine AI version:
+        - Browser version:
+        - Operating system and version:
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Write down the steps to reproduce the bug.
+      placeholder: |
+        1. Step 1...
+        2. Step 2...
+        3. Step 3...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Attachments
+      description: |
+        Screenshots, console logs, network request details
+      placeholder: Please upload screenshots and logs.
