@@ -28,8 +28,8 @@ body:
         - When installed natively, logs can be found `/usr/local/tdengine-ai/logs`
         - When started with Docker, logs can be copied from container with following command:
           ```bash
-          docker cp tdasset:/app/logs/tda.log ./tda.log
-          docker cp tdasset:/app/logs/tda-error.log ./tda-error.log
+          docker cp tdengine-ai:/app/logs/tda.log ./tda.log
+          docker cp tdengine-ai:/app/logs/tda-error.log ./tda-error.log
           ```
 
   - type: textarea
