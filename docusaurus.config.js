@@ -14,7 +14,7 @@ const config = {
   tagline: '工业互联网全量设备的元数据可视化管理系统',
   favicon: 'img/tdengine.ico',
 
-  url: 'https://docs.tdasset.ai',
+  url: 'https://docs.tdengine.ai',
   baseUrl: '/',
   onBrokenAnchors: 'warn',
   onBrokenLinks: 'warn',
@@ -44,27 +44,10 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/taosdata/tdasset-docs/tree/main',
         },
         blog: false,
-        // blog: {
-        //   showReadingTime: true,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -88,15 +71,14 @@ const config = {
           searchPagePath: false
       },
       metadata: [
-          // This would become <meta name="keywords" content="TDengine, IoT"> in the generated HTML
+          // This would become <meta name="keywords" content="..."> in the generated HTML
           {
               name: "keywords",
-              content: "TDengine, IoT, SQL, 分布式, 集群, 时序数据库",
+              content: "TDengine AI, asset",
           },
           {
               name: "description",
-              content:
-                  "TDengine 是一款高性能、分布式、支持 SQL 的时序数据库，其核心代码包括集群功能全部开源，同时 TDengine 还带有内建的缓存、流式计算、数据订阅等系统功能， 能大幅减少研发和运维的复杂度， 可广泛应用于物联网、车联网、工业互联网、IT 运维、金融等领域。",
+              content: "TDengine Asset Intelligence（TDengine AI）是一物联网、工业数据管理系统，它通过经典的树状结构组织传感器、设备采集的数据，实现数据的语境化、标准化、并提供实时分析、可视化、事件管理与报警等功能，旨在帮助企业从运营数据中挖掘出商业价值",
           },
           {
               name: "baidu-site-verification",
@@ -117,12 +99,6 @@ const config = {
               href: "https://www.taosdata.com",
           },
           items: [
-              // {
-              //   type: "docSidebar",
-              //   sidebarId: "tutorialSidebar",
-              //   position: "left",
-              //   label: "教程",
-              // },
               {
                 to: "https://www.taosdata.com/blog",
                 label: "博客",
@@ -139,8 +115,8 @@ const config = {
                 ],         
               },
               {
-                href: "https://github.com/taosdata/TDasset",
-                label: "GitHub",
+                href: "https://github.com/taosdata/tdengine-ai-docs/issues/new/choose",
+                label: "反馈问题",
                 position: "right",
               },
               // {
