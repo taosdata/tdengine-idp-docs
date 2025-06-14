@@ -32,12 +32,13 @@ jobs:
       - name: Check Typos
         uses: crate-ci/typos@v1.31.1
         with:
+          files: 'docs/**/*.md docs/**/*.mdx'
           config: .github/workflows/typos.toml
           
       - name: Check with AutoCorrect
         uses: huacnlee/autocorrect-action@v2
         with:
-          args: --lint docs/**/*.md,docs/**/*.mdx
+          args: --lint docs/**/*.md docs/**/*.mdx
 
       - name: Report ReviewDog
         if: always()
