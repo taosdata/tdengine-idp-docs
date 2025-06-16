@@ -30,7 +30,9 @@ import TabItem from '@theme/TabItem';
 
   <TabItem label="tar.gz 安装" value="tar">
 
-1. 从列表中下载获得 tar.gz 安装包。
+1. 从以下链接下载获得 tar.gz 安装包。
+
+    - [TDasset-enterprise-0.9.6.0609-Linux.tar.gz](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-enterprise-0.9.6.0609-Linux.tar.gz)
 
 2. 解压并安装：
 
@@ -49,7 +51,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
   <TabItem label="Deb 安装" value="deb">
   
-1. 从列表中下载获得 Deb 安装包。
+1. 从以下链接下载获得 Deb 安装包。
+
+    - [TDasset-enterprise-0.9.6.0609-Linux.deb](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-0.9.6.0609-Linux.deb)
 
 2. 使用 `dpkg` 命令安装 Deb 包（请将 `<version>` 替换为实际版本号）：
 
@@ -62,7 +66,9 @@ import TabItem from '@theme/TabItem';
 
   <TabItem label="RPM 安装" value="rpm">
 
-1. 从列表中下载获得 RPM 安装包。
+1. 从以下链接下载获得 RPM 安装包。
+
+    - [TDasset-enterprise-0.9.6.0609-Linux.rpm](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-enterprise-0.9.6.0609-Linux.rpm)
 
 2. 使用 `rpm` 命令安装 RPM 包（请将 `<version>` 替换为实际版本号）：
 
@@ -75,7 +81,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 
   <TabItem label="macOS 安装" value="macos">
-1. 从列表中下载获得 macOS 的 pkg 安装包。
+1. 从以下链接下载获得 macOS 的 pkg 安装包。
+
+    - [TDasset-enterprise-0.9.6.0609-macOS.pkg](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-enterprise-0.9.6.0609-macOS.pkg)
 
 2. 双击安装包，按照提示完成安装。
 
@@ -83,7 +91,9 @@ import TabItem from '@theme/TabItem';
 
   </TabItem>
   <TabItem label="Windows 安装" value="windows">
-1. 从列表中下载获得 Windows 的安装包。
+1. 从以下链接下载获得 Windows 的安装包。
+
+    - [TDasset-enterprise-0.9.6.0609-Windows.exe](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-enterprise-0.9.6.0609-Windows.exe)
 
 2. 双击安装包，按照提示完成安装。
 
@@ -92,12 +102,12 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-# 启动
+
+## 启动
+
 
 <Tabs>
 <TabItem label="Linux 系统" value="linux">
-
-## 启动服务
 
 安装完成后，你可以使用 `svc-tdasset` 命令来启动 TDengine AI 的服务进程。
 
@@ -118,8 +128,6 @@ import TabItem from '@theme/TabItem';
 ./svc-tdasset stop
 ```
 
-## 手动管理服务
-
 如果你想手动管理这些服务，可以使用以下命令，以下示例使用 `tdasset`:
 
 ```bash
@@ -132,7 +140,6 @@ systemctl restart tdasset
 :::info
 
 - `systemctl` 和 `svc-tdasset` 命令需要 _root_ 权限来运行，如果您非 _root_ 用户，请在命令前添加 `sudo`。
-- 如果系统中不支持 `systemd`，也可以用手动运行 `` 方式启动 TDengine AI 服务。
 
 :::
 
@@ -140,32 +147,48 @@ systemctl restart tdasset
 
 <TabItem label="Windows 系统" value="windows">
 
-安装后，可以在拥有管理员权限的 cmd 窗口执行以下命令来启动 TDengine 服务进程。。
 
-```cmd
-sc start tdasset-h2
-sc start tdasset-ai
+安装后，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令或在桌面双击 `TDasset` 图标来启动 TDengine AI 服务进程。
+
+```bat
 sc start tdasset
 ```
+这将启动 TDengine AI 的所有相关服务，包括：
+- `tdasset-h2`：用于存储 TDengine AI 的元数据和配置。
+- `tdasset-ai`：用于处理 AI 相关的任务和分析。
+- `tdasset`：核心服务，负责管理和提供数据访问。
 
+如果想手动管理这些服务，可以使用以下命令，以下示例使用 `tdasset`:
+
+```bat
+sc start tdasset
+sc stop tdasset
+sc query tdasset
+```
 </TabItem>
 
 <TabItem label="macOS 系统" value="macos">
 
-1. 安装后，可以运行 `sudo svc-tdasset start` 来启动 TDengine AI 服务进程。这将启动所有相关服务，包括：
+
+安装完成后，你可以使用 `svc-tdasset` 命令来启动 TDengine AI 的服务进程。
+
+ ```bash
+./svc-tdasset start
+```
+这将启动 TDengine AI 的所有相关服务，包括：
 
 - `tdasset-h2`：用于存储 TDengine AI 的元数据和配置。
 - `tdasset-ai`：用于处理 AI 相关的任务和分析。
 - `tdasset`：核心服务，负责管理和提供数据访问。
 
-2. 你也可以用 `svc-tdasset` 的其他命令来查看服务状态、停止服务等操作：
+你也可以用 `svc-tdasset` 的其他命令来查看服务状态、停止服务等操作：
 
 ```bash
 sudo svc-tdasset status
 sudo svc-tdasset stop
 ```
 
-3. 如果你想手动管理这些服务，可以使用以下命令，以下示例使用 `tdasset`:
+如果想手动管理这些服务，可以使用以下命令，以下示例使用 `tdasset`:
 
 ```bash
 sudo launchctl start com.taosdata.tdasset
@@ -177,7 +200,7 @@ sudo launchctl print system/com.taosdata.tdasset
 :::info
 
 - `launchctl` 命令管理 `com.taosdata.tdasset` 需要管理员权限，务必在前面加 `sudo` 来增强安全性。
-- `sudo launchctl list | grep tdasset` 指令返回的第一列是 `tdasset` 程序的 PID, 若为 `-` 则说明 TDasset 服务未运行。
+- `sudo launchctl list | grep tdasset` 指令返回的第一列是 `tdasset` 启动的 java 程序的 PID, 若为 `-` 则说明 TDasset 服务未运行。
 - 故障排查：
 - 如果服务异常请查看系统日志 `launchd.log` 或者 `/usr/local/tdasset` 目录下 `logs` 日志获取更多信息。
 
@@ -186,7 +209,8 @@ sudo launchctl print system/com.taosdata.tdasset
 </TabItem>
 </Tabs>
 
-# 卸载
+
+## 卸载
 
 1. 可通过如下命令卸载 TDasset 的服务
 
