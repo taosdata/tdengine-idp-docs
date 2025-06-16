@@ -58,7 +58,7 @@ TDengine AI 提供了多平台安装包，以下步骤将以 macOS 15 arm64 为�
 
 4. 停止服务
 
-   运行以下命令停止 TDengine AI服务。
+运行以下命令停止 TDengine AI 服务。。
 
    bash
    ```
