@@ -35,7 +35,7 @@ TDengine AI 提供了多平台安装包，以下步骤将以 macOS 15 arm64 为�
 
 1. 下载
 
-   前往 [TDengine AI 官方下载页面](../release-history/release)。
+   前往 [TDengine AI 官方下载页面](./release-history/release)。
 
 2. 安装
 
