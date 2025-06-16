@@ -24,22 +24,22 @@ TDengine AI 1.x 各版本安装包下载链接如下：
   </tr>
   <tr>
     <td>Release Notes</td>
-    <td>[Release Notes](./02-notes/0.9.6.md)</td>
+    <td>[Release Notes](./notes/0.9.6)</td>
   </tr>
   <tr>
     <td rowspan="5">下载</td>
-    <td>[TDasset-enterprise-0.9.6.0609-Linux.tar.gz](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-enterprise-0.9.6.0609-Linux.tar.gz)</td>
+    <td>[tdengine-ai-enterprise-0.9.6.0609-Linux.tar.gz](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-enterprise-0.9.6.0609-Linux.tar.gz)</td>
   </tr>
   <tr>
-    <td>[TDasset-enterprise-0.9.6.0609-Linux.deb](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-enterprise-0.9.6.0609-Linux.deb)</td>
+    <td>[tdengine-ai-enterprise-0.9.6.0609-Linux.deb](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-enterprise-0.9.6.0609-Linux.deb)</td>
   </tr>
   <tr>
-    <td>[TDasset-enterprise-0.9.6.0609-Linux.rpm](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-enterprise-0.9.6.0609-Linux.rpm)</td>
+    <td>[tdengine-ai-enterprise-0.9.6.0609-Linux.rpm](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-enterprise-0.9.6.0609-Linux.rpm)</td>
   </tr>
   <tr>
-    <td>[TDasset-enterprise-0.9.6.0609-macOS.pkg](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-enterprise-0.9.6.0609-macOS.pkg)</td>
+    <td>[tdengine-ai-enterprise-0.9.6.0609-macOS.pkg](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-enterprise-0.9.6.0609-macOS.pkg)</td>
   </tr>
   <tr>
-    <td>[TDasset-enterprise-0.9.6.0609-WIndows.exe](https://downloads.taosdata.com/tdasset/enterprise/0.9.6.0609/TDasset-enterprise-0.9.6.0609-Windows.exe)</td>
+    <td>[tdengine-ai-enterprise-0.9.6.0609-WIndows.exe](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-enterprise-0.9.6.0609-Windows.exe)</td>
   </tr>
 </table>
