@@ -28,7 +28,13 @@ jobs:
 
       - name: Run Markdown Lint
         run: markdownlint -c .github/workflows/markdown_config.json ./
-
+        
+      - name: Check Markdown Lint Cli2
+        uses: DavidAnson/markdownlint-cli2-action@v20
+        with:
+          config: '.github/workflows/.markdownlint-cli2.jsonc'
+          globs: 'docs/**/*.md,docs/**/*.mdx'
+      
       - name: Check Typos
         uses: crate-ci/typos@v1.31.1
         with:
@@ -49,12 +55,7 @@ jobs:
           reviewdog: true
           args: ./docs/**/*.md ./docs/**/*.mdx
       
-      - name: Check Markdown Lint Cli2
-        uses: DavidAnson/markdownlint-cli2-action@v20
-        with:
-          config: '.github/workflows/.markdownlint-cli2.jsonc'
-          globs: 'docs/**/*.md,docs/**/*.mdx'
-      
+
 
   build:
     needs:
