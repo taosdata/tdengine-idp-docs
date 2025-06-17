@@ -28,7 +28,7 @@ TDengine AI 提供了 Docker 镜像，用户可以通过 Docker 快速启动 TDe
 
 ## 在 Docker 环境下体验 TDengine AI
 
-   如D.
+如 D.�D.
    如D服。
 如 D服。
 如D 服。
