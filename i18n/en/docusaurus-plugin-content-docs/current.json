@@ -1,0 +1,22 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.功能概述": {
+    "message": "Function Overview",
+    "description": "The label for category 功能概述 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.运维指南": {
+    "message": "Operation and Maintenance Guide",
+    "description": "The label for category 运维指南 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.发布历史": {
+    "message": "Release History",
+    "description": "The label for category 发布历史 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.版本说明": {
+    "message": "Version Description",
+    "description": "The label for category 版本说明 in sidebar tutorialSidebar"
+  }
+}
