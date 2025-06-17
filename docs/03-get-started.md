@@ -5,9 +5,7 @@ TDengine Asset Intelligence 充分利用 AI 大模型技术，能基于采集的
 本章节将带您体验从下载、安装、启动服务开始，到通过 Web 页面完成配置、分析等操作的完整流程。
 
 :::info
-
 TDengine AI 不仅提供容器化部署、安装包部署，还提供全托管的 TDengine AI Cloud 服务，您只需几步注册即可轻松体验 TDengine AI 提供的数据管理服务，欢迎前往 TDengine AI Cloud 注册页面试用。
-
 :::
 
 ## 快速安装
@@ -38,6 +36,7 @@ TDengine AI 提供了 Docker 镜像，用户可以通过 Docker 快速启动 TDe
    cd tdengine-ai-deployment/docker
    docker compose up -d
    ```
+
 该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 **TDengine AI 服务和 TDengine TSDB 服务**。默认情况下，TDengine AI 服务会启动在主机的 6042 端口：[http://localhost:6042](http://localhost:6042)
 :::tip
 如需修改端口，可编辑 `docker-compose.yml` 文件中的 `ports` 配置
