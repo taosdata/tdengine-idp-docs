@@ -38,14 +38,15 @@ TDengine AI 提供了 Docker 镜像，用户可以通过 Docker 快速启动 TDe
    cd tdengine-ai-deployment/docker
    docker compose up -d
    ```
-   该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 **TDengine AI 服务和 TDengine TSDB 服务**：
-   - 默认情况下，TDengine-AI 服务会启动在主机的 6042 端口：[http://localhost:6042](http://localhost:6042)
-   - 如需修改端口，可编辑 `docker-compose.yml` 文件中的 `ports` 配置
+该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 **TDengine AI 服务和 TDengine TSDB 服务**。默认情况下，TDengine AI 服务会启动在主机的 6042 端口：[http://localhost:6042](http://localhost:6042)
+:::tip
+如需修改端口，可编辑 `docker-compose.yml` 文件中的 `ports` 配置
+:::
 
 ### 通过安装包运行
 
 TDengine AI 提供了多平台安装包，以下步骤将以 Linux 系统为例演示如何下载并安装 TDengine AI。
-1. 前往 [TDengine AI 官方下载页面](./release-history/release)。
+1. 前往 [TDengine AI 下载页面](./release-history/version)。
 2. 选择 tar.gz 安装包，选择最新版本，点击链接下载。
 3. 解压并执行安装脚本完成安装（请将 `<version>` 替换为实际版本号）。
    ```bash
@@ -57,7 +58,7 @@ TDengine AI 提供了多平台安装包，以下步骤将以 Linux 系统为例�
    ```bash
    svc-tdengine-ai start
    ```
-   至此，TDengine AI 服务已在主机的 6042 端口启动：[http://localhost:6042](http://localhost:6042)
+至此，TDengine AI 服务已在主机的 6042 端口启动：[http://localhost:6042](http://localhost:6042)
 
 ## 快速体验
 
