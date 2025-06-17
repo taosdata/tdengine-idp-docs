@@ -16,7 +16,7 @@ TDengine AI 版本号采用三位版本号，由 `MAJOR.MINOR.PATCH` 三部分�
   </tr>
   <tr>
     <td>发布说明</td>
-    <td>[发布说明 0.9.6](./02-release-notes/0.9.6.md)</td>
+    <td>[发布说明 0.9.6](./release-notes/0.9.6)</td>
   </tr>
   <tr>
     <td rowspan="5">下载链接</td>
