@@ -24,8 +24,6 @@ TDengine AI 提供了 Docker 镜像，用户可以通过 Docker 快速启动 TDe
     docker run -d --name tdengine-ai 
    ```
 
-4. 启动后，你可以通过浏览器访问 TDengine AI 的 Web 界面，默认地址为 `http://localhost:6042`。
+4. 启动D后，你可以通过浏览器访问 TDengine AI 的 Web 界面，默认地址为 `http://localhost:6042`。
 
 ## 在 Docker 环境下体验 TDengine AI
-
- 如D.
