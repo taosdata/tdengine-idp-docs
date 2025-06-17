@@ -43,8 +43,8 @@ TDengine AI 提供了 Docker 镜像，用户可以通过 Docker 快速启动 TDe
     docker compose up -d
     ```
 
-   该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 TDengine AI 服务：
-   - 默认情况下，服务会启动在主机的 6042 端口：[http://localhost:6042](http://localhost:6042)
+   该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 **TDengine-AI 服务和 TDengine 数据库服务**：
+   - 默认情况下，TDengine-AI 服务会启动在主机的 6042 端口：[http://localhost:6042](http://localhost:6042)
    - 如需修改端口，可编辑 `docker-compose.yml` 文件中的 `ports` 配置
 
 ### 通过安装包运行
