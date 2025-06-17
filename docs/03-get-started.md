@@ -61,7 +61,50 @@ TDengine AI 提供了多平台安装包，以下步骤将以 Linux 系统为例�
 
 ## 快速体验
 
+本节介绍如何使用 TDengine AI 完成示例数据的导入和元素的展示。
 
+:::tip
+前置准备
+
+在开始之前，请先部署一套可访问的TDengine服务：
+服务器地址：通常是TDengine服务的IP地址，比如localhost
+端口号：通常为6041
+:::
+### 创建连接
+
+1. 访问 TDengine AI 服务 [http://localhost:6042](http://localhost:6042)，使用默认用户名密码 jhtao@taosdata.com/123456 登录系统。
+2. 在右上角头像下拉框中选择管理后台。
+3. 在打开的管理后台页面左侧菜单栏中，选择连接，点击添加新链接。
+4. 配置以下连接信息后保存：
+   ```
+   名称：TDengine
+   类型：TDengine
+   主机：localhost 或可用的TDengine服务地址
+   端口：6041
+   认证类型：用户名密码
+   用户名：root
+   密码：taosdata
+   ```
+![alt text](../static/img/connections.png)
+### 导入示例数据
+
+1. 在管理后台页面左侧菜单栏，点击示例数据。
+2. 选择公共事业，在右侧选项中选择加载。
+3. 等待示例数据状态从 UNLOAD 变为 LOADED。
+![alt text](../static/img/sampledata.png)
+
+
+### 查看导入的元素信息
+
+1. 在顶层菜单中选择元素浏览器，切换至元素浏览器页面。
+2. 在左侧元素列表，可以查看到导入的公共事业元素。
+
+### 体验 AI 生成面板
+
+1. 在元素列表中选择一个元素，等待AI生成推荐面板
+2. 在AI生成的推荐面板右上角，点击生成
+3. 等待一段时间，AI即可生成对应的面板
+![alt text](../static/img/panels.png)
 
 ## 通过云服务快速体验
 
