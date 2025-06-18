@@ -102,21 +102,20 @@ TDengine AI 提供了以下 7 大场景的示例数据：
 2. 在左树形结构中的“元素”，即可查看到导入的“公共事业”示例数据的元素信息；
 3. 在“公共事业”元素下，共有北京、河北、河南三个地区，其下包含各自的地级市或区；
 4. 选择`北京-朝阳-三元桥街道-em-21`这个元素，其代表的是北京市朝阳区三元桥街道标号为 21 的电表 (electricity meter)，查看其通用信息，可以看到这是一个智能电表；查看其属性信息，可以看到电流、电压等物理量属性。
-![电表属性](../static/img/get-started/attribute.png)
-
+![电表属性](/docs-img/get-started/attribute.png)
 ### 体验 AI 生成面板
 
 在 TDengine AI 中，最强大的功能之一是通过 AI 进行数据面板的自动生成：
 1. 仍然选择`北京-朝阳-三元桥街道-emf-21`这个元素，会自动跳转到该元素的面板页面，并且会自动开始进行 AI 面板生成。AI 每次会至少推荐 5 个面板，如果对 AI 推荐的面板不满意，也可以在下部对话框中以对话的方式告诉 AI 想要的模板；
-![alt text](../static/img/get-started/panels.png)
+![panels](/docs-img/get-started/panels.png)
 1. 在 AI 推荐的面板中，选择第一个推荐面板`em-21过去一周每天的电流和电压平均值，折线图`，点击生成；
 1. 等待一段时间，AI 即可生成对应的面板；
 1. 选择生成的面板，点击详情，可跳转至面板详情页面，查看更多信息。
-![alt text](../static/img/get-started/paneldetail.png)
+![paneldetail](/docs-img/get-started/paneldetail.png)
 
 ## 通过云服务快速体验
 
-TDengine AI 提供了云服务版本，用户可以通过云服务快速体验 TDengine AI 的强大功能，而无需进行本地安装和配置。
+TDengine AI 提供了全托管的云服务版本，用户可以通过云服务，快速体验 TDengine AI 的强大功能，而无需进行本地安装和配置
 
 ## 下一步
 

@@ -1,0 +1,162 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Installation Guide
+
+## Prerequisites
+
+TDengine AI requires the following prerequisites:
+1. Python: Version 3.10-3.12
+2. Java: Version 21 or above
+3. glibc: Version 2.25 or above
+
+## Installation
+
+Please select the appropriate installation method according to your operating system. The detailed steps for each method are as follows:
+
+<Tabs>
+
+<TabItem label="tar.gz Installation" value="tar">
+1. Download the latest `.tar.gz` package from the [Version List](../../release-history/version) page.
+2. Run the following commands to extract and install. Replace `<version>` with the actual version number.
+   ```bash
+   tar zxvf tdengine-ai-enterprise-<version>-linux.tar.gz
+   cd tdengine-ai-enterprise-<version>
+   ./install.sh
+   ```
+3. The default installation path for TDengine AI is `/usr/local/tdengine-ai`. After successful installation, the terminal will display "TDengine AI has been installed successfully!".
+4. For more installation options, run:
+   ```bash
+   ./install.sh -h
+   ```
+</TabItem>
+
+<TabItem label="deb Installation" value="deb">
+1. Download the latest `.deb` package from the [Version List](../../release-history/version) page.
+2. Run the following command to install the deb package. Replace `<version>` with the actual version number.
+   ```bash
+   dpkg -i tdengine-ai-enterprise-<version>-linux.deb
+   ```
+3. The default installation path for TDengine AI is `/usr/local/tdengine-ai`. After successful installation, the terminal will display "TDengine AI has been installed successfully!".
+</TabItem>
+
+<TabItem label="rpm Installation" value="rpm">
+1. Download the latest `.rpm` package from the [Version List](../../release-history/version) page.
+2. Run the following command to install the rpm package. Replace `<version>` with the actual version number.
+   ```bash
+   rpm -i tdengine-ai-enterprise-<version>-linux.rpm
+   ```
+3. The default installation path for TDengine AI is `/usr/local/tdengine-ai`. After successful installation, the terminal will display "TDengine AI has been installed successfully!".
+</TabItem>
+
+<TabItem label="macOS Installation" value="macos">
+1. Download the latest macOS installation package (.pkg) from the [Version List](../../release-history/version) page.
+2. Double-click the package and follow the prompts to complete the installation.
+3. The default installation path for TDengine AI is `/usr/local/tdengine-ai`.
+</TabItem>
+
+<TabItem label="Windows Installation" value="windows">
+1. Download the latest Windows installation package (.exe) from the [Version List](../../release-history/version) page.
+2. Double-click the installer and follow the prompts to complete the installation.
+3. After installation, the default path for TDengine AI is `C:\tdengine-ai`.
+</TabItem>
+
+</Tabs>
+
+## Startup
+
+<Tabs>
+
+<TabItem label="Linux System" value="linux">
+After installation, you can use the `svc-tdengine-ai` command to start the TDengine AI service process.
+```bash
+sudo svc-tdengine-ai start
+```
+
+You can also use other `svc-tdengine-ai` commands to check service status, stop the service, etc. For example:
+```bash
+sudo svc-tdengine-ai status # Check service status
+sudo svc-tdengine-ai stop   # Stop the service
+```
+
+You can also use the `systemctl` command to manually manage these services. For example, for the `tdengine-ai` service:
+```bash
+sudo systemctl start tdengine-ai
+sudo systemctl stop tdengine-ai
+sudo systemctl status tdengine-ai
+sudo systemctl restart tdengine-ai
+```
+
+:::info
+- Running `systemctl` and `svc-tdengine-ai` commands requires _root_ privileges. For non-root users, please add `sudo` before the command.
+:::
+</TabItem>
+
+<TabItem label="macOS System" value="macos">
+After installation, you can use the `svc-tdengine-ai` command to start the TDengine AI service process.
+
+```bash
+sudo svc-tdengine-ai start
+```
+
+You can also use other `svc-tdengine-ai` commands to check service status or stop the service:
+```bash
+sudo svc-tdengine-ai status
+sudo svc-tdengine-ai stop
+```
+
+If you want to manually manage these services, you can use the following commands. For example, for `tdengine-ai`:
+```bash
+sudo launchctl start com.taosdata.tdengine-ai
+sudo launchctl stop com.taosdata.tdengine-ai
+sudo launchctl list | grep tdengine-ai
+sudo launchctl print system/com.taosdata.tdengine-ai
+```
+
+:::info
+- Managing `com.taosdata.tdengine-ai` with `launchctl` requires administrator privileges. Always use `sudo` for security.
+- The first column returned by `sudo launchctl list | grep tdengine-ai` is the PID of the java process started by tdengine-ai. If it is `-`, the tdengine-ai service is not running.
+- If the service is abnormal, check the system log `launchd.log` or the logs under `/usr/local/tdengine-ai/logs` for more information.
+:::
+</TabItem>
+
+<TabItem label="Windows System" value="windows">
+After installation, you can start the TDengine AI service process by running the `sc` command in a cmd window with administrator privileges, or by double-clicking the `TDengine AI` icon on the desktop.
+```bat
+sc start tdengine-ai
+```
+
+If you want to manually manage these services, you can run the `sc` command in a cmd window with administrator privileges. For example, for the `tdengine-ai` service:
+```bat
+sc start tdengine-ai
+sc stop tdengine-ai
+sc query tdengine-ai
+```
+</TabItem>
+
+</Tabs>
+
+After TDengine AI starts normally, it includes the following three services:
+- `tdengine-ai-h2`: Stores TDengine AI metadata and configuration.
+- `tdengine-ai-chat`: Handles AI-related tasks and analysis.
+- `tdengine-ai`: Core service, responsible for management and data access.
+
+## Uninstallation
+
+1. On Linux/macOS, you can uninstall TDengine AI with the following command:
+```bash
+rmtdengine-ai -e yes
+```
+If you want to keep data, logs, and configuration, run:
+```bash
+rmtdengine-ai -e no
+```
+2. On Linux, if installed via rpm, uninstall with:
+```bash
+rpm -e tdengine-ai
+```
+3. On Linux, if installed via deb, uninstall with:
+```
+dpkg -r tdengine-ai
+```
+4. On Windows, go to the installation directory `C:\tdengine-ai` and double-click the uninstaller (unins000.exe) to uninstall.
