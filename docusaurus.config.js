@@ -96,13 +96,14 @@ const config = {
           logo: {
               alt: "",
               src: "/img/logo.jpg",
-              href: "https://www.taosdata.com",
           },
           items: [
               {
-                to: "https://www.taosdata.com/blog",
+                to: "/blog-redirect",
                 label: "博客",
                 position: "right",
+                target: "_blank", // 新标签页打开
+                rel: "noopener noreferrer", // 安全性
               },              
               {
                 href: "https://github.com/taosdata/tdengine-ai-docs/issues/new/choose",
