@@ -16,9 +16,9 @@ const config = {
 
   url: 'https://docs.tdengine.ai',
   baseUrl: '/',
-  onBrokenAnchors: 'warn',
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'throw',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you

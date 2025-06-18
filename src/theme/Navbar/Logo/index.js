@@ -11,9 +11,11 @@ export default function Logo() {
 
   if (!logo?.src) return null;
 
-  const href = locale === 'en'
-    ? 'https://www.tdengine.com'
-    : 'https://www.taosdata.com';
+  const localeUrlMapping = {  
+    en: 'https://www.tdengine.com',  
+    default: 'https://www.taosdata.com',  
+  };  
+  const href = localeUrlMapping[locale] || localeUrlMapping.default;  
 
   return (
     <a
