@@ -16,7 +16,13 @@ export default function Logo() {
     : 'https://www.taosdata.com';
 
   return (
-    <a href={href} className="navbar__brand" title={logo.alt || title || "Logo"}>
+    <a
+      href={href}
+      className="navbar__brand"
+      title={logo.alt || title || "Logo"}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img src={logo.src} alt={logo.alt || title || "Logo"} className="navbar__logo" />
       <span className="navbar__title"><b>{title}</b></span>
     </a>
