@@ -25,10 +25,9 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    // locales: ['en-US', 'zh-Hans'],
-    locales: ['zh-Hans'],
+    locales: ['en', 'zh-Hans'],
     localeConfigs: {
-        'en-US': {
+        'en': {
             label: 'English',
         },
         'zh-Hans': {
@@ -44,8 +43,9 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/taosdata/tdasset-docs/tree/main',
+          // editUrl:
+          //   'https://github.com/taosdata/tdasset-docs/tree/main',
+          // editLocalizedFiles: true,
         },
         blog: false,
         theme: {
@@ -105,16 +105,6 @@ const config = {
                 position: "right",
               },              
               {
-                type: 'localeDropdown',
-                position: 'right',
-                dropdownItemsAfter: [
-                  {
-                    to: 'https://docs.taosdata.com/',
-                    label: 'Help Us Translate',
-                  },  
-                ],         
-              },
-              {
                 href: "https://github.com/taosdata/tdengine-ai-docs/issues/new/choose",
                 label: "反馈问题",
                 position: "right",
@@ -126,10 +116,20 @@ const config = {
               //   // dropdownActiveClassDisabled: true, // 可选：禁用下拉菜单项的激活状态
               // },
               {
-                  to: "https://www.taosdata.com/contactus",
-                  label: "联系我们",
-                  position: "right",
+                type: 'localeDropdown',
+                position: 'right',
+                dropdownItemsAfter: [
+                  {
+                    to: 'https://docs.tdengine.ai/',
+                    label: 'Help Us Translate',
+                  },  
+                ],         
               },
+              // {
+              //     to: "https://www.taosdata.com/contactus",
+              //     label: "联系我们",
+              //     position: "right",
+              // },
               {
                   type: "search",
                   position: "right",
