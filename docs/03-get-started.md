@@ -10,18 +10,7 @@ TDengine AI 不仅提供容器化部署、安装包部署，还提供全托管�
 
 ## 快速安装
 
-TDengine AI 支持多种安装方式，包括容器化部署、安装包部署在物理服务器或虚拟机上，针对安装包部署形式，目前我们支持以下操作系统：
-
-- RedHat
-- CentOS
-- SUSE
-- Ubuntu
-- Debian
-- Linux
-- macOS
-- Windows
-
-如您需要适配其他硬件平台或操作系统，可以[联系我们](https://www.taosdata.com/contactus)获取支持。
+TDengine AI 支持多种安装、部署方式，在不同的操作系统和架构下，都能够体验其强大的功能带来的便利。对操作系统和架构的支持，详见[安装包介绍](./operation/installation/installer)。下面，我们将介绍两种常用的安装部署方式。
 
 ### 通过 Docker 容器运行
 
@@ -44,12 +33,12 @@ TDengine AI 提供了 Docker 镜像，用户可以通过 Docker 快速启动 TDe
 
 ### 通过安装包运行
 
-TDengine AI 提供了多平台安装包，以下步骤将以 Linux 系统为例演示如何下载并安装 TDengine AI。
-1. 前往 [TDengine AI 下载页面](./release-history/version)。
-2. 选择 tar.gz 安装包，选择最新版本，点击链接下载。
-3. 解压并执行安装脚本完成安装（请将 `<version>` 替换为实际版本号）。
+TDengine AI 提供了多平台安装包，以下步骤将以 Linux 系统为例，演示如何下载并安装 TDengine AI。
+1. 前往[版本列表](./release-history/version)页面
+2. 选择最新版本的 `.tar.gz` 安装包，点击下载链接
+3. 解压并执行安装脚本，完成安装（请将 `<version>` 替换为实际版本号）
    ```bash
-   tar xf tdengine-ai-enterprise-<version>-linux.tar.gz 
+   tar zxvf tdengine-ai-enterprise-<version>-linux.tar.gz 
    cd tdengine-ai-enterprise-<version>
    ./install.sh
    ```
@@ -57,7 +46,7 @@ TDengine AI 提供了多平台安装包，以下步骤将以 Linux 系统为例�
    ```bash
    svc-tdengine-ai start
    ```
-至此，TDengine AI 服务已在主机的 6042 端口启动：[http://localhost:6042](http://localhost:6042)
+至此，TDengine AI 服务已在主机的 6042 端口启动：[http://localhost:6042](http://localhost:6042).
 
 ## 快速体验
 

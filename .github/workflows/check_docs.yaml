@@ -6,6 +6,8 @@ on:
       - 'main'
     paths:
       - 'docs/**'
+      - 'i18n/en/docusaurus-plugin-content-docs/current/**'
+      - '.github/workflows/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -34,11 +36,17 @@ jobs:
         with:
           files: 'docs/'
           config: .github/workflows/typos.toml
-          
+
+      - name: Check Typos for i18n
+        uses: crate-ci/typos@v1.31.1
+        with:
+          files: 'i18n/en/docusaurus-plugin-content-docs/current/'
+          config: .github/workflows/typos.toml
+                    
       - name: Check with AutoCorrect
         uses: huacnlee/autocorrect-action@v2
         with:
-          args: --lint docs/**/*.md docs/**/*.mdx
+          args: --lint docs/
 
       - name: Report ReviewDog
         if: always()
@@ -47,13 +55,13 @@ jobs:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           reviewdog: true
-          args: ./docs/**/*.md ./docs/**/*.mdx
+          args: ./docs/
       
       - name: Check Markdown Lint Cli2
         uses: DavidAnson/markdownlint-cli2-action@v20
         with:
           config: '.github/workflows/.markdownlint-cli2.jsonc'
-          globs: 'docs/**/*.md,docs/**/*.mdx'
+          globs: 'docs/**/*.md,docs/**/*.mdx,i18n/en/docusaurus-plugin-content-docs/current/**/*.md,i18n/en/docusaurus-plugin-content-docs/current/**/*.mdx'
       
 
   build:
