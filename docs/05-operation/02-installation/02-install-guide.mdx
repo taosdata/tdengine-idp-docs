@@ -3,196 +3,109 @@ import TabItem from '@theme/TabItem';
 
 # 安装指南
 
-在 Linux 系统上，TDengine AI 提供 Deb 和 RPM 格式安装包，其中 Deb 支持 Debian/Ubuntu 及其衍生系统，RPM 支持 CentOS/RHEL/SUSE 及其衍生系统，用户可以根据自己的运行环境自行选择。同时我们也提供了 tar.gz 格式安装包。
+## 先决条件
 
-在 MacOS 系统上，TDengine AI 提供 pkg 格式安装包。
-
-在 Windows 系统上，TDengine AI 提供 exe 格式安装包。
-
-## 运行环境要求
-
-在各系统上运行环境最低要求如下：
-
-1. 操作系统：
-
-- Linux: CentOS 8 及以上版本，Ubuntu 20 及以上版本
-- macOS: 13.0 及以上版本
-- Windows: Windows Server 2019/2022 和 Windows 11
-
-2. Python: 3.10-3.12 版本
-3. Java: 21 及以上版本
-4. glibc: 2.25 及以上版本
+TDengine AI 的运行需要满足以下先决条件：
+1. Python: 3.10-3.12 版本
+1. Java: 21 及以上版本
+1. glibc: 2.25 及以上版本
 
 ## 安装
 
 请根据您的操作系统类型，选择合适的安装方式，安装 TDengine AI。以下是不同安装方式的详细步骤：
+
 <Tabs>
 
-  <TabItem label="tar.gz 安装" value="tar">
-
-1. 从以下链接下载获得 tar.gz 安装包。
-
-    - [tdengine-ai-enterprise-0.9.6.0609-linux.tar.gz](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-enterprise-0.9.6.0609-linux.tar.gz)
-
-2. 解压并安装（请将 `<version>` 替换为实际版本号）：
-
+<TabItem label="tar.gz 安装" value="tar">
+1. 从[版本列表](../../release-history/version)页面下载获得最新的 `.tar.gz` 安装包
+1. 执行以下命令，解压并安装，请将 `<version>` 替换为实际版本号
    ```bash
-   tar xf tdengine-ai-enterprise-<version>-linux.tar.gz
+   tar zxvf tdengine-ai-enterprise-<version>-linux.tar.gz
    cd tdengine-ai-enterprise-<version>
    ./install.sh
    ```
-
-3. 安装完成后，TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`,
-   你可以通过 `./install.sh -h` 查看更多安装选项。
-
+1. TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`, 安装成功后，可以看到终端展示 "TDengine AI has been installed successfully!".
+1. 可以通过以下命令查看更多安装选项
    ```bash
    ./install.sh -h
    ```
+</TabItem>
 
-  </TabItem>
-
-  <TabItem label="Deb 安装" value="deb">
-
-1. 从以下链接下载获得 Deb 安装包。
-
-    - [tdengine-ai-enterprise-0.9.6.0609-linux.deb](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-0.9.6.0609-linux.deb)
-
-2. 使用 `dpkg` 命令安装 Deb 包（请将 `<version>` 替换为实际版本号）：
-
+<TabItem label="deb 安装" value="deb">
+1. 从[版本列表](../../release-history/version)页面下载获得最新的 `.deb` 安装包
+1. 执行以下命令，安装 deb 包，请将 `<version>` 替换为实际版本号
    ```bash
-   dpkg -i tdengine-ai-enterprise-<version>.deb
+   dpkg -i tdengine-ai-enterprise-<version>-linux.deb
    ```
+1. TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`, 安装成功后，可以看到终端展示 "TDengine AI has been installed successfully!".
+</TabItem>
 
-3. 安装完成后，TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`
-
-  </TabItem>
-
-  <TabItem label="RPM 安装" value="rpm">
-
-1. 从以下链接下载获得 RPM 安装包。
-
-    - [tdengine-ai-enterprise-0.9.6.0609-linux.rpm](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-enterprise-0.9.6.0609-linux.rpm)
-
-2. 使用 `rpm` 命令安装 RPM 包（请将 `<version>` 替换为实际版本号）：
-
+<TabItem label="rpm 安装" value="rpm">
+1. 从[版本列表](../../release-history/version)页面下载获得最新的 `.rpm` 安装包
+1. 执行以下命令，安装 rpm 包，请将 `<version>` 替换为实际版本号
    ```bash
-   rpm -i tdengine-ai-enterprise-<version>.rpm
+   rpm -i tdengine-ai-enterprise-<version>-linux.rpm
    ```
+1. TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`, 安装成功后，可以看到终端展示 "TDengine AI has been installed successfully!".
+</TabItem>
 
-3. 安装完成后，TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`
+<TabItem label="macOS 安装" value="macos">
+1. 从[版本列表](../../release-history/version)页面下载获得最新的 macOS 安装包 (.pkg)
+1. 双击安装包，按照提示完成安装
+1. TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`
+</TabItem>
 
-  </TabItem>
-
-  <TabItem label="macOS 安装" value="macos">
-1. 从以下链接下载获得 macOS 的 pkg 安装包。
-
-    - [tdengine-ai-enterprise-0.9.6.0609-macos.pkg](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-enterprise-0.9.6.0609-macos.pkg)
-
-2. 双击安装包，按照提示完成安装。
-
-3. 安装完成后，TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`
-
-  </TabItem>
-  <TabItem label="Windows 安装" value="windows">
-1. 从以下链接下载获得 Windows 的安装包。
-
-    - [tdengine-ai-enterprise-0.9.6.0609-windows.exe](https://downloads.taosdata.com/tdengine-ai/enterprise/0.9.6.0609/tdengine-ai-enterprise-0.9.6.0609-windows.exe)
-
-2. 双击安装包，按照提示完成安装。
-
+<TabItem label="Windows 安装" value="windows">
+1. 从[版本列表](../../release-history/version)页面下载获得最新的 Windows 安装包 (.exe)
+2. 双击安装包，按照提示完成安装
 3. 安装完成后，TDengine AI 的默认安装路径为 `C:\tdengine-ai`
+</TabItem>
 
-  </TabItem>
 </Tabs>
-
 
 ## 启动
 
-
 <Tabs>
+
 <TabItem label="Linux 系统" value="linux">
-
-安装完成后，你可以使用 `svc-tdengine-ai` 命令来启动 TDengine AI 的服务进程。
-
- ```bash
-svc-tdengine-ai start
+安装完成后，您可以使用 `svc-tdengine-ai` 命令来启动 TDengine AI 的服务进程。
+```bash
+sudo svc-tdengine-ai start
 ```
 
-这将启动 TDengine AI 的所有相关服务，包括：
-
-- `tdengine-ai-h2`：用于存储 TDengine AI 的元数据和配置。
-- `tdengine-ai-chat`：用于处理 AI 相关的任务和分析。
-- `tdengine-ai`：核心服务，负责管理和提供数据访问。
-
-你也可以用 `svc-tdengine-ai` 的其他命令来查看服务状态、停止服务等操作：
-
+您也可以用 `svc-tdengine-ai` 的其他命令来查看服务状态、停止服务等操作，例如：
 ```bash
-svc-tdengine-ai status
-svc-tdengine-ai stop
+sudo svc-tdengine-ai status # 查看服务状态
+sudo svc-tdengine-ai stop   # 停止服务
 ```
 
-如果你想手动管理这些服务，可以使用以下命令，以下示例使用 `tdengine-ai`:
-
+您还可以直接使用 `systemctl` 命令，手动管理这些服务，以 `tdengine-ai` 服务为例：
 ```bash
-systemctl start tdengine-ai
-systemctl stop tdengine-ai
-systemctl status tdengine-ai
-systemctl restart tdengine-ai
+sudo systemctl start tdengine-ai
+sudo systemctl stop tdengine-ai
+sudo systemctl status tdengine-ai
+sudo systemctl restart tdengine-ai
 ```
 
 :::info
-
-- `systemctl` 和 `svc-tdengine-ai` 命令需要 _root_ 权限来运行，如果您非 _root_ 用户，请在命令前添加 `sudo`。
-
+- 执行 `systemctl` 和 `svc-tdengine-ai` 命令时，需要 _root_ 权限，对于非 _root_ 用户，请在命令前添加 `sudo`。
 :::
-
-</TabItem>
-
-<TabItem label="Windows 系统" value="windows">
-
-
-安装后，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令或在桌面双击 `TDengine AI` 图标来启动 TDengine AI 服务进程。
-
-```bat
-sc start tdengine-ai
-```
-这将启动 TDengine AI 的所有相关服务，包括：
-- `tdengine-ai-h2`：用于存储 TDengine AI 的元数据和配置。
-- `tdengine-ai-chat`：用于处理 AI 相关的任务和分析。
-- `tdengine-ai`：核心服务，负责管理和提供数据访问。
-
-如果想手动管理这些服务，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令，以下示例使用 `tdengine-ai`:
-
-```bat
-sc start tdengine-ai
-sc stop tdengine-ai
-sc query tdengine-ai
-```
 </TabItem>
 
 <TabItem label="macOS 系统" value="macos">
+安装完成后，您可以使用 `svc-tdengine-ai` 命令来启动 TDengine AI 的服务进程。
 
-
-安装完成后，你可以使用 `svc-tdengine-ai` 命令来启动 TDengine AI 的服务进程。
-
- ```bash
-./svc-tdengine-ai start
+```bash
+sudo svc-tdengine-ai start
 ```
-这将启动 TDengine AI 的所有相关服务，包括：
 
-- `tdengine-ai-h2`：用于存储 TDengine AI 的元数据和配置。
-- `tdengine-ai-ai`：用于处理 AI 相关的任务和分析。
-- `tdengine-ai`：核心服务，负责管理和提供数据访问。
-
-你也可以用 `svc-tdengine-ai` 的其他命令来查看服务状态、停止服务等操作：
-
+您也可以用 `svc-tdengine-ai` 的其他命令来查看服务状态、停止服务等操作：
 ```bash
 sudo svc-tdengine-ai status
 sudo svc-tdengine-ai stop
 ```
 
 如果想手动管理这些服务，可以使用以下命令，以下示例使用 `tdengine-ai`:
-
 ```bash
 sudo launchctl start com.taosdata.tdengine-ai
 sudo launchctl stop com.taosdata.tdengine-ai
@@ -201,36 +114,49 @@ sudo launchctl print system/com.taosdata.tdengine-ai
 ```
 
 :::info
-
 - `launchctl` 命令管理 `com.taosdata.tdengine-ai` 需要管理员权限，务必在前面加 `sudo` 来增强安全性。
 - `sudo launchctl list | grep tdengine-ai` 指令返回的第一列是 `tdengine-ai` 启动的 java 程序的 PID, 若为 `-` 则说明 tdengine-ai 服务未运行。
-- 如果服务异常请查看系统日志 `launchd.log` 或者 `/usr/local/tdengine-ai` 目录下 `logs` 日志获取更多信息。
-
+- 如果服务异常，请查看系统日志 `launchd.log` 或者 `/usr/local/tdengine-ai/logs` 目录下的日志，获取更多信息。
 :::
-
 </TabItem>
+
+<TabItem label="Windows 系统" value="windows">
+安装后，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令，或在桌面双击 `TDengine AI` 图标来启动 TDengine AI 服务进程。
+```bat
+sc start tdengine-ai
+```
+
+如果想手动管理这些服务，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令，以 `tdengine-ai` 服务为例：
+```bat
+sc start tdengine-ai
+sc stop tdengine-ai
+sc query tdengine-ai
+```
+</TabItem>
+
 </Tabs>
 
+TDengine AI 正常启动后，包括以下三个服务：
+- `tdengine-ai-h2`：用于存储 TDengine AI 的元数据和配置。
+- `tdengine-ai-chat`：用于处理 AI 相关的任务和分析。
+- `tdengine-ai`：核心服务，负责管理和提供数据访问。
 
 ## 卸载
 
-1. 可通过如下命令卸载 tdengine-ai 的服务
-
- ```bash
+1. 在 Linux/macOS 系统, 可以通过如下命令卸载 TDengine AI 服务：
+```bash
 rmtdengine-ai -e yes
 ```
-
-2. 或者保留数据、日志和配置
-
- ```bash
+如果期望保留数据、日志和配置等，可以执行：
+```bash
 rmtdengine-ai -e no
 ```
-
-3. 如果是通过 rpm或者 deb安装, 可以使用如下命令卸载：
-
+2. 在 Linux 系统，如果是通过 rpm 方式安装, 请使用如下命令卸载：
 ```bash
-dpkg -r tdengine-ai
 rpm -e tdengine-ai
 ```
-
-3. Windows 系统可以使用卸载程序卸载
+3. 在 Linux 系统，如果是通过 deb 方式安装, 请使用如下命令卸载：
+```
+dpkg -r tdengine-ai
+```
+4. 在 Windows 系统，可以在进入安装目录 `C:\tdengine-ai` 后，双击卸载程序 (unins000.exe) 进行卸载。
