@@ -120,4 +120,4 @@ TDengine AI 提供了云服务版本，用户可以通过云服务快速体验 T
 
 ## 下一步
 
-至此，我们已经完成基本的 TDengine AI 安装、启动，并通过示例数据体验了元素导入和 AI 自动成功面板功能，您还可以继续进行[仪表板](/docs/feature/dashboard)、[分析](docs/feature/analysis)等功能的体验。
+至此，我们已经完成基本的 TDengine AI 安装、启动，并通过示例数据体验了元素导入和 AI 自动成功面板功能，您还可以继续进行[仪表板](feature/dashboard)、[分析](feature/analysis)等功能的体验。
