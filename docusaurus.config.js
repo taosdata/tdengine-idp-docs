@@ -43,8 +43,9 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/taosdata/tdasset-docs/tree/main',
+          // editUrl:
+          //   'https://github.com/taosdata/tdasset-docs/tree/main',
+          // editLocalizedFiles: true,
         },
         blog: false,
         theme: {

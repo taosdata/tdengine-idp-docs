@@ -1,0 +1,32 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+.feedback {
+  border-radius: 5px;
+  padding: 25px;
+  background-color: #f5f5f5;
+  box-shadow: 1px 2px 5px #cfd2e6;
+  margin-top: 20px;
+}
+
+h4 {
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.feedback > p {
+  font-size: 16px;
+}
+
+.feedback > div {
+  font-size: 16px;
+}
+
+.feedback a {
+  color: #2d7df0;
+  text-decoration: none;
+}

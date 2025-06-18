@@ -3,20 +3,20 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.功能概述": {
-    "message": "Function Overview",
-    "description": "The label for category 功能概述 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Feature Overview": {
+    "message": "Feature Overview",
+    "description": "The label for category Feature Overview in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.运维指南": {
-    "message": "Operation and Maintenance Guide",
-    "description": "The label for category 运维指南 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Operation and Maintenance": {
+    "message": "Operation and Maintenance",
+    "description": "The label for category Operation and Maintenance in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.发布历史": {
+  "sidebar.tutorialSidebar.category.Release History": {
     "message": "Release History",
-    "description": "The label for category 发布历史 in sidebar tutorialSidebar"
+    "description": "The label for category Release History in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.版本说明": {
-    "message": "Version Description",
-    "description": "The label for category 版本说明 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Release Notes": {
+    "message": "Release Notes",
+    "description": "The label for category Release Notes in sidebar tutorialSidebar"
   }
 }

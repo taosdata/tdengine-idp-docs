@@ -578,5 +578,35 @@
   },
   "关于": {
     "message": "About"
+  },
+  "feedback.contactTitle": {
+    "message": "Contact TDengine"
+  },
+  "feedback.title": {
+    "message": "Support & Feedback"
+  },
+  "feedback.desc": {
+    "message": "Your feedback and bug reports for TDengine AI and its documentation are highly appreciated."
+  },
+  "feedback.editDoc": {
+    "message": "Edit this page"
+  },
+  "feedback.reportIssue": {
+    "message": "Submit an issue"
+  },
+  "feedback.getService": {
+    "message": "Contact us"
+  },
+  "TDengine Database 技术交流群": {
+    "message": "TDengine Database 技术交流群"
+  },
+  "联系 TDengine": {
+    "message": "Contact us"
+  },
+  "TDengine Enterprise": {
+    "message": "TDengine Enterprise"
+  },
+  "TDengine Cloud": {
+    "message": "TDengine Cloud"
   }
 }
