@@ -233,7 +233,7 @@ class TopRight extends React.Component {
 }
 const BottomLeft = () => (
   <div className={styles.bottomLeft}>
-    <div>© 2017-2024 <Translate>涛思数据</Translate></div>
+    <div>© 2017-{new Date().getFullYear()} <Translate>涛思数据</Translate></div>
     <div><Translate>京公网安备 11010502047618号</Translate></div>
     <div><a href="https://beian.miit.gov.cn/" target="_blank"><Translate>京ICP备17069529号-1</Translate></a></div>
     <div><Translate>新版时序数据库 TDengine v3.0</Translate></div>
