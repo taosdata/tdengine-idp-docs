@@ -9,7 +9,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 function getEditUrl(metadata, locale) {
   // 你的仓库根路径
-  const repoRoot = 'https://github.com/taosdata/tdasset-docs/tree/main';
+  const repoRoot = 'https://github.com/taosdata/tdasset-docs/edit/main';
   const source = metadata.source.replace(/^@site\//, '');
   return `${repoRoot}/${source}`;
 }
