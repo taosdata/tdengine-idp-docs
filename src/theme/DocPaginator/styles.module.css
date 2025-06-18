@@ -5,11 +5,25 @@
  * LICENSE file in the root directory of this source tree.
  */
 .feedback {
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
   border-radius: 5px;
   padding: 25px;
-  background-color: #f5f5f5;
-  box-shadow: 1px 2px 5px #cfd2e6;
-  margin-top: 20px;
+  margin: 32px 0 0 0;
+  border: 1px solid #e0e0e0; /* 更低调的灰色 */
+  box-shadow: 0 2px 8px 0 rgba(60, 72, 88, 0.08); /* 更柔和的阴影 */
+  transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+}
+
+[data-theme='light'] .feedback {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px 0 rgba(60, 72, 88, 0.08);
+}
+
+[data-theme='dark'] .feedback {
+  background: var(--ifm-background-surface-color, #222);
+  border: 1px solid #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.24);
 }
 
 h4 {

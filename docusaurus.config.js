@@ -125,11 +125,11 @@ const config = {
                   },  
                 ],         
               },
-              {
-                  to: "https://www.taosdata.com/contactus",
-                  label: "联系我们",
-                  position: "right",
-              },
+              // {
+              //     to: "https://www.taosdata.com/contactus",
+              //     label: "联系我们",
+              //     position: "right",
+              // },
               {
                   type: "search",
                   position: "right",

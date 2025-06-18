@@ -10,17 +10,21 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 function getEditUrl(metadata, locale) {
   // 你的仓库根路径
   const repoRoot = 'https://github.com/taosdata/tdasset-docs/tree/main';
-  // 英文文档在 i18n/en/docusaurus-plugin-content-docs/current/
-  if (locale === 'en') {
-    return `${repoRoot}/i18n/en/docusaurus-plugin-content-docs/current/${metadata.source}`;
-  }
-  // 中文文档在 docs/
-  return `${repoRoot}/docs/${metadata.source}`;
+  const source = metadata.source.replace(/^@site\//, '');
+  return `${repoRoot}/${source}`;
 }
 
 function FeedBack({editUrl}) {
   const [showPopup, setShowPopup] = React.useState(false);
   const [data, setData] = React.useState({title: "", str: ""});
+  const {i18n} = useDocusaurusContext();
+  const locale = i18n.currentLocale;
+
+  // 根据语言切换联系链接
+  const contactUrl =
+    locale === 'en'
+      ? 'https://tdengine.com/contact/'
+      : 'https://www.taosdata.com/contactus';
 
   function getServices(e) {
     e.preventDefault();
@@ -55,7 +59,12 @@ function FeedBack({editUrl}) {
           <Translate id="feedback.reportIssue">反馈问题</Translate>
         </a>
         &nbsp;|&nbsp;
-        <a href="#!" className="advice" onClick={getServices}>
+        <a
+          href={contactUrl}
+          target="_blank"
+          rel="noopener"
+          className="advice"
+        >
           <Translate id="feedback.getService">获取专业服务</Translate>
         </a>
         <Popup
