@@ -5,14 +5,14 @@ import TabItem from '@theme/TabItem';
 
 ## 先决条件
 
-TDengine AI 的运行需要满足以下先决条件：
+TDengine IDP 的运行需要满足以下先决条件：
 1. Python: 3.10-3.12 版本
 1. Java: 21 及以上版本
 1. glibc: 2.25 及以上版本
 
 ## 安装
 
-请根据您的操作系统类型，选择合适的安装方式，安装 TDengine AI。以下是不同安装方式的详细步骤：
+请根据您的操作系统类型，选择合适的安装方式，安装 TDengine IDP。以下是不同安装方式的详细步骤：
 
 <Tabs>
 
@@ -20,11 +20,11 @@ TDengine AI 的运行需要满足以下先决条件：
 1. 从[版本列表](../../release-history/version)页面下载获得最新的 `.tar.gz` 安装包
 1. 执行以下命令，解压并安装，请将 `<version>` 替换为实际版本号
    ```bash
-   tar zxvf tdengine-ai-enterprise-<version>-linux.tar.gz
-   cd tdengine-ai-enterprise-<version>
+   tar zxvf tdengine-idp-enterprise-<version>-linux.tar.gz
+   cd tdengine-idp-enterprise-<version>
    ./install.sh
    ```
-1. TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`, 安装成功后，可以看到终端展示 "TDengine AI has been installed successfully!".
+1. TDengine IDP 的默认安装路径为 `/usr/local/taos/idp`, 安装成功后，可以看到终端展示 "TDengine IDP has been installed successfully!".
 1. 可以通过以下命令查看更多安装选项
    ```bash
    ./install.sh -h
@@ -35,30 +35,30 @@ TDengine AI 的运行需要满足以下先决条件：
 1. 从[版本列表](../../release-history/version)页面下载获得最新的 `.deb` 安装包
 1. 执行以下命令，安装 deb 包，请将 `<version>` 替换为实际版本号
    ```bash
-   dpkg -i tdengine-ai-enterprise-<version>-linux.deb
+   dpkg -i tdengine-idp-enterprise-<version>-linux.deb
    ```
-1. TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`, 安装成功后，可以看到终端展示 "TDengine AI has been installed successfully!".
+1. TDengine IDP 的默认安装路径为 `/usr/local/taos/idp`, 安装成功后，可以看到终端展示 "TDengine IDP has been installed successfully!".
 </TabItem>
 
 <TabItem label="rpm 安装" value="rpm">
 1. 从[版本列表](../../release-history/version)页面下载获得最新的 `.rpm` 安装包
 1. 执行以下命令，安装 rpm 包，请将 `<version>` 替换为实际版本号
    ```bash
-   rpm -i tdengine-ai-enterprise-<version>-linux.rpm
+   rpm -i tdengine-idp-enterprise-<version>-linux.rpm
    ```
-1. TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`, 安装成功后，可以看到终端展示 "TDengine AI has been installed successfully!".
+1. TDengine IDP 的默认安装路径为 `/usr/local/taos/idp`, 安装成功后，可以看到终端展示 "TDengine IDP has been installed successfully!".
 </TabItem>
 
 <TabItem label="macOS 安装" value="macos">
 1. 从 [版本列表](../../release-history/version) 页面下载获得最新的 macOS 安装包 (.pkg)
 1. 双击安装包，按照提示完成安装
-1. TDengine AI 的默认安装路径为 `/usr/local/tdengine-ai`
+1. TDengine IDP 的默认安装路径为 `/usr/local/taos/idp`
 </TabItem>
 
 <TabItem label="Windows 安装" value="windows">
 1. 从 [版本列表](../../release-history/version) 页面下载获得最新的 Windows 安装包 (.exe)
 2. 双击安装包，按照提示完成安装
-3. 安装完成后，TDengine AI 的默认安装路径为 `C:\tdengine-ai`
+3. 安装完成后，TDengine IDP 的默认安装路径为 `C:\tdengine-idp`
 </TabItem>
 
 </Tabs>
@@ -68,95 +68,95 @@ TDengine AI 的运行需要满足以下先决条件：
 <Tabs>
 
 <TabItem label="Linux 系统" value="linux">
-安装完成后，您可以使用 `svc-tdengine-ai` 命令来启动 TDengine AI 的服务进程。
+安装完成后，您可以使用 `svc-tdengine-idp` 命令来启动 TDengine IDP 的服务进程。
 ```bash
-sudo svc-tdengine-ai start
+sudo svc-tdengine-idp start
 ```
 
-您也可以用 `svc-tdengine-ai` 的其他命令来查看服务状态、停止服务等操作，例如：
+您也可以用 `svc-tdengine-idp` 的其他命令来查看服务状态、停止服务等操作，例如：
 ```bash
-sudo svc-tdengine-ai status # 查看服务状态
-sudo svc-tdengine-ai stop   # 停止服务
+sudo svc-tdengine-idp status # 查看服务状态
+sudo svc-tdengine-idp stop   # 停止服务
 ```
 
-您还可以直接使用 `systemctl` 命令，手动管理这些服务，以 `tdengine-ai` 服务为例：
+您还可以直接使用 `systemctl` 命令，手动管理这些服务，以 `tdengine-idp` 服务为例：
 ```bash
-sudo systemctl start tdengine-ai
-sudo systemctl stop tdengine-ai
-sudo systemctl status tdengine-ai
-sudo systemctl restart tdengine-ai
+sudo systemctl start tdengine-idp
+sudo systemctl stop tdengine-idp
+sudo systemctl status tdengine-idp
+sudo systemctl restart tdengine-idp
 ```
 
 :::info
-- 执行 `systemctl` 和 `svc-tdengine-ai` 命令时，需要 _root_ 权限，对于非 _root_ 用户，请在命令前添加 `sudo`。
+- 执行 `systemctl` 和 `svc-tdengine-idp` 命令时，需要 _root_ 权限，对于非 _root_ 用户，请在命令前添加 `sudo`。
 :::
 </TabItem>
 
 <TabItem label="macOS 系统" value="macos">
-安装完成后，您可以使用 `svc-tdengine-ai` 命令来启动 TDengine AI 的服务进程。
+安装完成后，您可以使用 `svc-tdengine-idp` 命令来启动 TDengine IDP 的服务进程。
 
 ```bash
-sudo svc-tdengine-ai start
+sudo svc-tdengine-idp start
 ```
 
-您也可以用 `svc-tdengine-ai` 的其他命令来查看服务状态、停止服务等操作：
+您也可以用 `svc-tdengine-idp` 的其他命令来查看服务状态、停止服务等操作：
 ```bash
-sudo svc-tdengine-ai status
-sudo svc-tdengine-ai stop
+sudo svc-tdengine-idp status
+sudo svc-tdengine-idp stop
 ```
 
-如果想手动管理这些服务，可以使用以下命令，以下示例使用 `tdengine-ai`:
+如果想手动管理这些服务，可以使用以下命令，以下示例使用 `tdengine-idp`:
 ```bash
-sudo launchctl start com.taosdata.tdengine-ai
-sudo launchctl stop com.taosdata.tdengine-ai
-sudo launchctl list | grep tdengine-ai
-sudo launchctl print system/com.taosdata.tdengine-ai
+sudo launchctl start com.taosdata.tdengine-idp
+sudo launchctl stop com.taosdata.tdengine-idp
+sudo launchctl list | grep tdengine-idp
+sudo launchctl print system/com.taosdata.tdengine-idp
 ```
 
 :::info
-- `launchctl` 命令管理 `com.taosdata.tdengine-ai` 需要管理员权限，务必在前面加 `sudo` 来增强安全性。
-- `sudo launchctl list | grep tdengine-ai` 指令返回的第一列是 `tdengine-ai` 启动的 java 程序的 PID, 若为 `-` 则说明 tdengine-ai 服务未运行。
-- 如果服务异常，请查看系统日志 `launchd.log` 或者 `/usr/local/tdengine-ai/logs` 目录下的日志，获取更多信息。
+- `launchctl` 命令管理 `com.taosdata.tdengine-idp` 需要管理员权限，务必在前面加 `sudo` 来增强安全性。
+- `sudo launchctl list | grep tdengine-idp` 指令返回的第一列是 `tdengine-idp` 启动的 java 程序的 PID, 若为 `-` 则说明 tdengine-idp 服务未运行。
+- 如果服务异常，请查看系统日志 `launchd.log` 或者 `/usr/local/taos/idp/logs` 目录下的日志，获取更多信息。
 :::
 </TabItem>
 
 <TabItem label="Windows 系统" value="windows">
-安装后，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令，或在桌面双击 `TDengine AI` 图标来启动 TDengine AI 服务进程。
+安装后，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令，或在桌面双击 `TDengine IDP` 图标来启动 TDengine IDP 服务进程。
 ```bat
-sc start tdengine-ai
+sc start tdengine-idp
 ```
 
-如果想手动管理这些服务，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令，以 `tdengine-ai` 服务为例：
+如果想手动管理这些服务，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令，以 `tdengine-idp` 服务为例：
 ```bat
-sc start tdengine-ai
-sc stop tdengine-ai
-sc query tdengine-ai
+sc start tdengine-idp
+sc stop tdengine-idp
+sc query tdengine-idp
 ```
 </TabItem>
 
 </Tabs>
 
-TDengine AI 正常启动后，包括以下三个服务：
-- `tdengine-ai-h2`：用于存储 TDengine AI 的元数据和配置。
-- `tdengine-ai-chat`：用于处理 AI 相关的任务和分析。
-- `tdengine-ai`：核心服务，负责管理和提供数据访问。
+TDengine IDP 正常启动后，包括以下三个服务：
+- `tdengine-idp-h2`：用于存储 TDengine IDP 的元数据和配置。
+- `tdengine-idp-chat`：用于处理 AI 相关的任务和分析。
+- `tdengine-idp`：核心服务，负责管理和提供数据访问。
 
 ## 卸载
 
-1. 在 Linux/macOS 系统，可以通过如下命令卸载 TDengine AI 服务：
+1. 在 Linux/macOS 系统，可以通过如下命令卸载 TDengine IDP 服务：
 ```bash
-rmtdengine-ai -e yes
+rmtdengine-idp -e yes
 ```
 如果期望保留数据、日志和配置等，可以执行：
 ```bash
-rmtdengine-ai -e no
+rmtdengine-idp -e no
 ```
 2. 在 Linux 系统，如果是通过 rpm 方式安装，请使用如下命令卸载：
 ```bash
-rpm -e tdengine-ai
+rpm -e tdengine-idp
 ```
 3. 在 Linux 系统，如果是通过 deb 方式安装，请使用如下命令卸载：
 ```
-dpkg -r tdengine-ai
+dpkg -r tdengine-idp
 ```
-4. 在 Windows 系统，可以在进入安装目录 `C:\tdengine-ai` 后，双击卸载程序 (unins000.exe) 进行卸载。
+4. 在 Windows 系统，可以在进入安装目录 `C:\tdengine-idp` 后，双击卸载程序 (unins000.exe) 进行卸载。
