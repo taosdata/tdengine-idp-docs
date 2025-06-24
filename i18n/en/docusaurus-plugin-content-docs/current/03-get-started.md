@@ -1,61 +1,61 @@
 # Quick Start
 
-TDengine Asset Intelligence fully leverages large AI models to automatically sense application scenarios based on collected data, automatically generate real-time analytics, reports, and visualization dashboards, greatly lowering the usage threshold. It helps users discover many novel reports and dashboards, significantly reducing the need for and reliance on data analysts and process engineers, shortening the distance from raw data to business insights and decisions, and improving data consumption efficiency.
+TDengine Industrial Data Platform fully leverages large AI models to automatically sense application scenarios based on collected data, automatically generate real-time analytics, reports, and visualization dashboards, greatly lowering the usage threshold. It helps users discover many novel reports and dashboards, significantly reducing the need for and reliance on data analysts and process engineers, shortening the distance from raw data to business insights and decisions, and improving data consumption efficiency.
 
 This section will guide you through the complete process from downloading, installing, and starting the service to completing configuration and analysis operations via the web interface.
 
 :::info
-TDengine AI not only provides containerized deployment and installation packages, but also offers a fully managed TDengine AI Cloud service. You can easily experience the data management services provided by TDengine AI with just a few registration steps. Welcome to try it out on the TDengine AI Cloud registration page.
+TDengine IDP not only provides containerized deployment and installation packages, but also offers a fully managed TDengine IDP Cloud service. You can easily experience the data management services provided by TDengine IDP with just a few registration steps. Welcome to try it out on the TDengine IDP Cloud registration page.
 :::
 
 ## Quick Installation
 
-TDengine AI supports multiple installation and deployment methods, and you can experience its powerful features and convenience on different operating systems and architectures. For supported operating systems and architectures, see [Installation Package Introduction](./operation/installation/installer). Below, we introduce two common installation and deployment methods.
+TDengine IDP supports multiple installation and deployment methods, and you can experience its powerful features and convenience on different operating systems and architectures. For supported operating systems and architectures, see [Installation Package Introduction](./operation/installation/installer). Below, we introduce two common installation and deployment methods.
 
 ### Running with Docker Container
 
-TDengine AI provides a Docker image, allowing users to quickly start the TDengine AI service using Docker. The steps are as follows:
+TDengine IDP provides a Docker image, allowing users to quickly start the TDengine IDP service using Docker. The steps are as follows:
 
-1. Clone the [tdengine-ai-deployment](https://github.com/taosdata/tdengine-ai-deployment) repository
+1. Clone the [tdengine-idp-deployment](https://github.com/taosdata/tdengine-idp-deployment) repository
    ```bash
-   git clone https://github.com/taosdata/tdengine-ai-deployment.git
+   git clone https://github.com/taosdata/tdengine-idp-deployment.git
    ```
-2. Use Docker Compose to start TDengine AI
+2. Use Docker Compose to start TDengine IDP
    ```bash
-   cd tdengine-ai-deployment/docker
+   cd tdengine-idp-deployment/docker
    docker compose up -d
    ```
 
-This command will automatically pull the required images (if not present locally) and start **TDengine AI service and TDengine TSDB service** in the background. By default, the TDengine AI service will start on port 6042 of the host: [http://localhost:6042](http://localhost:6042)
+This command will automatically pull the required images (if not present locally) and start **TDengine IDP service and TDengine TSDB service** in the background. By default, the TDengine IDP service will start on port 6042 of the host: [http://localhost:6042](http://localhost:6042)
 :::tip
 To change the port, edit the `ports` configuration in the `docker-compose.yml` file.
 :::
 
 ### Running with Installation Package
 
-TDengine AI provides installation packages for multiple platforms. The following steps use Linux as an example to demonstrate how to download and install TDengine AI.
+TDengine IDP provides installation packages for multiple platforms. The following steps use Linux as an example to demonstrate how to download and install TDengine IDP.
 1. Go to the [Version List](./release-history/version) page
 2. Select the latest `.tar.gz` installation package and click the download link
 3. Unzip and execute the installation script to complete the installation (replace `<version>` with the actual version number)
    ```bash
-   tar zxvf tdengine-ai-enterprise-<version>-linux.tar.gz 
-   cd tdengine-ai-enterprise-<version>
+   tar zxvf tdengine-idp-enterprise-<version>-linux.tar.gz 
+   cd tdengine-idp-enterprise-<version>
    ./install.sh
    ```
-4. After installation, run the following command to start the TDengine AI service:
+4. After installation, run the following command to start the TDengine IDP service:
    ```bash
-   svc-tdengine-ai start
+   svc-tdengine-idp start
    ```
-At this point, the TDengine AI service has started on port 6042 of the host: [http://localhost:6042](http://localhost:6042).
+At this point, the TDengine IDP service has started on port 6042 of the host: [http://localhost:6042](http://localhost:6042).
 
 ## Quick Start
 
-In TDengine AI, you can quickly experience features such as data import, element browsing, and AI panel generation through the web interface.
+In TDengine IDP, you can quickly experience features such as data import, element browsing, and AI panel generation through the web interface.
 
 :::tip
 Preparation
 
-1. In this demo, we will use TDengine TSDB as the data source for TDengine AI;
+1. In this demo, we will use TDengine TSDB as the data source for TDengine IDP;
 2. If you are running with Docker, make sure a TDengine TSDB service is already running in your environment;
 3. If you are using the installation package, you need to install and deploy the TDengine TSDB service. For details, see: [Quick Start with Installation Package for TDengine](https://docs.taosdata.com/get-started/package/).
 
@@ -63,7 +63,7 @@ Preparation
 
 ### Create a Connection
 
-1. Enter [http://localhost:6042](http://localhost:6042) in your browser to access the TDengine AI service. The default username and password are: `jhtao@taosdata.com/123456`;
+1. Enter [http://localhost:6042](http://localhost:6042) in your browser to access the TDengine IDP service. The default username and password are: `jhtao@taosdata.com/123456`;
 2. After logging in, you will first enter the element browser page. Once the data is imported, you can use AI to automatically generate data panels here. Next, let's create a data connection;
 3. Hover your mouse over the user avatar in the upper right corner of the page to open the dropdown menu, then select "Admin Console";
 4. On the admin console page, select "Connections" from the menu on the left, then click the "+" button to add a new connection;
@@ -80,7 +80,7 @@ Preparation
 
 ### Import Sample Data
 
-TDengine AI provides sample data for the following 7 scenarios:
+TDengine IDP provides sample data for the following 7 scenarios:
 - Utilities: Smart electricity meters, smart water meters
 - Cigarette processing: Cigarette factory processing
 - Vehicle management: Logistics company vehicle management
@@ -107,7 +107,7 @@ After importing the data, you can go to the "Element Browser" page to view the i
 
 ### Experience AI Panel Generation
 
-One of the most powerful features of TDengine AI is the automatic generation of data panels by AI:
+One of the most powerful features of TDengine IDP is the automatic generation of data panels by AI:
 1. Still select the element `Beijing-Chaoyang-Sanyuanqiao Street-emf-21`, and you will be automatically redirected to the panel page of this element, where AI panel generation will automatically start. Each time, AI will recommend at least 5 panels. If you are not satisfied with the recommended panels, you can tell AI your desired template in the dialog box below;
 [![Panels](/docs-img/get-started/panels.png)](/docs-img/get-started/panels.png)
 2. In the AI-recommended panels, select the first recommended panel "em-21 average current and voltage per day for the past week, line chart", and click Generate;
@@ -117,8 +117,8 @@ One of the most powerful features of TDengine AI is the automatic generation of 
 
 ## Quick Experience via Cloud Service
 
-TDengine AI provides a fully managed cloud service version, allowing users to quickly experience the powerful features of TDengine AI through the cloud, without local installation and configuration.
+TDengine IDP provides a fully managed cloud service version, allowing users to quickly experience the powerful features of TDengine IDP through the cloud, without local installation and configuration.
 
 ## Next Steps
 
-At this point, you have completed the basic installation and startup of TDengine AI, and experienced element import and AI auto panel generation with sample data. You can continue to explore features such as [Dashboard](feature/dashboard) and [Analysis](feature/analysis).
+At this point, you have completed the basic installation and startup of TDengine IDP, and experienced element import and AI auto panel generation with sample data. You can continue to explore features such as [Dashboard](feature/dashboard) and [Analysis](feature/analysis).

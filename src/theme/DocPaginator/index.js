@@ -39,7 +39,7 @@ function FeedBack({editUrl}) {
       </h4>
       <p>
         <Translate id="feedback.desc">
-          欢迎您对本文档或其他任何 TDengine AI 的错误进行修改或报告。
+          欢迎您对本文档或其他任何 TDengine IDP 的错误进行修改或报告。
         </Translate>
       </p>
       <div>
@@ -52,7 +52,7 @@ function FeedBack({editUrl}) {
           </span>
         )}
         <a
-          href="https://github.com/taosdata/tdengine-ai-docs/issues/new/choose"
+          href="https://github.com/taosdata/tdengine-idp-docs/issues/new/choose"
           target="_blank"
           rel="noopener"
         >

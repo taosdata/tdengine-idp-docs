@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TDengine AI 文档 | 涛思数据',
+  title: 'TDengine IDP 文档 | 涛思数据',
   tagline: '工业互联网全量设备的元数据可视化管理系统',
   favicon: 'img/tdengine.ico',
 
@@ -74,11 +74,11 @@ const config = {
           // This would become <meta name="keywords" content="..."> in the generated HTML
           {
               name: "keywords",
-              content: "TDengine AI, asset",
+              content: "TDengine IDP, asset",
           },
           {
               name: "description",
-              content: "TDengine Asset Intelligence（TDengine AI）是一物联网、工业数据管理系统，它通过经典的树状结构组织传感器、设备采集的数据，实现数据的语境化、标准化、并提供实时分析、可视化、事件管理与报警等功能，旨在帮助企业从运营数据中挖掘出商业价值",
+              content: "TDengine Industrial Data Platform（TDengine IDP）是一物联网、工业数据管理系统，它通过经典的树状结构组织传感器、设备采集的数据，实现数据的语境化、标准化、并提供实时分析、可视化、事件管理与报警等功能，旨在帮助企业从运营数据中挖掘出商业价值",
           },
           {
               name: "baidu-site-verification",
@@ -106,7 +106,7 @@ const config = {
                 rel: "noopener noreferrer", // 安全性
               },              
               {
-                href: "https://github.com/taosdata/tdengine-ai-docs/issues/new/choose",
+                href: "https://github.com/taosdata/tdengine-idp-docs/issues/new/choose",
                 label: "反馈问题",
                 position: "right",
               },
