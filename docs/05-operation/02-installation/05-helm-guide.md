@@ -9,7 +9,7 @@ Helm 是 Kubernetes 的包管理工具，用于简化 Kubernetes 应用程序的
 
 ## 安装 Helm
 
-如未安装 Helm， 可执行以下命令安装：
+如未安装 Helm，可执行以下命令安装：
 ```bash
 curl -fsSL -o get_helm.sh \
     https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
