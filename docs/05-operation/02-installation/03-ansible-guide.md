@@ -51,7 +51,7 @@ ansible_ssh_pass={{ vault_ssh_password }}
 ```
 
 - `[tdengine_idp_servers]` 和 `[tdengine_servers]`：分别定义 TDengine IDP 服务和 TDengine TSDB 服务的主机组。
-  `server1` 和 `server2` 为主机别名，`ansible_host` 指定实际 IP。
+ `idp_server1`、`idp_server2`、`tsdb_server1`、`tsdb_server2` 为主机别名，`ansible_host` 指定实际 IP。
 
 - `[tdengine_idp_servers:vars]` 和 `[tdengine_servers:vars]`：为主机组定义变量。
   `ansible_user` 和 `ansible_ssh_pass` 可通过加密变量（如 `group_vars/public.yml` ）引用，提升安全性。
