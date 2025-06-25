@@ -25,24 +25,31 @@ cd tdengine-idp-deployment/helm
 
 ## 部署 TDengine IDP 服务
 
-### 1. **使用默认配置安装**
-  ```bash
-  cd tdengine-idp-deployment/helm
-  helm install tdengine-idp .
-  ```
+:::info
 
-### 2. **自定义参数安装**
+> 如需部署 TDengine TSDB 服务，请参考官方文档：  
+> [使用 Helm 部署 TDengine 集群](https://docs.taosdata.com/operation/deployment/#%E4%BD%BF%E7%94%A8-helm-%E9%83%A8%E7%BD%B2-tdengine-%E9%9B%86%E7%BE%A4)
 
-  如需自定义参数，可通过自定义 values 文件后安装：
-  ```bash
-  helm install tdengine-idp . -f my-values.yaml
-  ```
-  或通过命令行覆盖参数：
-  ```bash
-  helm install tdengine-idp . --set key=value
-  ```
+:::
 
-  下表列出了部署 TDengine IDP 时常用的 Helm 参数。您可以通过 `--set key=value` 或编辑 `values.yaml` 文件进行自定义。
+### 1. 使用默认配置安装
+```bash
+cd tdengine-idp-deployment/helm
+helm install tdengine-idp .
+```
+
+### 2. 自定义参数安装
+
+如需自定义参数，可通过自定义 values 文件后安装：
+```bash
+helm install tdengine-idp . -f my-values.yaml
+```
+或通过命令行覆盖参数：
+```bash
+helm install tdengine-idp . --set key=value
+```
+
+下表列出了部署 TDengine IDP 时常用的 Helm 参数。您可以通过 `--set key=value` 或编辑 `values.yaml` 文件进行自定义。
 
 | 参数                      | 描述                                       | 默认值                  |
 |--------------------------|-------------------------------------------|------------------------|
@@ -60,7 +67,7 @@ cd tdengine-idp-deployment/helm
 | `tolerations`            | Pod 分配的容忍设置                         | `[]`                   |
 | `affinity`               | Pod 分配的亲和性规则                       | `{}`                   |
 
-### 3. **访问服务**
+### 3. 访问服务
 
 - **ClusterIP（默认）：**
   使用端口转发访问：
@@ -80,7 +87,7 @@ cd tdengine-idp-deployment/helm
 - **LoadBalancer：**
   通过云服务商分配的外部 IP 访问。
 
-### 4. **持久化存储**
+### 4. 持久化存储
 
 如需启用持久化，在 `values.yaml` 中设置：
 ```yaml
@@ -90,7 +97,7 @@ persistence:
 ```
 确保集群已配置 PersistentVolume 供应。
 
-### 5. **卸载与清理**
+### 5. 卸载与清理
 
 如需删除所有资源，执行：
 ```bash

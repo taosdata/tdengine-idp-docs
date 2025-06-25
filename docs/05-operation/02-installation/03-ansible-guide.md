@@ -35,17 +35,28 @@ git clone https://github.com/taosdata/tdengine-idp-deployment.git
 ```ini
 [tdengine_idp_servers]
 server1 ansible_host=192.168.1.10
-server2 ansible_host=192.168.1.20
+server2 ansible_host=192.168.2.20
 
 [tdengine_idp_servers:vars]
 ansible_user={{ ansible_ssh_user }}
 ansible_ssh_pass={{ vault_ssh_password }}
+
+[tdengine_servers]
+server1 ansible_host=192.168.1.10
+server2 ansible_host=192.168.2.20
+
+[tdengine_servers:vars]
+ansible_user={{ ansible_ssh_user }}
+ansible_ssh_pass={{ vault_ssh_password }}
 ```
 
-- `[tdengine_idp_servers]`：定义服务器组，`server1` 和 `server2` 为 Playbook 中设置的主机别名，`ansible_host` 指定实际 IP。
-- `[tdengine_idp_servers:vars]`：为该组定义变量，`ansible_user` 和 `ansible_ssh_pass` 可通过加密变量引用（如 `group_vars/public.yml` 中定义）。
+- `[tdengine_idp_servers]` 和 `[tdengine_servers]`：分别定义 TDengine IDP 服务和 TDengine TSDB 服务的主机组。
+  `server1` 和 `server2` 为主机别名，`ansible_host` 指定实际 IP。
 
-请根据实际环境修改服务器地址和连接参数。
+- `[tdengine_idp_servers:vars]` 和 `[tdengine_servers:vars]`：为主机组定义变量。
+  `ansible_user` 和 `ansible_ssh_pass` 可通过加密变量（如 `group_vars/public.yml` ）引用，提升安全性。
+  
+- 请根据实际环境修改服务器地址和连接参数。
 
 ### 3. 配置服务器密码
 
@@ -66,12 +77,24 @@ ansible-vault edit inventory/group_vars/public.yml
 
 :::
 
-### 4. 执行部署
+### 4. 部署 TDengine TSDB 与 IDP 服务
 
-运行以下命令开始部署：
+运行以下命令，目标服务器上仅安装并部署 TDengine IDP 服务：
 
 ```bash
 ansible-playbook playbooks/tdengine-idp.yml --ask-vault-pass
 ```
 
-当系统提示输入 `Vault password` 时，请输入 Vault 密码：`taosdata`. 执行成功后，目标服务器上就会安装了 TDengine IDP 服务。
+或运行以下命令，目标服务器上就会部署 TDengine TSDB 与 IDP 服务：
+
+```bash
+ansible-playbook playbooks/tdengine-idp.yml --ask-vault-pass -e deploy_tdengine=true
+```
+
+当系统提示输入 `Vault password` 时，请输入 Vault 密码：`taosdata`
+
+### 5. 访问服务
+
+默认情况下，TDengine IDP 服务监听主机的 6042 端口。可通过以下地址访问管理界面：
+
+- [http://ip:6042](http://ip:6042)
