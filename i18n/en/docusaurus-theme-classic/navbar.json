@@ -1,8 +1,4 @@
 {
-  "title": {
-    "message": "TDengine",
-    "description": "The title in the navbar"
-  },
   "item.label.博客": {
     "message": "Blog",
     "description": "Navbar item with label 博客"

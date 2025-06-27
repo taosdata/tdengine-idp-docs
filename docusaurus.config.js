@@ -88,14 +88,14 @@ const config = {
       colorMode: {
           defaultMode: "light",
           disableSwitch: false,
-          respectPrefersColorScheme: true,
+          respectPrefersColorScheme: false, // not respect user's system preference
       },
       navbar: {
           hideOnScroll: true,
-          title: "涛思数据",
+          title: "",
           logo: {
               alt: "",
-              src: "/img/logo.jpg",
+              src: "/img/site-logo.png",
           },
           items: [
               {
