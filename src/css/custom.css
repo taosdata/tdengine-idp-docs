@@ -13,24 +13,128 @@
   --ifm-color-primary-light: #488df2;
   --ifm-color-primary-lighter: #5596f3;
   --ifm-color-primary-lightest: #7daef6;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-secondary-dark: #d4d5d8;
+  --ifm-navbar-height: 100px;
+  --ifm-navbar-link-color: white;
+  --ifm-font-family-base: "Open Sans", Helvetica, "Hiragino Sans GB", sans-serif,
+    "Apple Color Emoji";
+  --ifm-navbar-item-padding-horizontal: 10px;
+  --white: #fefefe;
+  --ifm-font-color-base: #141414;
+  --docusaurus-highlighted-code-line-bg: rgb(178, 180, 186);
 }
 
+/* 探迹集客，隐藏默认图标 */
+.zSz_x {
+  display: none;
+}
+
+.navbar::before {
+  content: "";
+  background-image: url(/img/banner-bg.webp);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: inherit;
+}
+
+.navbar-sidebar__brand {
+  background-image: url(/img/banner-bg.webp);
+}
+
+.navbar__link {
+  color: var(--ifm-navbar-link-color);
+  font-weight: 300;
+  font-size: 17.6px;
+  line-height: 60px;
+  letter-spacing: 0;
+}
+
+.navbar__link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__link--active {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #2d7df0;
-  --ifm-color-primary-dark: #126dee;
-  --ifm-color-primary-darker: #1066e2;
-  --ifm-color-primary-darkest: #0d54ba;
-  --ifm-color-primary-light: #488df2;
-  --ifm-color-primary-lighter: #5596f3;
-  --ifm-color-primary-lightest: #7daef6;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+[data-theme="dark"] {
+  --ifm-color-primary: #84b3f5;
+  --ifm-color-primary-dark: #619df2;
+  --ifm-color-primary-darker: #5093f1;
+  --ifm-color-primary-darkest: #1b72ec;
+  --ifm-color-primary-light: #a7c9f8;
+  --ifm-color-primary-lighter: #b8d3f9;
+  --ifm-color-primary-lightest: #edf4fe;
+  --ifm-font-color-base: white;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .DocSearch {
+  /* --docsearch-primary-color: var(--ifm-color-primary); */
+  /* --docsearch-text-color: var(--ifm-font-color-base); */
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(94, 100, 112, 0.7);
+  /* Modal */
+  --docsearch-modal-background: var(--ifm-color-secondary-lighter);
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-color-secondary);
+  --docsearch-searchbox-focus-background: var(--ifm-color-white);
+  /* Hit */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-white);
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-color-white);
+}
+
+[data-theme="dark"] .DocSearch {
+  --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  /* Modal */
+  --docsearch-modal-background: var(--ifm-background-color);
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-background-color);
+  --docsearch-searchbox-focus-background: var(--ifm-color-black);
+  /* Hit */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-emphasis-100);
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-background-surface-color);
+  --docsearch-key-gradient: linear-gradient(-26.5deg,
+      var(--ifm-color-emphasis-200) 0%,
+      var(--ifm-color-emphasis-100) 100%);
 }
 
 body {
-  counter-reset: section
+  -webkit-font-smoothing: auto !important;
+}
+
+button.navbar__toggle {
+  color: white;
 }
 
 .markdown h1:first-child {
@@ -39,6 +143,173 @@ body {
 
 .markdown>h2 {
   --ifm-h2-font-size: 1.8rem !important;
+}
+
+.title_qBh7 {
+  --ifm-h1-font-size: 2.2rem;
+  margin-bottom: calc(var(--ifm-leading)*1.25);
+}
+
+header h1 {
+  --ifm-h1-font-size: 2.2rem !important;
+  margin-bottom: calc(var(--ifm-leading)*1.25);
+}
+
+@media (max-width: 996px) {
+  .navbar__toggle {
+    right: 10px;
+    float: right;
+    display: inherit;
+    position: absolute;
+  }
+}
+
+
+.navbar-sidebar {
+  left: 100%;
+}
+
+.navbar-sidebar--show .navbar-sidebar {
+  transform: translate3d(-100%, 0, 0) !important;
+}
+
+/* .navbar-sidebar__items--show-secondary {
+  transform: translate3d( calc((var(--ifm-navbar-sidebar-width)) * -1), 0, 0 );
+}
+.navbar-sidebar .second-menu-button {
+  display: none;
+}
+.navbar-sidebar__items {
+  display: flex;
+  height: calc(100% - var(--ifm-navbar-height));
+  transform: translateZ(0);
+  transition: transform var(--ifm-transition-fast) ease-in-out;
+} */
+
+
+.github {
+  color: #f0a808;
+}
+
+.github:hover {
+  color: #f0a808;
+}
+
+.center-table {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+@media (max-width:1270px) {
+  .center-table {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow-x: auto;
+  }
+
+  .center-table a {
+    margin: 0 auto;
+  }
+}
+
+.center-table th {
+  text-align: center;
+}
+
+.center-table td {
+  text-align: center;
+}
+
+.DocSearch-Footer {
+  /* flex-direction: row; */
+}
+
+.DocSearch-Button {
+  margin: 16px 0 !important;
+  border-radius: 0.25rem !important;
+  width: 55%;
+}
+
+.DocSearch-Button-Keys {
+  display: none !important;
+}
+
+.DocSearch-Logo {
+  display: none !important;
+}
+
+.Docsearch-Command-Tip {
+  font-size: 12px;
+  color: var(--docsearch-muted-color);
+  display: flex;
+}
+
+.DocSearch-Commands-Key {
+  box-shadow: none !important;
+  background: none !important;
+  border: 0.5px solid !important;
+}
+
+@media (max-width: 768px) {
+  .Docsearch-Command-Tip {
+    display: none;
+  }
+}
+
+code {
+  tab-size: 4;
+}
+
+article img {
+  text-align: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  width: 100%
+}
+
+article figure {
+  margin: 0
+}
+
+article figure img {
+  text-align: revert-layer;
+  padding-left: revert-layer;
+  padding-right: revert-layer;
+  width: revert-layer
+}
+
+@media (max-width: 996px) {
+  article img {
+    padding-left: 0;
+    padding-right: 0
+  }
+}
+
+/* 主题切换按钮变为白色 */
+.navbar .clean-btn[class*="toggleButton"] {
+  color: white !important;
+}
+
+/* 确保切换按钮图标在深色模式下也是白色 */
+html[data-theme='dark'] .navbar .clean-btn[class*="toggleButton"],
+html[data-theme='light'] .navbar .clean-btn[class*="toggleButton"] {
+  color: white !important;
+}
+
+/* 悬停效果保持白色但透明度变化 */
+.navbar .clean-btn[class*="toggleButton"]:hover {
+  opacity: 0.8;
+}
+
+body {
+  counter-reset: section
 }
 
 ul.theme-doc-sidebar-menu li {
@@ -89,4 +360,8 @@ ul.theme-doc-sidebar-menu ul ul ul ul a:before {
 ul.theme-doc-sidebar-menu ul ul ul ul ul a:before {
   counter-increment: detail3;
   content: counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(detail2) "." counter(detail3) "\00a0";
+}
+
+.navbarSearchTemp {
+  display: none
 }
