@@ -1,6 +1,6 @@
-# TDengine IDP Documentation
+# TDengine IDMP Documentation
 
-TDengine Industrial Data Platform ( TDengine IDP ) 是一款工业互联网全量设备的元数据可视化管理系统。本文档网站基于 [Docusaurus](https://docusaurus.io/) 构建，提供了 TDengine IDP 的使用指南、开发文档和相关资源。
+TDengine Industrial Data Management Platform ( TDengine IDMP ) 是一款工业互联网全量设备的元数据可视化管理系统。本文档网站基于 [Docusaurus](https://docusaurus.io/) 构建，提供了 TDengine IDMP 的使用指南、开发文档和相关资源。
 
 ---
 
@@ -71,12 +71,12 @@ pnpm  serve
 
 ## 贡献
 
-欢迎为 TDengine IDP 文档贡献内容！请提交 Pull Request 或报告问题。
+欢迎为 TDengine IDMP 文档贡献内容！请提交 Pull Request 或报告问题。
 
 ## 社区支持
 
-如果您在使用 TDengine IDP 或阅读文档时遇到问题，请通过以下方式联系我们：
-- [GitHub Issues](https://github.com/taosdata/tdengine-idp-docs/issues)
+如果您在使用 TDengine IDMP 或阅读文档时遇到问题，请通过以下方式联系我们：
+- [GitHub Issues](https://github.com/taosdata/tdengine-idmp-docs/issues)
 - [官方支持邮箱](mailto:it@taosdata.com)
 
 ## 许可证
