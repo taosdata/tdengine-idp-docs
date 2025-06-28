@@ -2,14 +2,14 @@
   "index_name": "tdasset_index",
   "start_urls": [
     {
-      "url": "https://idpdocs.tdengine.com/",
+      "url": "https://idmpdocs.tdengine.com/",
       "custom_fields": {
         "language": "zh-Hans",
         "docusaurus_tag": "docs-default-current"
       }
     },
     {
-      "url": "https://idpdocs.tdengine.com/en/",
+      "url": "https://idmpdocs.tdengine.com/en/",
       "custom_fields": {
         "language": "en",
         "docusaurus_tag": "docs-default-current"
@@ -17,8 +17,8 @@
     }
   ],
   "sitemap_urls": [
-    "https://idpdocs.tdengine.com/sitemap.xml",
-    "https://idpdocs.tdengine.com/en/sitemap.xml"
+    "https://idmpdocs.tdengine.com/sitemap.xml",
+    "https://idmpdocs.tdengine.com/en/sitemap.xml"
   ],
   "stop_urls": [],
   "selectors": {

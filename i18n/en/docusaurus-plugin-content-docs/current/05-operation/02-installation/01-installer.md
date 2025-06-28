@@ -2,7 +2,7 @@
 
 ## Operating Systems and Architectures
 
-Currently, TDengine IDP supports the following operating systems and architectures. If you wish to use it on other systems or architectures, please [contact us](https://www.taosdata.com/contactus) for support.
+Currently, TDengine IDMP supports the following operating systems and architectures. If you wish to use it on other systems or architectures, please [contact us](https://www.taosdata.com/contactus) for support.
 
 | Operating System | Supported Versions | x86_64 | arm64 |
 |---|---|:---:|:---:|
@@ -14,18 +14,18 @@ Currently, TDengine IDP supports the following operating systems and architectur
 
 ## Port Usage
 
-TDengine IDP uses the following ports by default. Please ensure these ports are not occupied by other applications.
+TDengine IDMP uses the following ports by default. Please ensure these ports are not occupied by other applications.
 
 | Port | Protocol | Description |
 |------|------|---------|
-| 6042 | HTTP | External port for TDengine IDP Web page and REST API, used for browser access and API calls. Please ensure your firewall allows access to this port. |
-| 8082 | HTTP | Internal port for TDengine IDP's internal H2 database service web page. |
-| 8777 | HTTP | Internal port for TDengine IDP's internal chat service API. |
-| 9092 | TCP  | Internal port for TDengine IDP's internal H2 database service. |
+| 6042 | HTTP | External port for TDengine IDMP Web page and REST API, used for browser access and API calls. Please ensure your firewall allows access to this port. |
+| 8082 | HTTP | Internal port for TDengine IDMP's internal H2 database service web page. |
+| 8777 | HTTP | Internal port for TDengine IDMP's internal chat service API. |
+| 9092 | TCP  | Internal port for TDengine IDMP's internal H2 database service. |
 
 ## Installation Directory
 
-After installation, TDengine IDP will, by default, create the following directories under `/usr/local/taos/idp` to store executables, configuration files, data files, and logs. The subdirectories are described as follows:
+After installation, TDengine IDMP will, by default, create the following directories under `/usr/local/taos/idmp` to store executables, configuration files, data files, and logs. The subdirectories are described as follows:
 
 | Directory   | Description |
 |-------------|-------------|
@@ -33,7 +33,7 @@ After installation, TDengine IDP will, by default, create the following director
 | backend     | Backend service files |
 | bin         | Scripts for starting/stopping services |
 | chat        | Chat service files |
-| config      | TDengine IDP service configuration files |
+| config      | TDengine IDMP service configuration files |
 | data        | Data files |
 | frontend    | Frontend service files |
 | lib         | Backend service dependency libraries |

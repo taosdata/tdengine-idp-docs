@@ -2,7 +2,7 @@
 
 ## 确认问题
 
-在使用 TDengine IDP 的过程中，如果遇到问题，请先关闭浏览器的缓存，再刷新页面后重试。具体操作如下所示：
+在使用 TDengine IDMP 的过程中，如果遇到问题，请先关闭浏览器的缓存，再刷新页面后重试。具体操作如下所示：
 
 1. 打开浏览器的开发者工具
 2. 切换到 "网络" 标签页
@@ -30,29 +30,29 @@
 
 ## 收集后端日志
 
-请按照以下步骤，收集 TDengine IDP 和 TDengine TSDB 的日志：
+请按照以下步骤，收集 TDengine IDMP 和 TDengine TSDB 的日志：
 
 ## 本地安装方式
 
-如果您是通过本地安装方式部署的 TDengine IDP，日志文件可以在以下位置找到：
+如果您是通过本地安装方式部署的 TDengine IDMP，日志文件可以在以下位置找到：
 
 | 组件       | 日志文件路径                            |
 |-----------|---------------------------------------|
-| TDengine IDP 日志 | /var/log/taos/tda.log          |
-| TDengine IDP 错误日志 | /var/log/taos/tda-error.log |
+| TDengine IDMP 日志 | /var/log/taos/tda.log          |
+| TDengine IDMP 错误日志 | /var/log/taos/tda-error.log |
 | TDengine TSDB 日志 | /var/log/taos/taosdlog.*      |
 
 ## 容器化部署方式
 
-如果您是通过容器化部署方式部署的 TDengine IDP，日志文件可以通过以下命令从容器中复制到本地：
+如果您是通过容器化部署方式部署的 TDengine IDMP，日志文件可以通过以下命令从容器中复制到本地：
 
 ```bash
-docker cp tdengine:/var/log/taos/taosdlog.*        ./
-docker cp tdengine-idp:/var/log/taos/tda.log       ./
-docker cp tdengine-idp:/var/log/taos/tda-error.log ./
+docker cp tdengine:/var/log/taos/taosdlog.*         ./
+docker cp tdengine-idmp:/var/log/taos/tda.log       ./
+docker cp tdengine-idmp:/var/log/taos/tda-error.log ./
 ```
 
 ## 提交问题
 
-我们使用 [Github Issues](https://github.com/taosdata/tdengine-idp-docs/issues/new/choose) 来跟踪和管理问题。请按照 Github Issues 的模板，提交以上收集到的信息，我们的支持团队会尽快回复并帮助您解决问题。
+我们使用 [Github Issues](https://github.com/taosdata/tdengine-idmp-docs/issues/new/choose) 来跟踪和管理问题。请按照 Github Issues 的模板，提交以上收集到的信息，我们的支持团队会尽快回复并帮助您解决问题。
 
