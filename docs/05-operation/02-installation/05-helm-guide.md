@@ -1,5 +1,5 @@
 # 使用 Helm 部署
-Helm 是 Kubernetes 的包管理工具，用于简化 Kubernetes 应用程序的部署、配置和管理。本指南介如何在 Kubernetes 上通过 Helm Chart 部署 TDengine IDP 服务。
+Helm 是 Kubernetes 的包管理工具，用于简化 Kubernetes 应用程序的部署、配置和管理。本指南介如何在 Kubernetes 上通过 Helm Chart 部署 TDengine IDMP 服务。
 
 ## 前置条件
 
@@ -17,13 +17,13 @@ chmod +x get_helm.sh
 ./get_helm.sh
 ```
 
-## 获取 TDengine IDP Chart
+## 获取 TDengine IDMP Chart
 ```bash
-git clone https://github.com/taosdata/tdengine-idp-deployment.git
-cd tdengine-idp-deployment/helm
+git clone https://github.com/taosdata/tdengine-idmp-deployment.git
+cd tdengine-idmp-deployment/helm
 ``` 
 
-## 部署 TDengine IDP 服务
+## 部署 TDengine IDMP 服务
 
 :::info
 
@@ -34,27 +34,27 @@ cd tdengine-idp-deployment/helm
 
 ### 1. 使用默认配置安装
 ```bash
-cd tdengine-idp-deployment/helm
-helm install tdengine-idp .
+cd tdengine-idmp-deployment/helm
+helm install tdengine-idmp .
 ```
 
 ### 2. 自定义参数安装
 
 如需自定义参数，可通过自定义 values 文件后安装：
 ```bash
-helm install tdengine-idp . -f my-values.yaml
+helm install tdengine-idmp . -f my-values.yaml
 ```
 或通过命令行覆盖参数：
 ```bash
-helm install tdengine-idp . --set key=value
+helm install tdengine-idmp . --set key=value
 ```
 
-下表列出了部署 TDengine IDP 时常用的 Helm 参数。您可以通过 `--set key=value` 或编辑 `values.yaml` 文件进行自定义。
+下表列出了部署 TDengine IDMP 时常用的 Helm 参数。您可以通过 `--set key=value` 或编辑 `values.yaml` 文件进行自定义。
 
 | 参数                      | 描述                                       | 默认值                  |
 |--------------------------|-------------------------------------------|------------------------|
 | `replicaCount`           | 副本数量                                   | `1`                    |
-| `image.repository`       | 镜像仓库                                   | `tdengine/tdengine-idp` |
+| `image.repository`       | 镜像仓库                                   | `tdengine/tdengine-idmp` |
 | `image.tag`              | 镜像标签                                   | `latest`               |
 | `image.pullPolicy`       | 镜像拉取策略                               | `IfNotPresent`         |
 | `service.type`           | Kubernetes 服务类型                        | `ClusterIP`            |
@@ -72,14 +72,14 @@ helm install tdengine-idp . --set key=value
 - **ClusterIP（默认）：**
   使用端口转发访问：
   ```bash
-  kubectl port-forward svc/tdengine-idp 6042:6042 --address 0.0.0.0
+  kubectl port-forward svc/tdengine-idmp 6042:6042 --address 0.0.0.0
   ```
   然后访问 [http://localhost:6042](http://localhost:6042)。
 
 - **NodePort：**
   1. 获取 NodePort 和节点 IP：
      ```bash
-     kubectl get svc tdengine-idp
+     kubectl get svc tdengine-idmp
      kubectl get nodes -o wide
      ```
   2. 通过 `http://<节点IP>:<NodePort>` 访问服务。
@@ -101,5 +101,5 @@ persistence:
 
 如需删除所有资源，执行：
 ```bash
-helm uninstall tdengine-idp
+helm uninstall tdengine-idmp
 ```
