@@ -25,11 +25,11 @@ body:
         - Copy request headers, response headers, response, stack trace (if available) and save them to a file
 
         Backend logs:
-        - When installed natively, logs can be found `/usr/local/taos/idp/logs`
+        - When installed natively, logs can be found `/usr/local/taos/idmp/logs`
         - When started with Docker, logs can be copied from container with following command:
           ```bash
-          docker cp tdengine-idp:/app/logs/tda.log ./tda.log
-          docker cp tdengine-idp:/app/logs/tda-error.log ./tda-error.log
+          docker cp tdengine-idmp:/app/logs/tda.log ./tda.log
+          docker cp tdengine-idmp:/app/logs/tda-error.log ./tda-error.log
           ```
 
   - type: textarea
@@ -37,7 +37,7 @@ body:
       label: Description
       description: A clear and concise description of what the bug is.
       value: |
-        - TDengine IDP version:
+        - TDengine IDMP version:
         - Browser version:
         - Operating system and version:
     validations:
