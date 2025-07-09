@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 快速体验
 
 TDengine Industrial Data Management Platform 充分利用 AI 大模型技术，能基于采集的数据自动感知应用场景，自动生成实时分析、报表与可视化看板，大幅降低了使用门槛，并能帮助用户发掘出诸多新颖的报表与看板，大幅降低了对数据分析师、流程工程师的需求和依赖，缩短了从原始数据到商业洞察、决策之间的距离，提升了数据消费的效率。
@@ -12,8 +15,8 @@ TDengine IDMP 不仅提供容器化部署、安装包部署，还提供全托管
 
 TDengine IDMP 支持多种安装、部署方式，在不同的操作系统和架构下，都能够体验其强大的功能带来的便利。对操作系统和架构的支持，详见[安装包介绍](./operation/installation/installer)。下面，我们将介绍两种常用的安装部署方式。
 
-### 通过 Docker 容器运行
-
+<Tabs>
+<TabItem label="使用容器" value="docker">
 TDengine IDMP 提供了 Docker 镜像，用户可以通过 Docker 快速启动 TDengine IDMP 服务。以下是启动步骤：
 
 1. 克隆 [tdengine-idmp-deployment](https://github.com/taosdata/tdengine-idmp-deployment) 仓库
@@ -25,7 +28,7 @@ TDengine IDMP 提供了 Docker 镜像，用户可以通过 Docker 快速启动 T
    cd tdengine-idmp-deployment/docker
    docker compose up -d
    ```
-   该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 **TDengine IDMP 服务和 TDengine TSDB 服务**。默认情况下，TDengine IDMP 服务会启动在主机的 6042 端口，可在浏览器输入以下地址访问：[http://ip:6042](http://ip:6042), 请将 `ip` 替换为您的主机 IP 地址，如果在本地运行，则可以直接访问 [http://localhost:6042](http://localhost:6042)。
+   该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 **TDengine IDMP 服务和 TDengine TSDB 服务**。默认情况下，TDengine IDMP 服务会启动在主机的 6042 端口，如需修改端口映射，可编辑 `docker-compose.yml` 文件中的 `ports` 配置。
 3. 当您体验完成后，您可以使用以下命令停止并删除容器：
    ```bash
    docker compose down
@@ -34,14 +37,11 @@ TDengine IDMP 提供了 Docker 镜像，用户可以通过 Docker 快速启动 T
    ```bash
    docker compose down -v
    ```
+</TabItem>
 
-:::tip
-如需修改端口映射，可编辑 `docker-compose.yml` 文件中的 `ports` 配置。
-:::
+<TabItem label="使用安装包" value="installer">
+TDengine IDMP 提供了多平台安装包，以下步骤将以 Linux 系统为例，演示如何下载、安装并启动 TDengine IDMP.
 
-### 通过安装包运行
-
-TDengine IDMP 提供了多平台安装包，以下步骤将以 Linux 系统为例，演示如何下载并安装 TDengine IDMP。
 1. 前往[版本列表](./release-history/version)页面
 2. 选择最新版本的 `.tar.gz` 安装包，点击下载链接
 3. 解压并执行安装脚本，完成安装（请将 `<version>` 替换为实际版本号）
@@ -54,7 +54,10 @@ TDengine IDMP 提供了多平台安装包，以下步骤将以 Linux 系统为�
    ```bash
    svc-tdengine-idmp start
    ```
-至此，TDengine IDMP 服务已在主机的 6042 端口启动。
+</TabItem>
+</Tabs>
+
+至此，TDengine IDMP 服务已成功启动。您可以在浏览器输入以下地址访问：[http://ip:6042](http://ip:6042), 请将 `ip` 替换为真实的主机 IP 地址，如果在本地运行，则可以直接访问 [http://localhost:6042](http://localhost:6042)。
 
 ## 快速体验
 
@@ -68,9 +71,8 @@ TDengine IDMP 提供了丰富的功能，下面将带您体验如何通过 Web �
 
 ### 激活
 
-1. TDengine IDMP 服务启动后，您可以在浏览器中以 IP 地址和端口号的方式访问，如果服务在本地启动，可以直接访问 [http://localhost:6042](http://localhost:6042)。
-2. 首次访问时，您需要激活服务。在填写“邮箱”和“组织”后，点击“获取激活码”按钮，系统会向您填写的邮箱发送一封激活邮件，输入邮件中的激活码后，点击“激活”按钮，即可完成激活，您将获得 15 天的免费试用期。
-3. 激活码验证通过后，会弹出“隐私配置”对话框，您可以根据需求选择信息采集项，采集的信息将帮助我们改进产品，您的业务及生产数据绝不会被采集，配置完成后，请点击“同意”按钮。
+1. 首次访问时，您需要激活服务。在填写“邮箱”和“组织”后，点击“获取激活码”按钮，系统会向您填写的邮箱发送一封激活邮件，输入邮件中的激活码后，点击“激活”按钮，即可完成激活，您将获得 15 天的免费试用期。
+1. 激活码验证通过后，会弹出“隐私配置”对话框，您可以根据需求选择信息采集项，采集的信息将帮助我们改进产品，您的业务及生产数据绝不会被采集，配置完成后，请点击“同意”按钮。
 
 ### 配置用户信息
 
