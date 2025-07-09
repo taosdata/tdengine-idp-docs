@@ -25,10 +25,18 @@ TDengine IDMP 提供了 Docker 镜像，用户可以通过 Docker 快速启动 T
    cd tdengine-idmp-deployment/docker
    docker compose up -d
    ```
+   该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 **TDengine IDMP 服务和 TDengine TSDB 服务**。默认情况下，TDengine IDMP 服务会启动在主机的 6042 端口，可在浏览器输入以下地址访问：[http://ip:6042](http://ip:6042), 请将 `ip` 替换为您的主机 IP 地址，如果在本地运行，则可以直接访问 [http://localhost:6042](http://localhost:6042)。
+3. 当您体验完成后，您可以使用以下命令停止并删除容器：
+   ```bash
+   docker compose down
+   ```
+   服务启动时，会自动创建 Docker Volume 来持久化数据，您可以在 `docker-compose.yml` 文件中查看相关配置。如果您期望在停止服务的同时，清除数据，可以使用以下命令：
+   ```bash
+   docker compose down -v
+   ```
 
-该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 **TDengine IDMP 服务和 TDengine TSDB 服务**。默认情况下，TDengine IDMP 服务会启动在主机的 6042 端口，可在浏览器输入以下地址访问：[http://localhost:6042](http://localhost:6042) 或 [http://ip:6042](http://ip:6042).
 :::tip
-如需修改端口，可编辑 `docker-compose.yml` 文件中的 `ports` 配置
+如需修改端口映射，可编辑 `docker-compose.yml` 文件中的 `ports` 配置。
 :::
 
 ### 通过安装包运行
@@ -85,7 +93,7 @@ TDengine IDMP 提供了丰富的功能，下面将带您体验如何通过 Web �
 
 在以下示例中，我们将选用“公共事业”场景的数据进行演示：请您选中“公共事业”场景，然后点击“确认”按钮，系统会自动加载该场景的数据。加载过程可能需要几分钟的时间，请您耐心等待。
 
-### 查看导入的元素信息
+### 查看元素信息
 
 加载示例场景后，您将进入 TDengine IDMP 的主 Web 界面，默认来到的是“元素浏览器”页面。您可以在这里查看和管理导入的元素信息。
 
