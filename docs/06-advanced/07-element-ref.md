@@ -12,7 +12,7 @@
 
 ![strong-ref](/docs-img/advanced/strong-ref.png)
 
-Wind Turbine -1 与 Wind Turbines，与 Site A, 都是强关系。当删除了元素 Site A 下的 Wind Turbine-1 时，Wind Turbine-1 并没有真正被删除，它还存在于元素 Wind Turbines 下。
+Wind Turbine-1 与 Wind Turbines，与 Site A, 都是强关系。当删除了元素 Site A 下的 Wind Turbine-1 时，Wind Turbine-1 并没有真正被删除，它还存在于元素 Wind Turbines 下。
 
 ## 包含引用
 
