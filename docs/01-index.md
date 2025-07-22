@@ -1,4 +1,5 @@
 ---
+sidebar_label: 文档首页
 slug: /
 ---
 # TDengine IDMP 文档
