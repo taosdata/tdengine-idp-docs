@@ -288,6 +288,7 @@ header h1 {
 
 code {
   tab-size: 4;
+  font-size: 0.94em; /* 或 16px */
 }
 
 article img {
