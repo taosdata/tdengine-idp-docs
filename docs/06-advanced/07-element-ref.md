@@ -26,7 +26,7 @@ Wind Turbine -1 与 Wind Turbines，与 Site A, 都是强关系。当删除了�
 ![weak-ref](/docs-img/advanced/weak-ref.png)
 
 但是，如果你删除 Site A 下面的 Wind Turbine-1, 那么 Wind Turbines 下面的 Wind Turbine-1 也被自动删除，因为 Wind Turbine-1 已经不存在有强引用或包含引用了，那么所有弱引用也要被删除。
-![weak-ref-delt-strong](/docs-img/advanced/weak-ref-delt-strong.png)
+![weak-ref-del-strong](/docs-img/advanced/weak-ref-del-strong.png)
 
 
 ## 引用的规则
