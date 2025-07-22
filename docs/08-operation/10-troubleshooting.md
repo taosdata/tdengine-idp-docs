@@ -54,4 +54,4 @@ docker cp tdengine-idmp:/var/log/taos/tda-error.log ./
 
 ## 提交问题
 
-我们使用 [Github Issues](https://github.com/taosdata/tdengine-idmp-docs/issues/new/choose) 来跟踪和管理问题。请按照 Github Issues 的模板，提交以上收集到的信息，我们的支持团队会尽快回复并帮助您解决问题。
+我们使用 [GitHub Issues](https://github.com/taosdata/tdengine-idmp-docs/issues/new/choose) 来跟踪和管理问题。请按照 GitHub Issues 的模板，提交以上收集到的信息，我们的支持团队会尽快回复并帮助您解决问题。
