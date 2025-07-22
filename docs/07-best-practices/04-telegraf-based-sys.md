@@ -1,1 +1,1 @@
-# 使用 Telegraf 采集数据的系统
+# Telegraf 采集数据的系统

@@ -142,8 +142,31 @@ button.navbar__toggle {
 }
 
 .markdown>h2 {
-  --ifm-h2-font-size: 1.8rem !important;
+  --ifm-h2-font-size: 1.9rem !important;
 }
+
+.markdown h4 {
+  font-size: 1.5rem !important;
+  font-weight: bold;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  line-height: 1.4;
+}
+.markdown h5 {
+  font-size: 1.3rem !important;
+  font-weight: bold;
+  margin-top: 1.1em;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+.markdown h6 {
+  font-size: 1.15rem !important;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+
 
 .title_qBh7 {
   --ifm-h1-font-size: 2.2rem;

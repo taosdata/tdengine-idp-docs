@@ -14,7 +14,7 @@ IDMP 的用户界面是完全基于浏览器的。登录后的典型 UI 界面�
 6. 信息区：页面最下方显示 IDMP 的版本、配置数据的版本等信息
 7. 人像：右上侧是 Avatar，点击可以配置个人信息、进入系统管理页面等。
 
-![UI-main](/docs-img/feature/UI-main.png)
+![ui-main](/docs-img/basic/ui-main.png)
 
 因为 UI 的设计常有调整，了解 UI 布局最好的方式是点击右上角的人像图标，然后选择"引导页面"，它将一步一步的给您介绍整个 UI 的布局。
 
