@@ -1,3 +1,7 @@
+# TDengine IDMP 文档
+
+[English](README.md) | 简体中文
+
 # 目录
 
 1. [简介](#1-简介)
