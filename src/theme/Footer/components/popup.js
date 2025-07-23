@@ -63,7 +63,7 @@ export default class extends React.Component {
         super(props);
         this.state = {
             isShow: true,
-            sucessMsg: '',
+            successMsg: '',
             flag: ''
         }
     }
@@ -91,9 +91,9 @@ export default class extends React.Component {
         this.props.pfn(val);//这个地方把值传递给了props的事件当中
     }
 
-    isShowSuccess(sucessMsg, flag) {
+    isShowSuccess(successMsg, flag) {
         this.setState({isShow: false});
-        this.setState({sucessMsg: sucessMsg});
+        this.setState({successMsg: successMsg});
         this.setState({flag: flag});
     }
 
@@ -118,12 +118,12 @@ export default class extends React.Component {
                         </div>
                     </div>
                     <div className={this.state.isShow ? "display-is-none" : "display-is-block"}>
-                        <div style={{diaplay: 'block', width: '90%', margin: '0 auto', padding: '1rem'}}>
+                        <div style={{display: 'block', width: '90%', margin: '0 auto', padding: '1rem'}}>
                             <div className="success-img">
                                 {this.state.flag == "sub" ? <img src={require("../../../../static/img/subscribe-success.webp").default} alt="TDengine Database"></img> : ""}
                                 {this.state.flag == "sale" ? <img src={require("../../../../static/img/send-success.webp").default} alt="TDengine Database"></img> : ""}
                             </div>
-                            <div className="success-msg">{this.state.sucessMsg}</div>
+                            <div className="success-msg">{this.state.successMsg}</div>
                             <button className="btn btn-primary" onClick={this.closeBtn.bind(this, this.props.hidden)}>关闭</button>
                         </div>
                     </div>
@@ -170,7 +170,7 @@ class SubScription extends React.Component {
             email: '',
             message: '',
             showMessage: false,
-            sucessMsg: "恭喜您成功订阅 TDengine 最新动态",
+            successMsg: "恭喜您成功订阅 TDengine 最新动态",
             flag: 'sub'
         }
     }
@@ -207,7 +207,7 @@ class SubScription extends React.Component {
             return response.json();
         }).then((data) => {
             if (data[0].status == 'success') {
-                this.props.isShowSuccess(this.state.sucessMsg, this.state.flag);
+                this.props.isShowSuccess(this.state.successMsg, this.state.flag);
             }
         }).catch(function (error) {
             console.log(error);
@@ -217,7 +217,7 @@ class SubScription extends React.Component {
     render() {
         return (
             <div>
-                <div style={{diaplay: 'block', width: '90%', margin: '0 auto', position: 'relative'}}>
+                <div style={{display: 'block', width: '90%', margin: '0 auto', position: 'relative'}}>
                     <div className={this.state.showMessage ? "popalert" : "popalert popalert-hidden"}>
                         {this.state.message}
                     </div>
@@ -242,7 +242,7 @@ class ContactSales extends React.Component {
             msg: '',
             message: '',
             showMessage: false,
-            sucessMsg: "我们将在最快时间内与您取得联系！",
+            successMsg: "我们将在最快时间内与您取得联系！",
             flag: 'sale'
         };
     }
@@ -366,7 +366,7 @@ class ContactSales extends React.Component {
             return response.json();
         }).then((data) => {
             if (data[0].status == 'success') {
-                this.props.isShowSuccess(this.state.sucessMsg, this.state.flag);
+                this.props.isShowSuccess(this.state.successMsg, this.state.flag);
             }
         }).catch(function (error) {
             console.log(error);
