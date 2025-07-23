@@ -1,4 +1,8 @@
-# Table of Contents
+# TDengine IDMP Documentation
+
+English | [简体中文](README-CN.md)
+
+## Table of Contents
 
 1. [Introduction](#1-introduction)
 2. [Installation](#2-installation)
