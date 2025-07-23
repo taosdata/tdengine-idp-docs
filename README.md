@@ -1,12 +1,30 @@
-# TDengine IDMP Documentation
+# Table of Contents
 
-TDengine Industrial Data Management Platform (TDengine IDMP) is a metadata visualization management system for industrial internet full-device data. This documentation site is built with [Docusaurus](https://docusaurus.io/) and provides user guides, development documentation, and related resources for TDengine IDMP.
+1. [Introduction](#1-introduction)
+2. [Installation](#2-installation)
+    - [2.1 Install Prerequisite Tools](#21-install-prerequisite-tools)
+    - [2.2 Install Project Dependencies](#22-install-project-dependencies)
+3. [Local Development and Production Deployment](#3-local-development-and-production-deployment)
+    - [3.1 Start Chinese and English Preview](#31-start-chinese-and-english-preview)
+    - [3.2 Production Build](#32-production-build)
+    - [3.3 Production Deployment](#33-production-deployment)
+4. [Directory Structure](#4-directory-structure)
+5. [Contribution](#5-contribution)
+6. [Community Support](#6-community-support)
+7. [License](#7-license)
 
 ---
 
-## Install Dependencies
+## 1. Introduction
 
-This project requires [Node.js](https://nodejs.org/) version 18.0 or above (check with `node -v`). You can use nvm to manage multiple Node versions on a single machine. Then, install pnpm globally via npm:
+TDengine IDMP (Industrial Data Management Platform) is an AI-native IoT and industrial data management platform. It organizes sensor and device data using a classic tree hierarchy, builds a data catalog, provides contextual and standardized data processing, and offers real-time analytics, visualization, event management, and alerting.
+
+This documentation site is built with [Docusaurus](https://docusaurus.io/) and provides user guides, development documentation, and related resources for TDengine IDMP.
+
+## 2. Installation
+
+### 2.1 Install Prerequisite Tools
+This project requires [Node.js](https://nodejs.org/) version 18.0 or above (you can check with `node -v`). You can use nvm to manage multiple Node versions on a single machine. Then, install pnpm globally via npm:
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
@@ -16,45 +34,47 @@ npm install -g pnpm
 pnpm --version
 ```
 
-## Install Project Dependencies
-
+### 2.2 Install Project Dependencies
+Navigate to the project repository directory and run the following command to install all required dependencies:
 ```bash
 pnpm install  
 ```
 
-This command will install all dependencies required for the project.
+## 3. Local Development and Production Deployment
+After editing the documentation, you can start the local development server to preview the website.
 
-## Local Development
+### 3.1 Start Chinese and English Preview
+The following commands will automatically open a browser window for real-time preview and debugging, suitable for development.
 
-### Start in Chinese
+* Start Chinese preview
 
 ```bash
-pnpm start --host 0.0.0.0
+pnpm start  --host 0.0.0.0
 ```
-
-### Start in English
+* Start English preview
 
 ```bash
 pnpm start --host 0.0.0.0 --locale en
 ```
 
-This command will start the local development server and automatically open the browser window. Most changes will be reflected in real time without restarting the server.
+### 3.2 Production Build
+Use the following command to build static files for production into the `build` directory. The generated content can be deployed using any static content hosting service. We use [Azure Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/) to deploy the IDMP documentation service.
 
-## Build and Deploy
+* Build documentation
 
 ```bash
 pnpm build
 ```
-
-This command will generate static content in the `build` directory, which can be deployed using any static content hosting service.
-
-## Local Preview
+* Local preview
 
 ```bash
-pnpm serve
+pnpm serve 
 ```
 
-## Directory Structure
+### 3.3 Production Deployment
+After code is merged into the main branch, GitHub Actions will automatically trigger the build and deployment process, deploying the generated static files to Azure Static Web Apps.
+
+## 4. Directory Structure
 
 - **`docs/`**: Markdown source files for documentation.
 - **`src/`**: Website source code, including pages, components, and styles.
@@ -70,14 +90,14 @@ pnpm serve
 - **`README-CN.md`**: Chinese version of the project README.
 - **`README.md`**: Project README file.
 
-## Contribution
+## 5. Contribution
 
 Contributions to TDengine IDMP documentation are welcome! Please submit a Pull Request or report issues.
 
-## Community Support
+## 6. Community Support
 
 If you encounter any problems while using TDengine IDMP or reading the documentation, please contact us via:
 - [GitHub Issues](https://github.com/taosdata/tdengine-idmp-docs/issues)
 - [Official Support Email](mailto:it@taosdata.com)
 
-## License
+## 7. License
