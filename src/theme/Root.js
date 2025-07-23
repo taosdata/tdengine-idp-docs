@@ -15,8 +15,21 @@ export default function Root({ children }) {
 
     observer.observe(body, { attributes: true, attributeFilter: ['class'] });
 
+    // 自动收起顶部导航栏：监听右侧锚点目录点击
+    const rightTocLinks = document.querySelectorAll('.table-of-contents__link');
+    rightTocLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navbar) navbar.classList.add('navbarHidden_bnBw');
+      });
+    });
+
     return () => {
       observer.disconnect();
+      rightTocLinks.forEach(link => {
+        link.removeEventListener('click', () => {
+          if (navbar) navbar.classList.add('navbarHidden_bnBw');
+        });
+      });
     };
   }, []);
   return <>{children}</>;
