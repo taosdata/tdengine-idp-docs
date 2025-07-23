@@ -4,34 +4,31 @@ export default function Root({ children }) {
   useEffect(() => {
     const navbar = document.querySelector('.theme-layout-navbar');
     const body = document.body;
-
+    const hideNavbar = () => {
+      navbar?.classList.add('navbarHidden_bnBw');
+    };
     // Hide the top navbar when medium-zoom is opened
+
     const observer = new MutationObserver(() => {
       if (body.classList.contains('medium-zoom--opened')) {
-        if (navbar) navbar.classList.add('navbarHidden_bnBw');
+        hideNavbar();
       } else {
-        if (navbar) navbar.classList.remove('navbarHidden_bnBw');
+        navbar?.classList.remove('navbarHidden_bnBw');
       }
     });
-
     observer.observe(body, { attributes: true, attributeFilter: ['class'] });
 
-    // automatically hide the top navbar when clicking on right-side table of contents links
-    const rightTocLinks = document.querySelectorAll('.table-of-contents__link');
-    rightTocLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (navbar) navbar.classList.add('navbarHidden_bnBw');
-      });
-    });
+    // Hide the top navbar when clicking on right-side table of contents links
 
+    const rightTocLinks = document.querySelectorAll('.table-of-contents__link');
+    rightTocLinks.forEach(link => link.addEventListener('click', hideNavbar));
+
+    // cleanup function to remove the event listeners
     return () => {
       observer.disconnect();
-      rightTocLinks.forEach(link => {
-        link.removeEventListener('click', () => {
-          if (navbar) navbar.classList.add('navbarHidden_bnBw');
-        });
-      });
+      rightTocLinks.forEach(link => link.removeEventListener('click', hideNavbar));
     };
   }, []);
+
   return <>{children}</>;
 }
