@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NODE_VERSION: '20'
-      PNPM_VERSION: '9'
+      NODE_VERSION: '24'
+      PNPM_VERSION: '10'
       PYTHON_VERSION: '3.10'
 
     steps:
