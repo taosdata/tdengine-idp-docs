@@ -1,12 +1,12 @@
 # TDengine IDMP Documentation
 
-TDengine Industrial Data Management Platform ( TDengine IDMP ) 是一款工业互联网全量设备的元数据可视化管理系统。本文档网站基于 [Docusaurus](https://docusaurus.io/) 构建，提供了 TDengine IDMP 的使用指南、开发文档和相关资源。
+TDengine Industrial Data Management Platform (TDengine IDMP) is a metadata visualization management system for industrial internet full-device data. This documentation site is built with [Docusaurus](https://docusaurus.io/) and provides user guides, development documentation, and related resources for TDengine IDMP.
 
 ---
 
-## 安装依赖工具
+## Install Dependencies
 
-本项目需要安装 [Node.js](https://nodejs.org/), 版本 18.0 或以上（可以通过运行 node -v 来检查）。你可以使用 nvm 来管理安装的单台计算机上的多个 Node 版本。再通过 npm 全局安装 pnpm：
+This project requires [Node.js](https://nodejs.org/) version 18.0 or above (check with `node -v`). You can use nvm to manage multiple Node versions on a single machine. Then, install pnpm globally via npm:
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
@@ -16,67 +16,68 @@ npm install -g pnpm
 pnpm --version
 ```
 
-## 安装项目依赖
+## Install Project Dependencies
 
 ```bash
 pnpm install  
 ```
 
-此命令将安装项目所需的所有依赖项。
+This command will install all dependencies required for the project.
 
-## 本地开发项目
+## Local Development
 
-### 启动中文
+### Start in Chinese
 
 ```bash
-pnpm start  --host 0.0.0.0
+pnpm start --host 0.0.0.0
 ```
 
-### 启动英文
+### Start in English
 
 ```bash
 pnpm start --host 0.0.0.0 --locale en
 ```
 
-此命令将启动本地开发服务器，并自动打开浏览器窗口。大多数更改会实时反映，无需重启服务器。
+This command will start the local development server and automatically open the browser window. Most changes will be reflected in real time without restarting the server.
 
-## 构建及部署
+## Build and Deploy
 
 ```bash
 pnpm build
 ```
 
-此命令会将静态内容生成到 `build` 目录中，生成的内容可以通过任何静态内容托管服务进行部署。
+This command will generate static content in the `build` directory, which can be deployed using any static content hosting service.
 
-## 本地预览
+## Local Preview
 
 ```bash
-pnpm  serve 
+pnpm serve
 ```
 
-## 目录结构
+## Directory Structure
 
-- **`docs/`**: 文档的 md 源文件。
-- **`src/`**: 网站的源代码，包括页面、组件和样式。
-- **`static/`**: 静态资源文件（如图片、文档等）。
-- **`build/`**: 构建后的静态文件目录。
-- **`docusaurus.config.js`**: 网站的配置文件。
-- **`sidebars.js`**: 文档的侧边栏配置。
-- **`i18n/`**: 国际化配置文件，支持多语言文档。
-- **`package.json`**: 项目的依赖和脚本配置。
-- **`.github/workflows/`**: GitHub Actions 工作流配置文件。
-- **`sidebars.js`**: 定义文档侧边栏的结构和内容。
+- **`docs/`**: Markdown source files for documentation.
+- **`src/`**: Website source code, including pages, components, and styles.
+- **`static/`**: Static resource files (such as images, documents, etc.).
+- **`build/`**: Directory for built static files.
+- **`docusaurus.config.js`**: Website configuration file.
+- **`sidebars.js`**: Sidebar configuration for documentation.
+- **`i18n/`**: Internationalization configuration files, supporting multi-language documentation.
+- **`package.json`**: Project dependencies and script configuration.
+- **`.github/workflows/`**: GitHub Actions workflow configuration files.
+- **`.docsearch/`**: DocSearch configuration files for search functionality.
+- **`pnpm-lock.yaml`**: Dependency lock file for the project.
+- **`README-CN.md`**: Chinese version of the project README.
+- **`README.md`**: Project README file.
 
+## Contribution
 
+Contributions to TDengine IDMP documentation are welcome! Please submit a Pull Request or report issues.
 
-## 贡献
+## Community Support
 
-欢迎为 TDengine IDMP 文档贡献内容！请提交 Pull Request 或报告问题。
-
-## 社区支持
-
-如果您在使用 TDengine IDMP 或阅读文档时遇到问题，请通过以下方式联系我们：
+If you encounter any problems while using TDengine IDMP or reading the documentation, please contact us via:
 - [GitHub Issues](https://github.com/taosdata/tdengine-idmp-docs/issues)
-- [官方支持邮箱](mailto:it@taosdata.com)
+- [Official Support Email](mailto:it@taosdata.com)
 
-## 许可证
+## License
