@@ -57,4 +57,5 @@
 - 电压：connections['TDengine']/databases['smdb']/smeter-1/columns[voltage]
 - 型号：connections['TDengine']/databases['smdb']/smeter-1/columns[model]
 ```
+
 IDMP 提供的自定义可替换字符串十分灵活强大，便于你批量的、自动的将 TSDB 里的数据映射到 IDMP。TDengine 链接的资产模型的自动导入，就是利用`KEYWORD`来实现的。

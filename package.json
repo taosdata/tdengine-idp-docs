@@ -1,5 +1,5 @@
 {
-  "name": "my-website",
+  "name": "tdengine-idmp-docs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -18,8 +18,10 @@
     "@docusaurus/plugin-content-docs": "^3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
     "@docusaurus/theme-common": "^3.8.1",
+    "@docusaurus/theme-mermaid": "^3.8.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
+    "docusaurus-plugin-image-zoom": "^3.0.1",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-cookies": "^0.1.1",
