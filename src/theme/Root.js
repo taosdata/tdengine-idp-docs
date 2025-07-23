@@ -5,6 +5,7 @@ export default function Root({ children }) {
     const navbar = document.querySelector('.theme-layout-navbar');
     const body = document.body;
 
+    // Hide the top navbar when medium-zoom is opened
     const observer = new MutationObserver(() => {
       if (body.classList.contains('medium-zoom--opened')) {
         if (navbar) navbar.classList.add('navbarHidden_bnBw');
@@ -15,7 +16,7 @@ export default function Root({ children }) {
 
     observer.observe(body, { attributes: true, attributeFilter: ['class'] });
 
-    // 自动收起顶部导航栏：监听右侧锚点目录点击
+    // automatically hide the top navbar when clicking on right-side table of contents links
     const rightTocLinks = document.querySelectorAll('.table-of-contents__link');
     rightTocLinks.forEach(link => {
       link.addEventListener('click', () => {
