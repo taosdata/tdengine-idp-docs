@@ -55,6 +55,14 @@ const config = {
     ],
   ],
 
+
+  // themes: ['@docusaurus/theme-mermaid'],
+  // // In order for Mermaid code blocks in Markdown to work,
+  // // you also need to enable the Remark plugin with this option
+  // markdown: {
+  //   mermaid: true,
+  // },
+  
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   ({
@@ -175,6 +183,10 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      zoom: {
+        selector: '.markdown :not(em) > img, img[data-zoom]',
+        background: { light: '#fff', dark: '#333' }
+      },
   }),
   plugins: [
     [
@@ -182,6 +194,14 @@ const config = {
         {
             trackingID: 'G-7TPB043Y9M',
             anonymizeIP: true,
+        },
+    ],
+    [
+        'docusaurus-plugin-image-zoom',
+        {
+            selector: '.theme-doc-markdown img, .markdown img, .theme-doc-content img',
+            background: 'rgba(0,0,0,0.8)',
+            zoomMargin: 32,
         },
     ],
   ],

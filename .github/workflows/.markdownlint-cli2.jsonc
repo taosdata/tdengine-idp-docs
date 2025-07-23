@@ -4,10 +4,12 @@
 {
   // Disable some built-in rules
   "config": {
+	"MD001": false, // header-increment 无需标题递增
+	"MD003": {"style": "atx"},
 	"MD013": false, // line-length 禁止行长度限制
 	"MD024": false, // no-duplicate-heading 禁止重复标题
+	"MD025": {"level": 1, "front_matter_title": ""},
 	"MD029": false, // ol-prefix 列表前缀可以任意设置
-	"MD025": false, // single-title 同一文档只能有一个一级标题
 	"MD033": false, // no-inline-html 禁止行内HTML
 	"MD041": false, // first-line-heading 禁止第一行必须是标题
 	"MD046": {"style": "fenced"}, // code-fence-style 代码块使用围栏样式
