@@ -10,7 +10,6 @@
 | Debian   | Debian 10<br/>Debian 11<br/>Debian 12 | 是 | 是 |
 | CentOS   | CentOS 8 | 是 | 是 |
 | macOS 13 | macOS 13<br/>macOS 14<br/>macOS 15 | 是 | 是 |
-| Windows  | Windows Server 2019<br/>Windows Server 2022<br/>Windows 11 | 是 | 否 |
 
 ## 端口占用
 
