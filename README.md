@@ -28,6 +28,7 @@ This documentation site is built with [Docusaurus](https://docusaurus.io/) and p
 ## 2. Installation
 
 ### 2.1 Install Prerequisite Tools
+
 This project requires [Node.js](https://nodejs.org/) version 18.0 or above (you can check with `node -v`). You can use nvm to manage multiple Node versions on a single machine. Then, install pnpm globally via npm:
 
 ```bash
@@ -39,43 +40,51 @@ pnpm --version
 ```
 
 ### 2.2 Install Project Dependencies
+
 Navigate to the project repository directory and run the following command to install all required dependencies:
+
 ```bash
 pnpm install  
 ```
 
 ## 3. Local Development and Production Deployment
+
 After editing the documentation, you can start the local development server to preview the website.
 
-### 3.1 Start Chinese and English Preview
+### 3.1 Start Preview
+
 The following commands will automatically open a browser window for real-time preview and debugging, suitable for development.
 
-* Start Chinese preview
+- Start Chinese preview
 
 ```bash
 pnpm start  --host 0.0.0.0
 ```
-* Start English preview
+
+- Start English preview
 
 ```bash
 pnpm start --host 0.0.0.0 --locale en
 ```
 
 ### 3.2 Production Build
+
 Use the following command to build static files for production into the `build` directory. The generated content can be deployed using any static content hosting service. We use [Azure Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/) to deploy the IDMP documentation service.
 
-* Build documentation
+- Build documentation
 
 ```bash
 pnpm build
 ```
-* Local preview
+
+- Local preview
 
 ```bash
 pnpm serve 
 ```
 
 ### 3.3 Production Deployment
+
 After code is merged into the main branch, GitHub Actions will automatically trigger the build and deployment process, deploying the generated static files to Azure Static Web Apps.
 
 ## 4. Directory Structure
@@ -101,6 +110,7 @@ Contributions to TDengine IDMP documentation are welcome! Please submit a Pull R
 ## 6. Community Support
 
 If you encounter any problems while using TDengine IDMP or reading the documentation, please contact us via:
+
 - [GitHub Issues](https://github.com/taosdata/tdengine-idmp-docs/issues)
 - [Official Support Email](mailto:it@taosdata.com)
 
