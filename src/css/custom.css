@@ -15,13 +15,15 @@
   --ifm-color-primary-lightest: #7daef6;
   --ifm-color-secondary-dark: #d4d5d8;
   --ifm-navbar-height: 100px;
-  --ifm-navbar-link-color: white;
-  --ifm-font-family-base: "Open Sans", Helvetica, "Hiragino Sans GB", sans-serif,
-    "Apple Color Emoji";
+  --ifm-font-family-base: "IBM Plex Sans", sans-serif;
+  --ifm-font-family-monospace: "IBM Plex Mono", monospace;
   --ifm-navbar-item-padding-horizontal: 10px;
   --white: #fefefe;
   --ifm-font-color-base: #141414;
   --docusaurus-highlighted-code-line-bg: rgb(178, 180, 186);
+  
+  --ifm-navbar-link-color: #333；
+  
 }
 
 /* 探迹集客，隐藏默认图标 */
@@ -31,7 +33,7 @@
 
 .navbar::before {
   content: "";
-  background-image: url(/img/banner-bg.webp);
+  background-image: url('/img/banner.png');
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
@@ -45,7 +47,7 @@
 }
 
 .navbar-sidebar__brand {
-  background-image: url(/img/banner-bg.webp);
+  background-image: url('/img/banner.png');
 }
 
 .navbar__link {
@@ -57,12 +59,12 @@
 }
 
 .navbar__link:hover {
-  color: white;
+  color: #0041CE;
   text-decoration: none;
 }
 
 .navbar__link--active {
-  color: white;
+  color: #0041CE;
   text-decoration: none;
   border-bottom: 1px solid white;
 }

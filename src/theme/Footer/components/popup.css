@@ -34,7 +34,7 @@
   border-radius: 0.25rem 0.25rem 0 0;
   position: relative;
   height: 90px;
-  background-image: url("../../../../static/img/banner-bg.webp");
+  background-image: url('/img/banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
