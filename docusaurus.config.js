@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'TDengine IDMP 文档 | 涛思数据',
   tagline: '工业互联网全量设备的元数据可视化管理系统',
-  favicon: '/tdengine.ico',
+  favicon: '/favicon.ico',
 
   url: 'https://docs.tdengine.ai',
   baseUrl: '/',
