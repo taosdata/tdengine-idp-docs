@@ -3,8 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # 通过云服务快速体验
 
-TDengine IDMP 提供全托管的 TDengine IDMP Cloud 服务，您只需简单的几步操作即可完成注册，
-在导入示例场景数据后，即可轻松体验元素浏览、AI 面板生成和 AI 分析等功能。
+TDengine IDMP 提供全托管的 TDengine IDMP Cloud 服务，您只需简单的几步操作即可完成注册。在导入示例场景数据后，即可轻松体验元素浏览、AI 面板生成和 AI 分析等功能。
 
 ## 注册
 
