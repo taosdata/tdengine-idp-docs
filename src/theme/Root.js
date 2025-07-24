@@ -18,15 +18,18 @@ export default function Root({ children }) {
     });
     observer.observe(body, { attributes: true, attributeFilter: ['class'] });
 
-    // Hide the top navbar when clicking on right-side table of contents links
-
-    const rightTocLinks = document.querySelectorAll('.table-of-contents__link');
-    rightTocLinks.forEach(link => link.addEventListener('click', hideNavbar));
+    // Hide the navbar when clicking on a link in the table of contents
+    const handleTocClick = (e) => {
+      if (e.target.matches('.table-of-contents__link')) {
+        hideNavbar();
+      }
+    };
+    document.addEventListener('click', handleTocClick);
 
     // cleanup function to remove the event listeners
     return () => {
       observer.disconnect();
-      rightTocLinks.forEach(link => link.removeEventListener('click', hideNavbar));
+      document.removeEventListener('click', handleTocClick);
     };
   }, []);
 
