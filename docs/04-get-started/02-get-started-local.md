@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 本地部署快速体验
+# 通过本地部署快速体验
 
 TDengine IDMP 提供了丰富的功能，本文档将带领您完成 TDengine IDMP 安装和启动，
 在导入示例场景数据后，即可轻松体验元素浏览、AI 面板生成和 AI 分析等功能。
@@ -91,6 +91,6 @@ TDengine IDMP 提供了多平台安装包，以下步骤将以 Linux 系统为�
 3. 请设置系统的登录密码。
 4. 在短信验证码和密码验证通过后，就完成了用户信息的配置，点击“继续”，系统将自动跳转到加载示例场景页面。
 
-import Getstarted from './_get_started.mdx'
+import Getstarted from './_get_started.md'
 
 <Getstarted />

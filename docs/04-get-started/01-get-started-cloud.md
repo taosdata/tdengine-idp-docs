@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 使用云服务快速体验
+# 通过云服务快速体验
 
 TDengine IDMP 提供全托管的 TDengine IDMP Cloud 服务，您只需简单的几步操作即可完成注册，
 在导入示例场景数据后，即可轻松体验元素浏览、AI 面板生成和 AI 分析等功能。
@@ -10,7 +10,7 @@ TDengine IDMP 提供全托管的 TDengine IDMP Cloud 服务，您只需简单的
 
 首次使用时，请您按照以下步骤注册 TDengine 云服务：
 
-1. 登录 TDengine 云服务官网：[中文](https://cloud.taosdata.com) | [English](https://cloud.tdengine.com)
+1. 登录 [TDengine 云服务官网](https://cloud.taosdata.com)。
 1. 请点击页面上的“立即免费注册”按钮。
 1. 填写“邮箱”和“组织”后，请点击“获取验证码”按钮，系统会向您填写的邮箱发送一封注册邮件，请输入邮件中的验证码。
 1. 请在阅读 TDengine 云服务的“服务协议”和“隐私政策”后，勾选同意。
@@ -31,6 +31,6 @@ TDengine IDMP 提供全托管的 TDengine IDMP Cloud 服务，您只需简单的
 1. 请在阅读 TDengine 云服务的服务协议后，勾选同意。
 1. 请点击“创建”按钮，等待创建实例完成后，系统将自动跳转至示例场景加载页面。
 
-import Getstarted from './_get_started.mdx'
+import Getstarted from './_get_started.md'
 
 <Getstarted />
