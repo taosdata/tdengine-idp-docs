@@ -5,8 +5,6 @@
     font-size: 14px;
     font-weight: 400;
     color: white;
-    font-family: "Open Sans", Helvetica, "Hiragino Sans GB", sans-serif,
-        "Apple Color Emoji";
     /* overflow: hidden; */
 }
 
@@ -19,7 +17,7 @@
 
 /* .container::before {
   content: "";
-  background-image: url(/img/banner-bg.png);
+  background-image: url('/img/banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
