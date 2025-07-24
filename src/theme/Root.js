@@ -23,7 +23,7 @@ export default function Root({ children }) {
     observer.observe(body, { attributes: true, attributeFilter: ['class'] });
 
     const handleTocClick = (e) => {
-      if (e.target.matches(TOC_LINK_SELECTOR)) {
+      if (e.target.closest(TOC_LINK_SELECTOR)) { 
         hideNavbar();
       }
     };
