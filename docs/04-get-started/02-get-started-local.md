@@ -12,7 +12,7 @@ TDengine IDMP 不仅提供容器化部署、安装包部署，还提供全托管
 
 ## 安装
 
-TDengine IDMP 支持多种安装、部署方式，在不同的操作系统和架构下，都能够体验其强大的功能带来的便利。对操作系统和架构的支持，详见[安装包介绍](./operation/installation/installer)。下面，我们将介绍两种常用的安装部署方式。
+TDengine IDMP 支持多种安装、部署方式，在不同的操作系统和架构下，都能够体验其强大的功能带来的便利。对操作系统和架构的支持，详见[安装包介绍](../operation/installation/installer)。下面，我们将介绍两种常用的安装部署方式。
 
 <Tabs>
 <TabItem label="使用容器" value="docker">
@@ -49,7 +49,7 @@ TDengine IDMP 提供了 Docker 镜像，用户可以通过 Docker 快速启动 T
 <TabItem label="使用安装包" value="installer">
 TDengine IDMP 提供了多平台安装包，以下步骤将以 Linux 系统为例，演示如何下载、安装并启动 TDengine IDMP.
 
-1. 前往[版本列表](./release-history/version)页面
+1. 前往[版本列表](../release-history/version)页面
 2. 选择最新版本的 `.tar.gz` 安装包，点击下载链接
 3. 解压并执行安装脚本，完成安装（请将 `<version>` 替换为实际版本号）
 
