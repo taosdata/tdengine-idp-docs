@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'TDengine IDMP 文档 | 涛思数据',
   tagline: '工业互联网全量设备的元数据可视化管理系统',
-  favicon: 'img/tdengine.ico',
+  favicon: '/tdengine.ico',
 
   url: 'https://docs.tdengine.ai',
   baseUrl: '/',
@@ -103,7 +103,7 @@ const config = {
           title: "",
           logo: {
               alt: "",
-              src: "/img/site-logo.png",
+              src: "/img/tdengine.svg",
           },
           items: [
               {
@@ -205,5 +205,8 @@ const config = {
         },
     ],
   ],
+  stylesheets: [
+    "/fonts/css/ibm-plex.min.css"
+  ]
 };
 export default config;
