@@ -98,7 +98,7 @@ After code is merged into the main branch, GitHub Actions will automatically tri
 - **`i18n/`**: Internationalization configuration files, supporting multi-language documentation.
 - **`package.json`**: Project dependencies and script configuration.
 - **`.github/workflows/`**: GitHub Actions workflow configuration files.
-- **`.docsearch/`**: DocSearch configuration files for search functionality.
+- **`.docsearch/`**: Algolia doc search service configuration directory.
 - **`pnpm-lock.yaml`**: Dependency lock file for the project.
 - **`README-CN.md`**: Chinese version of the project README.
 - **`README.md`**: Project README file.
