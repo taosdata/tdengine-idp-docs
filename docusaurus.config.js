@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -27,12 +27,12 @@ const config = {
     defaultLocale: 'zh-Hans',
     locales: ['en', 'zh-Hans'],
     localeConfigs: {
-        'en': {
-            label: 'English',
-        },
-        'zh-Hans': {
-            label: '简体中文',
-        },
+      'en': {
+        label: 'English',
+      },
+      'zh-Hans': {
+        label: '简体中文',
+      },
     },
   },
   presets: [
@@ -42,6 +42,7 @@ const config = {
       ({
         docs: {
           routeBasePath: "/",
+          breadcrumbs: false,
           sidebarPath: './sidebars.js',
           // editUrl:
           //   'https://github.com/taosdata/tdasset-docs/tree/main',
@@ -62,89 +63,89 @@ const config = {
   // markdown: {
   //   mermaid: true,
   // },
-  
+
   themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-  ({
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
       docs: {
-          sidebar: {
-              hideable: true,
-              autoCollapseCategories: true,
-          }
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        }
       },
       algolia: {
-          appId: "FP08SIOFZ3",
-          apiKey: "89d4d983122a141b426e52fdca50e3a0",
-          indexName: "tdasset_index",
-          searchPagePath: false
+        appId: "FP08SIOFZ3",
+        apiKey: "89d4d983122a141b426e52fdca50e3a0",
+        indexName: "tdasset_index",
+        searchPagePath: false
       },
       metadata: [
-          // This would become <meta name="keywords" content="..."> in the generated HTML
-          {
-              name: "keywords",
-              content: "TDengine IDMP, asset",
-          },
-          {
-              name: "description",
-              content: "TDengine Industrial Data Management Platform（TDengine IDMP）是一物联网、工业数据管理系统，它通过经典的树状结构组织传感器、设备采集的数据，实现数据的语境化、标准化、并提供实时分析、可视化、事件管理与报警等功能，旨在帮助企业从运营数据中挖掘出商业价值",
-          },
-          {
-              name: "baidu-site-verification",
-              content: "code-Fvrqff6sDg",
-          },
+        // This would become <meta name="keywords" content="..."> in the generated HTML
+        {
+          name: "keywords",
+          content: "TDengine IDMP, asset",
+        },
+        {
+          name: "description",
+          content: "TDengine Industrial Data Management Platform（TDengine IDMP）是一物联网、工业数据管理系统，它通过经典的树状结构组织传感器、设备采集的数据，实现数据的语境化、标准化、并提供实时分析、可视化、事件管理与报警等功能，旨在帮助企业从运营数据中挖掘出商业价值",
+        },
+        {
+          name: "baidu-site-verification",
+          content: "code-Fvrqff6sDg",
+        },
       ],
       colorMode: {
-          defaultMode: "light",
-          disableSwitch: false,
-          respectPrefersColorScheme: false, // not respect user's system preference
+        defaultMode: "light",
+        disableSwitch: true,
+        respectPrefersColorScheme: true, // not respect user's system preference
       },
       navbar: {
-          hideOnScroll: true,
-          title: "",
-          logo: {
-              alt: "",
-              src: "/img/tdengine.svg",
+        hideOnScroll: true,
+        logo: {
+          src: "/img/tdengine.svg",
+          width: 180,
+          height: 36
+        },
+        items: [
+          {
+            to: "/blog-redirect",
+            label: "博客",
+            position: "right",
+            target: "_blank", // 新标签页打开
+            rel: "noopener noreferrer", // 安全性
           },
-          items: [
+          {
+            href: "https://github.com/taosdata/tdengine-idmp-docs/issues/new/choose",
+            label: "反馈问题",
+            position: "right",
+          },
+          // {
+          //   type: "docsVersionDropdown", // 固定类型，用于启用版本选择
+          //   position: "right", // 下拉菜单位置（'left' 或 'right'，默认右对齐）
+          //   label: "version", // 自定义下拉菜单标签（默认值为 'Version'）
+          //   // dropdownActiveClassDisabled: true, // 可选：禁用下拉菜单项的激活状态
+          // },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+            dropdownItemsAfter: [
               {
-                to: "/blog-redirect",
-                label: "博客",
-                position: "right",
-                target: "_blank", // 新标签页打开
-                rel: "noopener noreferrer", // 安全性
-              },              
-              {
-                href: "https://github.com/taosdata/tdengine-idmp-docs/issues/new/choose",
-                label: "反馈问题",
-                position: "right",
+                to: 'https://docs.tdengine.ai/',
+                label: 'Help Us Translate',
               },
-              // {
-              //   type: "docsVersionDropdown", // 固定类型，用于启用版本选择
-              //   position: "right", // 下拉菜单位置（'left' 或 'right'，默认右对齐）
-              //   label: "version", // 自定义下拉菜单标签（默认值为 'Version'）
-              //   // dropdownActiveClassDisabled: true, // 可选：禁用下拉菜单项的激活状态
-              // },
-              {
-                type: 'localeDropdown',
-                position: 'right',
-                dropdownItemsAfter: [
-                  {
-                    to: 'https://docs.tdengine.ai/',
-                    label: 'Help Us Translate',
-                  },  
-                ],         
-              },
-              // {
-              //     to: "https://www.taosdata.com/contactus",
-              //     label: "联系我们",
-              //     position: "right",
-              // },
-              {
-                  type: "search",
-                  position: "right",
-                  className: "navbarSearchTemp"
-              },
-          ],
+            ],
+          },
+          // {
+          //     to: "https://www.taosdata.com/contactus",
+          //     label: "联系我们",
+          //     position: "right",
+          // },
+          {
+            type: "search",
+            position: "right",
+            className: "navbarSearchTemp"
+          },
+        ],
       },
       footer: {
         style: "dark",
@@ -187,22 +188,22 @@ const config = {
         selector: '.markdown :not(em) > img, img[data-zoom]',
         background: { light: '#fff', dark: '#333' }
       },
-  }),
+    }),
   plugins: [
     [
-        '@docusaurus/plugin-google-gtag',
-        {
-            trackingID: 'G-7TPB043Y9M',
-            anonymizeIP: true,
-        },
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-7TPB043Y9M',
+        anonymizeIP: true,
+      },
     ],
     [
-        'docusaurus-plugin-image-zoom',
-        {
-            selector: '.theme-doc-markdown img, .markdown img, .theme-doc-content img',
-            background: 'rgba(0,0,0,0.8)',
-            zoomMargin: 32,
-        },
+      'docusaurus-plugin-image-zoom',
+      {
+        selector: '.theme-doc-markdown img, .markdown img, .theme-doc-content img',
+        background: 'rgba(0,0,0,0.8)',
+        zoomMargin: 32,
+      },
     ],
   ],
   stylesheets: [
