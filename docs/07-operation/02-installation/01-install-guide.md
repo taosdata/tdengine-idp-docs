@@ -56,12 +56,6 @@ TDengine IDMP 的运行需要满足以下先决条件：
 1. TDengine IDMP 的默认安装路径为 `/usr/local/taos/idmp`
 </TabItem>
 
-<TabItem label="Windows 安装" value="windows">
-1. 从 [版本列表](../../release-history/version) 页面下载获得最新的 Windows 安装包 (.exe)
-2. 双击安装包，按照提示完成安装
-3. 安装完成后，TDengine IDMP 的默认安装路径为 `C:\tdengine\idmp`
-</TabItem>
-
 </Tabs>
 
 ## 启动
@@ -129,21 +123,6 @@ sudo launchctl print system/com.taosdata.tdengine-idmp
 :::
 </TabItem>
 
-<TabItem label="Windows 系统" value="windows">
-安装后，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令，或在桌面双击 `TDengine IDMP` 图标来启动 TDengine IDMP 服务进程。
-```bat
-sc start tdengine-idmp
-```
-
-如果想手动管理这些服务，可以在拥有管理员权限的 cmd 窗口执行 `sc` 命令，以 `tdengine-idmp` 服务为例：
-
-```bat
-sc start tdengine-idmp
-sc stop tdengine-idmp
-sc query tdengine-idmp
-```
-
-</TabItem>
 
 </Tabs>
 
@@ -178,5 +157,3 @@ rpm -e tdengine-idmp
 ```bash
 dpkg -r tdengine-idmp
 ```
-
-4. 在 Windows 系统，可以在进入安装目录 `C:\tdengine-idmp` 后，双击卸载程序 (unins000.exe) 进行卸载。
