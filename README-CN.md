@@ -98,7 +98,7 @@ pnpm  serve
 - **`i18n/`**: 国际化配置文件，支持多语言文档。
 - **`package.json`**: 项目的依赖和脚本配置。
 - **`.github/workflows/`**: GitHub Actions 工作流配置文件。
-- **`.docsearch/`**: DocSearch 配置文件，用于搜索功能。
+- **`.docsearch/`**: Algolia 搜索服务配置目录，包含搜索索引规则和站点地图配置，为文档网站提供智能搜索功能。
 - **`pnpm-lock.yaml`**: 项目的依赖锁定文件。
 - **`README-CN.md`**: 中文版本的项目自述文件。
 - **`README.md`**: 项目的自述文件。
