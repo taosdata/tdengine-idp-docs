@@ -26,6 +26,39 @@ function getCookie(name) {
   }
   return val;
 }
+
+function LanguageSwitchButton() {
+  // 当前页面路径和参数
+  const { pathname, search, hash } = window.location;
+  const currentHost = window.location.host;
+
+  // 中文和英文域名
+  const zhHost = "idmpdocs.taosdata.com";
+  const enHost = "idmpdocs.tdengine.com";
+
+  // 判断当前语言
+  const isZh = currentHost === zhHost;
+  const targetHost = isZh ? enHost : zhHost;
+  const targetLabel = isZh ? "EN" : "中文";
+
+  // 构造跳转 URL
+  let targetUrl;
+  if (isZh) {
+    // 中文跳英文，加 /en 前缀
+    targetUrl = `https://${enHost}/en${pathname}${search}${hash}`;
+  } else {
+    // 英文跳中文，去掉 /en 前缀
+    const zhPath = pathname.startsWith('/en') ? pathname.replace(/^\/en/, '') : pathname;
+    targetUrl = `https://${zhHost}${zhPath}${search}${hash}`;
+  }
+
+  return (
+    <a className={styles.gbButton} href={targetUrl} rel="nofollow">
+      {targetLabel}
+    </a>
+  );
+}
+
 class TopLeft extends React.Component {
   constructor(props) {
     super(props);
@@ -219,6 +252,9 @@ class TopRight extends React.Component {
                     <div className={styles.headlineText}><a href="https://www.taosdata.com/it_operation_time-series_database"><Translate>IT 运维</Translate></a></div>
                     <div className={styles.headlineText}><a href="https://www.taosdata.com/energy"><Translate>电力能源</Translate></a></div>
                     <div className={styles.headlineText}><a href="https://www.taosdata.com/finance"><Translate>金融</Translate></a></div>
+                  </div>
+                  <div style={{ paddingTop: '10px' }}>
+                    <LanguageSwitchButton />
                   </div>
                 </div>
               </div>

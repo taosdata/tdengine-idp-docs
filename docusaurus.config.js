@@ -14,7 +14,7 @@ const config = {
   tagline: '工业互联网全量设备的元数据可视化管理系统',
   favicon: '/favicon.ico',
 
-  url: 'https://docs.tdengine.ai',
+  url: 'https://idmpdocs.taosdata.com',
   baseUrl: '/',
   onBrokenAnchors: 'throw',
   onBrokenLinks: 'throw',
@@ -124,16 +124,16 @@ const config = {
               //   label: "version", // 自定义下拉菜单标签（默认值为 'Version'）
               //   // dropdownActiveClassDisabled: true, // 可选：禁用下拉菜单项的激活状态
               // },
-              {
-                type: 'localeDropdown',
-                position: 'right',
-                dropdownItemsAfter: [
-                  {
-                    to: 'https://docs.tdengine.ai/',
-                    label: 'Help Us Translate',
-                  },  
-                ],         
-              },
+              // {
+              //   type: 'localeDropdown',
+              //   position: 'right',
+              //   dropdownItemsAfter: [
+              //     {
+              //       to: 'https://idmpdocs.taosdata.com/',
+              //       label: 'Help Us Translate',
+              //     },  
+              //   ],         
+              // },
               // {
               //     to: "https://www.taosdata.com/contactus",
               //     label: "联系我们",
