@@ -69,6 +69,11 @@
   border-bottom: 1px solid white;
 }
 
+.navbar__item--locale-dropdown,
+.navbar__item.dropdown {
+  display: none !important;
+}
+
 .breadcrumbs {
   display: none !important;
 }
@@ -321,21 +326,30 @@ article figure img {
   }
 }
 
-/* 主题切换按钮变为白色 */
-.navbar .clean-btn[class*="toggleButton"] {
-  color: white !important;
+html[data-theme='dark'] .navbar__link,
+html[data-theme='dark'] .navbar__items .navbar__item,
+html[data-theme='dark'] .navbar__title,
+html[data-theme='dark'] .navbar__toggle,
+html[data-theme='dark'] .navbar .clean-btn[class*="toggleButton"],
+html[data-theme='dark'] .navbar__item {
+  color: #111 !important; /* 深色模式下字体为黑色 */
 }
+
+/* 主题切换按钮变为白色 */
+/* .navbar .clean-btn[class*="toggleButton"] {
+  color: white !important;
+} */
 
 /* 确保切换按钮图标在深色模式下也是白色 */
-html[data-theme='dark'] .navbar .clean-btn[class*="toggleButton"],
+/* html[data-theme='dark'] .navbar .clean-btn[class*="toggleButton"],
 html[data-theme='light'] .navbar .clean-btn[class*="toggleButton"] {
   color: white !important;
-}
+} */
 
 /* 悬停效果保持白色但透明度变化 */
-.navbar .clean-btn[class*="toggleButton"]:hover {
+/* .navbar .clean-btn[class*="toggleButton"]:hover {
   opacity: 0.8;
-}
+} */
 
 body {
   counter-reset: section
