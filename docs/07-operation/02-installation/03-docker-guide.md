@@ -22,7 +22,7 @@ docker run -d --name tdengine-idmp \
    -p 6042:6042 tdengine/tdengine-idmp
 ```
 
-> 如需自定义端口，请将 `-p 6042:6042` 中前面的端口号修改为你需要的端口。
+> 如需自定义端口，请将 `-p 6042:6042` 中前面的端口号修改为您需要的端口。
 
 ### 3. 访问 TDengine IDMP 服务
 

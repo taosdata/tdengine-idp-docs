@@ -9,7 +9,7 @@ TDengine IDMP 提供了丰富的功能，本文档将带领您通过安装包完
 
 TDengine IDMP 支持多种安装、部署方式，在不同的操作系统和架构下，都能够体验其强大的功能带来的便利。对操作系统和架构的支持，详见[部署规划](../operation/planning)。以下步骤将以 Linux 系统为例，演示如何下载、安装并启动 TDengine IDMP.
 
-1. 前往[TDengine 下载中心](https://www.taosdata.com/downloads/)。
+1. 前往 TDengine 下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面。
 1. 选择最新版本的 `.tar.gz` 类型的装包下载。
 1. 解压并执行安装脚本，以完成安装（请将 `<version>` 替换为实际版本号）。
    ```bash
