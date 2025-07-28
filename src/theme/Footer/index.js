@@ -183,7 +183,7 @@ class TopRight extends React.Component {
                     <Translate>产品</Translate>
                   </div>
                   <div className={styles.marginTop10}>
-                    <div className={styles.headlineText}><a href="https://www.taosdata.com/tdengine-enterprise"><Translate>TDengine Enterprise</Translate></a></div>
+                    <div className={styles.headlineText}><a href="https://www.taosdata.com/tdengine-enterprise"><Translate>TDengine TSDB</Translate></a></div>
                     <div className={styles.headlineText}><a href="https://cloud.taosdata.com/"><Translate>TDengine Cloud</Translate></a></div>
                   </div>
                 </div>
@@ -284,7 +284,7 @@ const EnglishFooter = React.memo(() => (
           <div className={enstyles.firstColumn}>
             <div className={enstyles.firstTop}>
               <div className={enstyles.headline}>Products</div>
-              <a href="https://tdengine.com/tsdb/">TDengine TSDB</a>
+              <a href="https://tdengine.com/">TDengine TSDB</a>
               <a href="https://tdengine.com/idmp/">TDengine IDMP</a>
               <a href="https://cloud.tdengine.com">TDengine Cloud</a>
             </div>
