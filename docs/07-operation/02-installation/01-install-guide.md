@@ -18,10 +18,10 @@ TDengine IDMP 的运行需要满足以下先决条件：
 <Tabs>
 
 <TabItem label="tar.gz 安装" value="tar">
-1. 从[版本列表](../../release-history/version)页面下载获得最新的 `.tar.gz` 安装包
+1. 从 TDengine 产品下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面下载获得最新的 `.tar.gz` 安装包
 1. 执行以下命令，解压并安装，请将 `<version>` 替换为实际版本号
    ```bash
-   tar zxvf tdengine-idmp-enterprise-<version>-linux.tar.gz
+   tar zxvf tdengine-idmp-enterprise-<version>-linux-generic.tar.gz
    cd tdengine-idmp-enterprise-<version>
    ./install.sh
    ```
@@ -33,25 +33,25 @@ TDengine IDMP 的运行需要满足以下先决条件：
 </TabItem>
 
 <TabItem label="deb 安装" value="deb">
-1. 从[版本列表](../../release-history/version)页面下载获得最新的 `.deb` 安装包
+1. 从 TDengine 产品下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面下载获得最新的 `.deb` 安装包
 1. 执行以下命令，安装 deb 包，请将 `<version>` 替换为实际版本号
    ```bash
-   dpkg -i tdengine-idmp-enterprise-<version>-linux.deb
+   dpkg -i tdengine-idmp-enterprise-<version>-linux-generic.deb
    ```
 1. TDengine IDMP 的默认安装路径为 `/usr/local/taos/idmp`, 安装成功后，可以看到终端展示 "TDengine IDMP has been installed successfully!".
 </TabItem>
 
 <TabItem label="rpm 安装" value="rpm">
-1. 从[版本列表](../../release-history/version)页面下载获得最新的 `.rpm` 安装包
+1. 从 TDengine 产品下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面下载获得最新的 `.rpm` 安装包
 1. 执行以下命令，安装 rpm 包，请将 `<version>` 替换为实际版本号
    ```bash
-   rpm -i tdengine-idmp-enterprise-<version>-linux.rpm
+   rpm -ivh --nodeps tdengine-idmp-enterprise-<version>-linux-generic.rpm
    ```
 1. TDengine IDMP 的默认安装路径为 `/usr/local/taos/idmp`, 安装成功后，可以看到终端展示 "TDengine IDMP has been installed successfully!".
 </TabItem>
 
 <TabItem label="macOS 安装" value="macos">
-1. 从 [版本列表](../../release-history/version) 页面下载获得最新的 macOS 安装包 (.pkg)
+1. 从 TDengine 产品下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面下载获得最新的 macOS 安装包 (.pkg)
 1. 双击安装包，按照提示完成安装
 1. TDengine IDMP 的默认安装路径为 `/usr/local/taos/idmp`
 </TabItem>

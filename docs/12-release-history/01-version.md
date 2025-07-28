@@ -6,4 +6,4 @@ TDengine IDMP 版本号采用三位版本号，由 `MAJOR.MINOR.PATCH` 三部分
 - `Major`：有重大新特性，升级后不可回退
 - `Patch`：有新特性或缺陷修复，升级后可以回退
 
-欢迎到[下载中心](https://taosdata.com/aaadownloads/)下载安装包。
+欢迎到[下载中心](https://www.taosdata.com/download-center)下载安装包。
