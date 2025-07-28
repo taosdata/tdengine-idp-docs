@@ -264,7 +264,7 @@ class ContactSales extends React.Component {
         if (name == "") {
             console.log('name', name);
             this.state.name.focus();
-            this.setState({message: "请输入你的名字"});
+            this.setState({message: "请输入您的名字"});
             this.setState({showMessage: true});
             return false;
         }

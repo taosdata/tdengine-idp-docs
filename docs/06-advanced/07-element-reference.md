@@ -4,7 +4,7 @@
 
 在一个树状结构里创建一个新元素时，该元素便有了第一个引用，因此任何一个元素的引用数总数是大于零的。当元素只有一个引用的时候，一般不会说这个唯一的引用是元素引用，而是直接称之为元素。
 
-一个元素可以被用户直接删除，或当它的父元素被删除时，间接的被删除。由于一个元素的引用数可能大于 1，当你删除在某一个位置的元素时，这个元素不一定被真正删除了。只有当元素的引用总数为 0 时，该元素才被彻底删除或不存在了。为明确元素删除行为，IDMP 对元素引用定义了三种类型，包括强引用、包含引用和弱引用。
+一个元素可以被用户直接删除，或当它的父元素被删除时，间接的被删除。由于一个元素的引用数可能大于 1，当您删除在某一个位置的元素时，这个元素不一定被真正删除了。只有当元素的引用总数为 0 时，该元素才被彻底删除或不存在了。为明确元素删除行为，IDMP 对元素引用定义了三种类型，包括强引用、包含引用和弱引用。
 
 ## 强引用
 
@@ -22,10 +22,10 @@ Wind Turbine-1 与 Wind Turbines，与 Site A, 都是强关系。当删除了元
 
 ## 弱引用
 
-当你想让两个元素有父子层级关系但是这个关系不影响子元素的生命周期时，可以选择弱引用（Weak）。比如 Wind Turbine-1 在 Wind Turbines 下面是弱引用，但在 Site A 下面是强引用，如果删除 Wind Turbines 下面的 Wind Turbine-1, Site A 下面的 Wind Turbine-1 继续存在，不受任何影响。
+当您想让两个元素有父子层级关系但是这个关系不影响子元素的生命周期时，可以选择弱引用（Weak）。比如 Wind Turbine-1 在 Wind Turbines 下面是弱引用，但在 Site A 下面是强引用，如果删除 Wind Turbines 下面的 Wind Turbine-1, Site A 下面的 Wind Turbine-1 继续存在，不受任何影响。
 ![weak-ref](/docs-img/advanced/weak-ref.png)
 
-但是，如果你删除 Site A 下面的 Wind Turbine-1, 那么 Wind Turbines 下面的 Wind Turbine-1 也被自动删除，因为 Wind Turbine-1 已经不存在有强引用或包含引用了，那么所有弱引用也要被删除。
+但是，如果您删除 Site A 下面的 Wind Turbine-1, 那么 Wind Turbines 下面的 Wind Turbine-1 也被自动删除，因为 Wind Turbine-1 已经不存在有强引用或包含引用了，那么所有弱引用也要被删除。
 ![weak-ref-del-strong](/docs-img/advanced/weak-ref-del-strong.png)
 
 ## 引用的规则
