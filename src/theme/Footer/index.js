@@ -228,7 +228,7 @@ class TopRight extends React.Component {
                     <div className={styles.headlineText}><a href="https://www.taosdata.com/finance"><Translate>金融</Translate></a></div>
                   </div>
                   <div style={{ paddingTop: '10px' }}>
-                    <a className={styles.gbButton} href="https://tdengine.com/idmp/" rel="nofollow">EN</a>
+                    <a className={styles.gbButton} href="https://tdengine.com/" rel="nofollow">EN</a>
                   </div>
                 </div>
               </div>
