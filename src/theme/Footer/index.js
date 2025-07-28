@@ -1,11 +1,16 @@
-// filepath: /root/tdasset-docs/src/theme/Footer/index.js
 import React from "react";
 import styles from "./styles.module.css";
+import enstyles from "./en.styles.module.css";
 import LogoSvg from "/img/site-logo.svg";
+import GitHubIcon from "/img/github.svg";
+import DiscordIcon from "/img/discord.svg";
+import LinkedInIcon from "/img/linkedin.svg";
+import TwitterIcon from "/img/twitter.svg";
+import YouTubeIcon from "/img/youtube.svg";
 import Popup from "./components/popup";
 import cookie from 'react-cookies'
 import Translate, {translate} from '@docusaurus/Translate';
-import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 function setCookie(name, value, daysToLive) {
   if (!value || typeof value === "undefined") {
@@ -26,6 +31,7 @@ function getCookie(name) {
   }
   return val;
 }
+
 class TopLeft extends React.Component {
   constructor(props) {
     super(props);
@@ -129,12 +135,13 @@ class TopLeft extends React.Component {
           </span>
           <a className={styles.socialBtn} href="https://www.linkedin.com/company/tdengine" target="_blank" rel="noopener noreferrer" aria-label="linkedin link"><span className={styles.icon}><svg aria-hidden="true" alt="TDengine Database" role="img" height="1em" width="1em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></span></a>
           <a className={styles.socialBtn} href="https://stackoverflow.com/questions/tagged/td-engine" target="_blank" rel="noopener noreferrer" aria-label="stackoverflow link"><span className={styles.icon}><svg height="200" width="200" alt="TDengine Database" role="img" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024" ><path fill="#ffffff" d="M1024 640v384H0V640h128v256h768v-256zM192 704h640v128H192z m15.136-138.528l27.712-124.96 624.832 138.496-27.712 124.96z m72.512-256.928l54.08-116 580.032 270.464-54.08 116z m712.064 52.928l-77.92 101.536L406.048 73.408 462.4 0h58.24z"></path></svg></span></a>
-          <a className={styles.socialBtn} href="https://www.zhihu.com/people/tbase" target="_blank" rel="noopener noreferrer" aria-label="zhihu link"><span className={styles.icon}><svg height="200" width="200" alt="TDengine Database" role="img" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path fill="#ffffff" d="M564.7 230.1V803h60l25.2 71.4L756.3 803h131.5V230.1H564.7z m247.7 497h-59.9l-75.1 50.4-17.8-50.4h-18V308.3h170.7v418.8zM526.1 486.9H393.3c2.1-44.9 4.3-104.3 6.6-172.9h130.9l-0.1-8.1c0-0.6-0.2-14.7-2.3-29.1-2.1-15-6.6-34.9-21-34.9H287.8c4.4-20.6 15.7-69.7 29.4-93.8l6.4-11.2-12.9-0.7c-0.8 0-19.6-0.9-41.4 10.6-35.7 19-51.7 56.4-58.7 84.4-18.4 73.1-44.6 123.9-55.7 145.6-3.3 6.4-5.3 10.2-6.2 12.8-1.8 4.9-0.8 9.8 2.8 13 10.5 9.5 38.2-2.9 38.5-3 0.6-0.3 1.3-0.6 2.2-1 13.9-6.3 55.1-25 69.8-84.5h56.7c0.7 32.2 3.1 138.4 2.9 172.9h-141l-2.1 1.5c-23.1 16.9-30.5 63.2-30.8 65.2l-1.4 9.2h167c-12.3 78.3-26.5 113.4-34 127.4-3.7 7-7.3 14-10.7 20.8-21.3 42.2-43.4 85.8-126.3 153.6-3.6 2.8-7 8-4.8 13.7 2.4 6.3 9.3 9.1 24.6 9.1 5.4 0 11.8-0.3 19.4-1 49.9-4.4 100.8-18 135.1-87.6 17-35.1 31.7-71.7 43.9-108.9L497 850l5-12c0.8-1.9 19-46.3 5.1-95.9l-0.5-1.8-108.1-123-22 16.6c6.4-26.1 10.6-49.9 12.5-71.1h158.7v-8c0-40.1-18.5-63.9-19.2-64.9l-2.4-3z"></path></svg></span></a>
+          <a className={styles.socialBtn} href="https://www.zhihu.com/people/tbase" target="_blank" rel="noopener noreferrer" aria-label="zhihu link"><span className={styles.icon}><svg height="200" width="200" alt="TDengine Database" role="img" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path fill="#ffffff" d="M526.1 486.9H393.3c2.1-44.9 4.3-104.3 6.6-172.9h130.9l-0.1-8.1c0-0.6-0.2-14.7-2.3-29.1-2.1-15-6.6-34.9-21-34.9H287.8c4.4-20.6 15.7-69.7 29.4-93.8l6.4-11.2-12.9-0.7c-0.8 0-19.6-0.9-41.4 10.6-35.7 19-51.7 56.4-58.7 84.4-18.4 73.1-44.6 123.9-55.7 145.6-3.3 6.4-5.3 10.2-6.2 12.8-1.8 4.9-0.8 9.8 2.8 13 10.5 9.5 38.2-2.9 38.5-3 0.6-0.3 1.3-0.6 2.2-1 13.9-6.3 55.1-25 69.8-84.5h56.7c0.7 32.2 3.1 138.4 2.9 172.9h-141l-2.1 1.5c-23.1 16.9-30.5 63.2-30.8 65.2l-1.4 9.2h167c-12.3 78.3-26.5 113.4-34 127.4-3.7 7-7.3 14-10.7 20.8-21.3 42.2-43.4 85.8-126.3 153.6-3.6 2.8-7 8-4.8 13.7 2.4 6.3 9.3 9.1 24.6 9.1 5.4 0 11.8-0.3 19.4-1 49.9-4.4 100.8-18 135.1-87.6 17-35.1 31.7-71.7 43.9-108.9L497 850l5-12c0.8-1.9 19-46.3 5.1-95.9l-0.5-1.8-108.1-123-22 16.6c6.4-26.1 10.6-49.9 12.5-71.1h158.7v-8c0-40.1-18.5-63.9-19.2-64.9l-2.4-3z"></path></svg></span></a>
         </div>
       </div>
     )
   }
 }
+
 class TopRight extends React.Component {
   constructor(props) {
     super(props);
@@ -220,6 +227,9 @@ class TopRight extends React.Component {
                     <div className={styles.headlineText}><a href="https://www.taosdata.com/energy"><Translate>电力能源</Translate></a></div>
                     <div className={styles.headlineText}><a href="https://www.taosdata.com/finance"><Translate>金融</Translate></a></div>
                   </div>
+                  <div style={{ paddingTop: '10px' }}>
+                    <a className={styles.gbButton} href="https://tdengine.com/idmp/" rel="nofollow">EN</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -231,7 +241,9 @@ class TopRight extends React.Component {
     );
   }
 }
-const BottomLeft = () => (
+
+// 中文页脚底部组件
+const ChineseBottomLeft = () => (
   <div className={styles.bottomLeft}>
     <div>© 2017-{new Date().getFullYear()} <Translate>涛思数据</Translate></div>
     <div><Translate>京公网安备 11010502047618号</Translate></div>
@@ -240,21 +252,93 @@ const BottomLeft = () => (
   </div>
 );
 
-class BottomRight extends React.Component {
-  constructor() {
-    super();
-  }
-  render() {
-    return (
-      <div className={styles.bottomRight}>
-        <a className={styles.bottomLink} href="https://taosdata.com/careers"><Translate>招贤纳士</Translate></a>
-        <a className={styles.bottomLink} href="https://taosdata.com/terms-of-service"><Translate>服务条款</Translate></a>
-        <a className={styles.bottomLink} href="https://taosdata.com/privacy"><Translate>隐私</Translate></a>
-        <a className={styles.bottomLinkLast} href="https://taosdata.com/about"><Translate>关于</Translate></a>
+// 英文页脚组件
+const EnglishFooter = React.memo(() => (
+  <footer className={enstyles.footer}>
+    <div className={enstyles.inside}>
+      <div className={enstyles.top}>
+        <div className={enstyles.left}>
+          <div className={enstyles.imageContainer}>
+            <a href="https://tdengine.com">
+              <LogoSvg className={enstyles.logoImg} width="150" height="30" alt="TDengine" />
+            </a>
+            <div className={enstyles.certsContainer}>
+              <a href="https://tdengine.com/legal/soc-2/">
+                <img className={enstyles.socImg} src={require('@site/static/img/soc-footer.png').default} alt="SOC 2 compliant" />
+              </a>
+              <a href="https://tdengine.com/legal/iso-27001/">
+                <img className={enstyles.isoImg} src={require('@site/static/img/iso27001-footer.png').default} alt="ISO 27001 compliant" />
+              </a>
+              <a href="https://tdengine.com/legal/iso-27001/">
+                <img className={enstyles.isoImg} src={require('@site/static/img/iso27017-footer.png').default} alt="ISO 27017 compliant" />
+              </a>
+            </div>
+          </div>
+          <p className={enstyles.footerBlurb}>TDengine™ is a time-series database purpose-built for Industry 4.0
+            and Industrial IoT. It enables real-time ingestion, storage, analysis, and distribution of petabytes
+            of data per day, generated by billions of sensors and data collectors. With TDengine making big data
+            accessible, valuable, and affordable, digital transformation has never been easier.</p>
+          <p className={enstyles.footerBlurb}>© 2022–{new Date().getFullYear()} TDengine</p>
+        </div>
+        <div className={enstyles.right}>
+          <div className={enstyles.firstColumn}>
+            <div className={enstyles.firstTop}>
+              <div className={enstyles.headline}>Products</div>
+              <a href="https://tdengine.com/tsdb/">TDengine TSDB</a>
+              <a href="https://tdengine.com/idmp/">TDengine IDMP</a>
+              <a href="https://cloud.tdengine.com">TDengine Cloud</a>
+            </div>
+            <div className={enstyles.firstBottom}>
+              <div className={enstyles.headline}>Resources</div>
+              <a href="https://docs.tdengine.com/">Docs</a>
+              <a href="https://tdengine.com/blog/">Blog</a>
+              <a href="https://tdengine.com/webinars/">Webinars</a>
+            </div>
+          </div>
+          <div className={enstyles.secondColumn}>
+            <div className={enstyles.headline}>Company</div>
+            <a href="https://tdengine.com/about/">About</a>
+            <a href="https://tdengine.com/downloads/">Downloads</a>
+            <a href="https://tdengine.com/media/">Newsroom</a>
+            <a href="https://tdengine.com/security/">Security</a>
+            <a href="https://tdengine.com/legal/">Legal</a>
+            <a href="https://tdengine.com/partners/">Partners</a>
+            <a href="https://tdengine.com/contact/">Contact Us</a>
+          </div>
+          <div className={enstyles.thirdColumn}>
+            <div className={enstyles.headline}>Social</div>
+            <a className={enstyles.socialBtn} href="https://github.com/taosdata/tdengine">
+              <span className={enstyles.icon}>
+                <GitHubIcon />
+              </span>
+              <span>GitHub</span></a>
+            <a className={enstyles.socialBtn} href="https://discord.com/invite/VZdSuUg4pS">
+              <span className={enstyles.icon}>
+                <DiscordIcon />
+              </span>
+              <span>Discord</span></a>
+            <a className={enstyles.socialBtn} href="https://www.linkedin.com/company/tdengine/">
+              <span className={enstyles.icon}>
+                <LinkedInIcon />
+              </span>
+              <span>LinkedIn</span></a>
+            <a className={enstyles.socialBtn} href="https://twitter.com/TDengineDB">
+              <span className={enstyles.icon}>
+                <TwitterIcon />
+              </span>
+              <span>Twitter</span></a>
+            <a className={enstyles.socialBtn} href="https://www.youtube.com/@tdengine">
+              <span className={enstyles.icon}>
+                <YouTubeIcon />
+              </span>
+              <span>YouTube</span></a>
+            <a className={enstyles.langIcon} href="https://www.taosdata.com">中</a>
+          </div>
+        </div>
       </div>
-    );
-  }
-}
+    </div>
+  </footer>
+));
 
 class Footer extends React.Component {
   constructor(props) {
@@ -347,6 +431,8 @@ class Footer extends React.Component {
     })
   }
   render() {
+    const { isEnglish } = this.props;
+    
     return (
       <div>
         <div>
@@ -359,23 +445,38 @@ class Footer extends React.Component {
             </svg>
           </div>}
         </div>
-        <div className={styles.footer}>
-          <div className={styles.container}>
-            <div className={styles.inside}>
-              <div className={styles.top}>
-                <TopLeft />
-                <TopRight />
-              </div>
-              <div className={styles.bottom}>
-                <BottomLeft />
-                {/* <BottomRight /> */}
+        
+        {/* 根据语言渲染不同的页脚内容 */}
+        {isEnglish ? (
+          // 英文页脚
+          <EnglishFooter />
+        ) : (
+          // 中文页脚
+          <div className={styles.footer}>
+            <div className={styles.container}>
+              <div className={styles.inside}>
+                <div className={styles.top}>
+                  <TopLeft />
+                  <TopRight />
+                </div>
+                <div className={styles.bottom}>
+                  <ChineseBottomLeft />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     );
   }
 }
 
-export default Footer;
+// 包装组件，使用 hook 获取语言信息
+const FooterWrapper = () => {
+  const { i18n } = useDocusaurusContext();
+  const isEnglish = i18n.currentLocale === 'en';
+  
+  return <Footer isEnglish={isEnglish} />;
+};
+
+export default FooterWrapper;
