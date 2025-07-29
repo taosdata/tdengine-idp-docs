@@ -22,7 +22,7 @@ TDengine IDMP 支持多种安装、部署方式，在不同的操作系统和架
    tda:
      default-connection:
        enable: true
-       auth-type: UserPassword # can be set to UerPassword or Token
+       auth-type: UserPassword # can be set to UserPassword or Token
        url: http://192.168.1.100:6041
        username: root
        password: taosdata
