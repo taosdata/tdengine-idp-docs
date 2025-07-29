@@ -11,7 +11,7 @@ TDengine IDMP supports multiple installation and deployment methods, allowing yo
 
 1. Access the [TDengine Download Center](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise).
 1. Select the latest Linux-Generic installation package and download it.
-1. Extract the package and run the installation script to complete the installation (replace <version> with the actual version number):
+1. Extract the package and run the installation script to complete the installation (replace `<version>` with the actual version number):
    ```bash
    tar zxvf tdengine-idmp-enterprise-<version>-linux.tar.gz 
    cd tdengine-idmp-enterprise-<version>
