@@ -10,7 +10,7 @@ To minimize the cost of modeling, TDengine recommends performing basic data gove
 
 The taosX module in TDengine TSDB can automatically create super tables and sub-tables when reading these collected data, perform data transformation, and add more tags to save the hierarchical information of devices. Based on the metadata in TSDB, IDMP can automatically build a tree-like hierarchical structure and automatically create element templates and elements.
 
-For data collected from PLCs, since it is a single-column model and a device often has multiple metrics, these metrics need to be grouped under one device. This grouping can only be done in IDMP. You can refer to the [Data Import/Export - TSDB Asset Model](../operation/data-import-export#tdengine-tsdb-asset-model) section for details.
+For data collected from PLCs, since it is a single-column model and a device often has multiple metrics, these metrics need to be grouped under one device. This grouping can only be done in IDMP. You can refer to the [Data Import/Export - TSDB Asset Model](/operation/data-import-export#tdengine-tsdb-asset-model) section for details.
 
 Once the tree-like hierarchical model is established in IDMP, you can supplement more descriptive information and business semantics through element and attribute templates, providing better data context and making the entire data platform AI-Ready, which facilitates better utilization of AI.
 
