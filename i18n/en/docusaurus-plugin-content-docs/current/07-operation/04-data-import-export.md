@@ -30,7 +30,7 @@ The specific import steps are as follows:
 
 **Data Contextualization:** After importing, it’s recommended to enrich the data whenever possible. This includes adding physical units, categories, descriptions, and limit values to each element, as well as adding metadata to non-leaf nodes. By assigning business semantics to your data, you make your data platform AI-ready, allowing AI to better recommend dashboards and real-time analyses.
 
-## TDengine TSDB Asset Model 
+## TDengine TSDB Asset Model {#tdengine-tsdb-asset-model}
 
 If data has already been written into TSDB but lacks proper modeling—such as missing hierarchical tags, or using a single-column model despite each device having multiple data points— then the data cannot be directly imported into IDMP. In such cases, IDMP offers a flexible yet more complex configuration method that allows you to consolidate multiple super tables into a single element template. By using string builders and naming patterns, you can construct a hierarchical structure manually. This approach effectively resolves the limitations of single-column models and enables data from the OT domain (e.g., PLC-collected data) to be better structured and semantically enriched in the IT domain—making it easier to extract meaningful business insights.
 
