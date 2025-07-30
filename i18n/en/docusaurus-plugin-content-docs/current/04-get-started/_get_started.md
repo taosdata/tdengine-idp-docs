@@ -17,7 +17,7 @@ In the following example, we will use data from the "Utilities" scenario for dem
 After loading the demo scenario, you will be taken to the main web interface of TDengine IDMP. By default, you’ll land on the Element Browser page, where you can view and manage the imported element data.
 
 1. In the sidebar, select Elements. Once the "Utilities" scenario is fully loaded, you’ll be able to browse the specific element data under it.
-1. The "Utilities" scenario includes electricity and water meter data from Beijing, Hebei, Henan, and their respective cities or counties. You can explore different geographical locations via the tree structure on the left.
+1. The "Utilities" scenario includes electricity and water meter data from California, Georgia, New York, and their respective cities or counties. You can explore different geographical locations via the tree structure on the left.
 1. Select the element California > San Diego County > Chula Vista > em-10, which represents electricity meter number 10 in Chula Vista, California. Click the dropdown in the breadcrumb navigation bar at the top and select General to view its general information, including its description. Then select Attributes from the dropdown to view its attribute data such as current and voltage.
 
 ![attributes](/docs-img/get-started/attributes.png)
