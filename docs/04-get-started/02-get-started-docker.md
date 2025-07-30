@@ -22,26 +22,11 @@ TDengine IDMP 提供了 Docker 镜像，用户可以通过 Docker Compose 快速
    docker compose up -d
    ```
 
-   该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 **TDengine IDMP 服务和 TDengine TSDB 服务**。默认情况下，TDengine IDMP 服务会启动在主机的 6042 端口，如需修改端口映射，可编辑 `docker-compose.yml` 文件中的 `ports` 配置。
+   该命令会自动拉取所需镜像（如本地不存在），并以后台模式启动 TDengine IDMP 和 TDengine TSDB 服务。
 
-3. 当您体验完成后，您可以使用以下命令停止并删除容器：
+至此，TDengine IDMP 服务已成功启动。您可以在浏览器输入以下地址访问：[http://ip:6042](http://ip:6042),
+请将 `ip` 替换为真实的主机 IP 地址，如果在本地运行，则可以直接访问 [http://localhost:6042](http://localhost:6042)。关于服务启动、停止更详细的操作指南，请您参考[使用 Docker 部署](../operation/installation/docker-guide)章节。
 
-   ```bash
-   docker compose down
-   ```
-
-   服务启动时，会自动创建 Docker Volume 来持久化数据，您可以在 `docker-compose.yml` 文件中查看相关配置。如果您期望在停止服务的同时，清除数据，可以使用以下命令：
-
-   ```bash
-   docker compose down -v
-   ```
-
-:::tip
-
-1. 在这个演示中，我们将使用 TDengine TSDB 作为 TDengine IDMP 的数据源；
-1. 执行以上命令后，则在您的环境中，已启动了一个可用的 TDengine TSDB 服务。
-
-:::
 
 import Init from './_init.md'
 
