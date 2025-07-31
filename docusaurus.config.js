@@ -107,22 +107,20 @@ const config = {
           },
           items: [
               {
-                to: "/blog-redirect",
-                label: "博客",
-                position: "right",
-                target: "_blank", // 新标签页打开
-                rel: "noopener noreferrer", // 安全性
-              },    
-              {
-                label: "TDengine TSDB 文档",
+                label: "TSDB 文档",
                 to: "https://docs.taosdata.com/",
                 position: "right",
                 locale: "zh-Hans",
               },
               {
-                href: "https://github.com/taosdata/tdengine-idmp-docs/issues/new/choose",
-                label: "反馈问题",
-                position: "right",
+                  to: "https://cloud.taosdata.com/",
+                  label: "Cloud",
+                  position: "right",
+              },
+              {
+                  to: "https://www.taosdata.com/contactus",
+                  label: "联系我们",
+                  position: "right",
               },
 
               // {
