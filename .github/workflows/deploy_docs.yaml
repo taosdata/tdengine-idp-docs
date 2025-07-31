@@ -8,6 +8,7 @@ on:
   push:
     paths:
       - 'docs/**'
+      - 'i18n/en/docusaurus-plugin-content-docs/current/**'
       - '.github/workflows/deploy_docs.yaml'
       - '.docsearch/**'
     branches:
