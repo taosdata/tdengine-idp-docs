@@ -20,6 +20,14 @@
 | macOS 13 | macOS 13<br/>macOS 14<br/>macOS 15 | 支持 | 支持 |
 | Windows  | n/a | 暂不支持 | 暂不支持 |
 
+## 基础依赖
+
+TDengine IDMP 的运行需要以下基础依赖：
+
+Python: 3.10-3.12 版本
+Java: 21 及以上版本
+glibc: 2.25 及以上版本
+
 ## 端口占用
 
 TDengine IDMP 默认使用以下端口，请确保这些端口未被其他应用程序占用。
