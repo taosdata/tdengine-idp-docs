@@ -53,7 +53,11 @@ docker compose down -v
 
 ## 部署 TDengine IDMP 服务
 
-TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+, 如果您的环境中已存在满足要求的 TDengine TSDB 实例，您可以只启动 TDengine IDMP 容器，并将其连接至该 TDengine TSDB 实例。
+:::warning
+TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+
+:::
+
+如果您的环境中已存在满足要求的 TDengine TSDB 实例，您可以只启动 TDengine IDMP 容器，并将其连接至该 TDengine TSDB 实例。
 
 ### 1. 拉取 TDengine  IDMP 镜像
 
@@ -119,13 +123,15 @@ tda:
 
 ```bash
 docker run -d \
-   -p 6042:6042 \
-   -v /path/to/application.yml:/usr/local/taos/idmp/config/application.yml \
-   --name tdengine-idmp \
-   tdengine/idmp-ee
+  -p 6042:6042 \
+  -v ./application.yml:/usr/local/taos/idmp/config/application.yml \
+  --name tdengine-idmp \
+  tdengine/idmp-ee
 ```
 
-如需自定义端口，例如：将 TDengine IDMP 服务的端口 6042 映射至主机的 7042 端口，可按照以下方式，修改端口映射参数 `-p 7042:6042`。
+说明：
+- `-p` 选项，用于将​​容器的端口映射到主机的端口​​，使得外部可以通过主机的端口访问容器内运行的服务。如需自定义端口，例如：将 TDengine IDMP 服务的端口 6042 映射至主机的 7042 端口，可按照以下方式，修改端口映射参数 `-p 7042:6042`。
+- `-v` 选项，用于挂载主机目录或卷到容器中，实现主机和容器之间的文件共享或持久化存储。在以上命令中，将主机当前目录下的 `application.yml` 文件挂载到容器内的 `/usr/local/taos/idmp/config/application.yml` 路径下。
 
 ### 3. 访问 TDengine IDMP 服务
 
