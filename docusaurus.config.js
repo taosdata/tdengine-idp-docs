@@ -112,12 +112,19 @@ const config = {
                 position: "right",
                 target: "_blank", // 新标签页打开
                 rel: "noopener noreferrer", // 安全性
-              },              
+              },    
+              {
+                label: "TDengine TSDB 文档",
+                to: "https://docs.taosdata.com/",
+                position: "right",
+                locale: "zh-Hans",
+              },
               {
                 href: "https://github.com/taosdata/tdengine-idmp-docs/issues/new/choose",
                 label: "反馈问题",
                 position: "right",
               },
+
               // {
               //   type: "docsVersionDropdown", // 固定类型，用于启用版本选择
               //   position: "right", // 下拉菜单位置（'left' 或 'right'，默认右对齐）
