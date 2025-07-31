@@ -65,7 +65,7 @@ TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+
 docker pull tdengine/idmp-ee
 ```
 
-### 2. 编译 TDengine IDMP 配置文件
+### 2. 编辑 TDengine IDMP 配置文件
 
 TDengine IDMP 的配置文件 `application.yml` 的示例如下：
 
@@ -108,8 +108,8 @@ tda:
     expire-time: 3600 # permission cache expired for 3600 seconds
   analysis:
     event:
-      urls: ${TDA_ANALYSIS_EVENT_URLS:ws://localhost:6042} # The websocket URI for tdengine to access IDMP server.
-      event-types: # The event types for IDMP to used
+      urls: ws://192.168.1.100:6042 # The websocket URI for tdengine to access IDMP server.
+      event-types: # The event types for IDMP to use
         - WINDOW_OPEN
         - WINDOW_CLOSE
 ```
@@ -118,6 +118,8 @@ tda:
 - auth-type: 认证方式，支持 UserPassword 和 Token 两种方式，默认为方式 UserPassword
 - url: 为 TDengine TSDB 中 taosAdapter 组件的 IP 地址和端口号，端口号默认为 6041
 - username 和 password: 为 TDengine TSDB 的用户名和密码，默认为 root 和 taosdata
+
+在 `tda.analysis` 下，`envent.urls` 为 TDengine TSDB 访问 IDMP 服务的 WebSocket 地址。
 
 ### 2. 启动 TDengine IDMP 容器
 
