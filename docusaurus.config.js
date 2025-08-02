@@ -8,9 +8,18 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const getTitle = () => {
+  const locale = process.env.DOCUSAURUS_CURRENT_LOCALE || 'zh-Hans';
+  if (locale === 'en') {
+    return 'TDengine IDMP Documentation | TDengine';
+  }
+  return 'TDengine IDMP 文档 | 涛思数据';
+};
+
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TDengine IDMP 文档 | 涛思数据',
+  title: getTitle(),
   tagline: '工业互联网全量设备的元数据可视化管理系统',
   favicon: '/favicon.ico',
 
