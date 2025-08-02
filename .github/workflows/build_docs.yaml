@@ -2,7 +2,7 @@ name: Build Docs
 
 on:
   workflow_call:
-  push:
+  pull_request:
     paths-ignore:
       - 'docs/**'
       - 'i18n/en/docusaurus-plugin-content-docs/current/**'
