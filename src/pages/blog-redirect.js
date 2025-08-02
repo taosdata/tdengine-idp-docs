@@ -6,12 +6,12 @@ export default function BlogRedirect() {
 
   useEffect(() => {
     const locale = i18n.currentLocale;
-    const localeUrlMappings = {  
-      en: 'https://www.tdengine.com/blog',  
-      zh: 'https://www.taosdata.com/blog',  
-    };  
-    const href = localeUrlMappings[locale] || localeUrlMappings.en;  
-    
+    const localeUrlMappings = {
+      en: 'https://www.tdengine.com/blog',
+      'zh-Hans': 'https://www.taosdata.com/blog',
+    };
+    const href = localeUrlMappings[locale] || localeUrlMappings.en;
+
     window.location.replace(href);
   }, [i18n.currentLocale]);
 

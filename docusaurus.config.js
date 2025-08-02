@@ -108,21 +108,30 @@ const config = {
           items: [
               {
                 label: "TSDB 文档",
-                to: "https://docs.taosdata.com/",
+                to: "/redirect?target=tsdb",
                 position: "right",
-                locale: "zh-Hans",
+                target: "_blank", // 新标签页打开
+                rel: "noopener noreferrer", // 安全性
               },
               {
-                  to: "https://cloud.taosdata.com/",
-                  label: "Cloud",
-                  position: "right",
+                label: "Cloud",
+                to: "/redirect?target=cloud",
+                position: "right",
+                target: "_blank",
+                rel: "noopener noreferrer", 
               },
               {
-                  to: "https://www.taosdata.com/contactus",
-                  label: "联系我们",
-                  position: "right",
+                label: "联系我们",
+                to: "/redirect?target=contactus",
+                position: "right",
+                target: "_blank",
+                rel: "noopener noreferrer",
               },
-
+              {
+                  type: "search",
+                  position: "right",
+                  className: "navbarSearchTemp"
+              },
               // {
               //   type: "docsVersionDropdown", // 固定类型，用于启用版本选择
               //   position: "right", // 下拉菜单位置（'left' 或 'right'，默认右对齐）
@@ -139,16 +148,8 @@ const config = {
               //     },  
               //   ],         
               // },
-              // {
-              //     to: "https://www.taosdata.com/contactus",
-              //     label: "联系我们",
-              //     position: "right",
-              // },
-              {
-                  type: "search",
-                  position: "right",
-                  className: "navbarSearchTemp"
-              },
+
+
           ],
       },
       footer: {
