@@ -15,6 +15,10 @@ TDengine IDMP 提供全托管的 TDengine IDMP Cloud 服务，您只需简单的
 1. 请在阅读 TDengine 云服务的“服务协议”和“隐私政策”后，勾选同意。
 1. 请点击“注册”按钮，即可完成 TDengine 云服务的注册。
 
+import Tip from './_tip.md'
+
+<Tip />
+
 ## 配置用户信息
 
 1. 完成云服务注册后，即可进入用户信息配置页面，系统会提示您配置姓名等用户信息。
