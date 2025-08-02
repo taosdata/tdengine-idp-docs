@@ -608,5 +608,8 @@
   },
   "TDengine Cloud": {
     "message": "TDengine Cloud"
+  },
+  "TDengine TSDB": {
+    "message": "TDengine TSDB"
   }
 }

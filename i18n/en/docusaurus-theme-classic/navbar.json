@@ -10,5 +10,13 @@
   "item.label.联系我们": {
     "message": "Contact Us",
     "description": "Navbar item with label 联系我们"
+  },
+  "item.label.TSDB 文档": {
+    "message": "TSDB Docs",
+    "description": "Navbar item with label TSDB 文档"
+  },
+  "item.label.Cloud": {
+    "message": "Cloud",
+    "description": "Navbar item with label Cloud"
   }
 }
