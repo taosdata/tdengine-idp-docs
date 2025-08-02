@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
+import { useLocation } from '@docusaurus/router';
 
 const TOC_LINK_SELECTOR = '.table-of-contents__link';
+const ANCHOR_LINK_SELECTOR = 'a[href^="#"]';
 const NAVBAR_HIDDEN_CLASS = 'navbarHidden_bnBw';
 
 export default function Root({ children }) {
+  const location = useLocation();
+
   useEffect(() => {
-    const navbar = document.querySelector('.theme-layout-navbar');
+    const navbar = document.querySelector('.navbar');
     const body = document.body;
     const tocContainer = document.querySelector('.table-of-contents');
 
@@ -13,32 +17,48 @@ export default function Root({ children }) {
       navbar?.classList.add(NAVBAR_HIDDEN_CLASS);
     };
 
+    const showNavbar = () => {
+      navbar?.classList.remove(NAVBAR_HIDDEN_CLASS);
+    };
+
     const observer = new MutationObserver(() => {
       if (body.classList.contains('medium-zoom--opened')) {
         hideNavbar();
       } else {
-        navbar?.classList.remove(NAVBAR_HIDDEN_CLASS);
+        showNavbar();
       }
     });
     observer.observe(body, { attributes: true, attributeFilter: ['class'] });
 
-    const handleTocClick = (e) => {
-      if (e.target.closest(TOC_LINK_SELECTOR)) { 
+    const handleLinkClick = (e) => {
+      if (
+        e.target.closest(TOC_LINK_SELECTOR) ||
+        (e.target.closest(ANCHOR_LINK_SELECTOR) &&
+          e.target.getAttribute('href')?.startsWith('#'))
+      ) {
         hideNavbar();
       }
     };
 
     if (tocContainer) {
-      tocContainer.addEventListener('click', handleTocClick);
+      tocContainer.addEventListener('click', handleLinkClick);
+    }
+    document.body.addEventListener('click', handleLinkClick);
+
+    // 页面加载或路由切换时，如果有 hash，自动收起导航栏
+    if (window.location.hash) {
+      hideNavbar();
     }
 
     return () => {
       observer.disconnect();
       if (tocContainer) {
-        tocContainer.removeEventListener('click', handleTocClick);
+        tocContainer.removeEventListener('click', handleLinkClick);
       }
+      document.body.removeEventListener('click', handleLinkClick);
+      showNavbar();
     };
-  }, []);
+  }, [location.pathname]);
 
   return <>{children}</>;
 }
