@@ -62,6 +62,11 @@ TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+, 在安装 TDengine IDMP 
 
 </Tabs>
 
+:::warning
+如果出现 “Java Version 21+ /Python Version 3.10+ is required and not found at:” 的失败提示，说明打印的系统环境变量中没有找到符合要求的 Java 或 Python。
+你可以通过设置软链接，把对应的可执行文件添加到打印的系统环境变量目录中。
+:::
+
 ## 配置
 
 TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+. 在启动 TDengine IDMP 之前，请配置 TDengine TSDB 连接。用编辑器打开 TDengine IDMP 的配置文件，默认位于 `/usr/local/taos/idmp/config/application.yml`。在 `tda.default-connection` 下，配置 TDengine TSDB 的连接信息，示例如下：
