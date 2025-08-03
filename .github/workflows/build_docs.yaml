@@ -2,6 +2,16 @@ name: Build Docs
 
 on:
   workflow_call:
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - 'i18n/en/docusaurus-plugin-content-docs/current/**'
+    branches:
+      - main
+      
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:

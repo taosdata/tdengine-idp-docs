@@ -18,5 +18,29 @@
   "sidebar.tutorialSidebar.category.Release Notes": {
     "message": "Release Notes",
     "description": "The label for category Release Notes in sidebar tutorialSidebar"
+  },
+  "sidebar.defaultSidebar.category.Quick Start Guide": {
+    "message": "Quick Start Guide",
+    "description": "The label for category Quick Start Guide in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Basic Features": {
+    "message": "Basic Features",
+    "description": "The label for category Basic Features in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Advanced Features": {
+    "message": "Advanced Features",
+    "description": "The label for category Advanced Features in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Operations Manual": {
+    "message": "Operations Manual",
+    "description": "The label for category Operations Manual in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Installing TDengine IDMP": {
+    "message": "Installing TDengine IDMP",
+    "description": "The label for category Installing TDengine IDMP in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Release History": {
+    "message": "Release History",
+    "description": "The label for category Release History in sidebar defaultSidebar"
   }
 }
