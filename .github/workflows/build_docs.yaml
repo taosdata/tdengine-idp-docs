@@ -10,7 +10,7 @@ on:
       - main
       
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
+  group: ${{ github.workflow }}-${{ github.ref }}-build-${{ github.event_name }}
   cancel-in-progress: true
 
 jobs:
