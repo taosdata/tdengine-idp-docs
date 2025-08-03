@@ -63,7 +63,7 @@ TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+, 在安装 TDengine IDMP 
 </Tabs>
 
 :::warning
-如果出现 “Java Version 21+ /Python Version 3.10+ is required and not found at:” 的失败提示，说明打印的系统环境变量中没有找到符合要求的 Java 或 Python。
+如果出现"Java Version 21+ /Python Version 3.10+ is required and not found at:"的失败提示，说明打印的系统环境变量中没有找到符合要求的 Java 或 Python。
 你可以通过设置软链接，把对应的可执行文件添加到打印的系统环境变量目录中。
 :::
 
