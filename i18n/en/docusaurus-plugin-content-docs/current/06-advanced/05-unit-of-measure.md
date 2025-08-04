@@ -1,5 +1,5 @@
 ---
-title: Units of Measure
+title: Units of Measurement
 ---
 
 In IoT and industrial scenarios, each data point collected may use different units of measurement (UoM). Even if unit conversion is performed during ingestion, due to variations in project timelines and other factors, inconsistencies in units may still exist in the stored data. Unit conversion is essential to ensure accurate data analysis.

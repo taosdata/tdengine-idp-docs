@@ -2,6 +2,12 @@
 
 To help you get started quickly, TDengine IDMP comes with built-in sample scenarios. Select at least one sample scenario to continue:
 
+:::important
+
+You must load only one sample scenario at a time. Do not attempt to load a second sample scenario until the previous scenario has finished loading.
+
+:::
+
 - Utilities: A smart meter monitoring system that collects real-time data from electricity and water meters to enable precise energy management and anomaly detection.
 - Logistics: A fleet tracking and management system that monitors vehicle location, speed, routes, and overspeed alerts in real time, combining this with mileage analysis to enhance transport safety and operational efficiency.
 - Solar Power: A solar power monitoring system that collects real-time data from inverters and environmental sensors to provide a clear view of plant operations and enable intelligent analysis.
@@ -9,7 +15,7 @@ To help you get started quickly, TDengine IDMP comes with built-in sample scenar
 - Wastewater Treatment: A wastewater treatment monitoring system that collects real-time data from bioreactors, membrane tanks, and influent/effluent water quality sensors to visualize the treatment process and enable intelligent control.
 - Oil Field: An oilfield production monitoring system that collects real-time data on well output, pressure, and water cut to enable precise, end-to-end management of field operations.
 
-:::important
+:::tip
 
 The following sections use the data from the Utilities scenario to demonstrate the features of TDengine IDMP. To follow along, select the Utilities scenario and click **Confirm**.
 
