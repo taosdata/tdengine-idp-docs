@@ -54,13 +54,13 @@ TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+, 在安装 TDengine IDMP 
 关于服务启动、停止更详细的操作指南，请您参考[使用安装包部署](../operation/installation/install-guide)章节。为了简化安装包的部署，您还可以使用我们提供的 Ansible Playbook 来完成安装和配置，具体步骤请参考[使用 Ansible Playbook 部署](../operation/installation/ansible-guide)章节。
 
 :::tip
-Q：在安装过程中，安装程序会自动下载并安装 AI 相关的 Python 依赖，如果遇到"Failed to install TDengine IDMP dependencies from /usr/local/taos/idmp/chat/requirements.txt"的错误提示
-
-A：请确保您的系统已连接互联网，在国内的网络中还可以通过替换 PyPI 镜像源，例如：[清华大学的 PyPI 镜像源](https://pypi.tuna.tsinghua.edu.cn/)，来加速下载。
-```bash
-pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
-```
-
+1. 安装过程中，如果遇到以下错误 "Failed to install TDengine IDMP dependencies from /usr/local/taos/idmp/chat/requirements.txt", 应该如何解决？
+   - IDMP 安装过程中，需要访问互联网，以安装 AI 相关的 Python 依赖，请确保您的系统已连接互联网。
+   - 网络连接正常的情况下，请确保 PyPI 仓库可以正常访问。在国内的网络中，建议配置 PyPI 镜像源来加速下载，例如：[清华大学的 PyPI 镜像源](https://pypi.tuna.tsinghua.edu.cn/)，具体命令如下：
+     ```bash
+     pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+     ```
+   - 更详细的安装日志，请参考：/tmp/tdengine_chat_dep_install.log
 :::
 
 import Init from './_init.md'
