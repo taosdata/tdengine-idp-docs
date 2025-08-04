@@ -1,14 +1,27 @@
-At this point, the TDengine IDMP service has been successfully started. You can access it in your browser by navigating to `http://ip:6042`
-Replace ip with your actual host IP address. If you are running the service locally, you can simply visit `http://localhost:6042`.
+import Tip from './_tip.md';
 
-## Activate Your Account
+Once TDengine TSDB and TDengine IDMP are running, you can access TDengine IDMP in your web browser at `http://localhost:6042`. Adjust this address accordingly if you have modified the port number or are running TDengine IDMP on a remote machine.
 
-1. On your first visit, you’ll need to activate the service. After entering your email and organization, click the “Get Activation Code” button. An activation email will be sent to the provided address. Enter the code from the email and click “Activate” to complete the process. You’ll receive a 15-day free trial.
-1. Once the activation code is verified, a Privacy Settings dialog will appear. You can choose which diagnostic information to share—this data helps us improve the product. Your business and production data will never be collected. When finished, click “Agree” to continue.
+## Activate TDengine IDMP
 
-## Configure User Information
+1. Under **Activate TDengine IDMP**, enter your email address and organization.
+1. Click **Get Code** and enter the code sent to your email address.
+1. Read the User Agreement and Privacy Policy and click **Activate**.
+1. In the **Privacy Settings** dialog box displayed, select which diagnostic information you want to share with TDengine.
+1. Click **Agree**.
 
-1. After activating the product, you will be directed to the User Information Setup page.
-1. Follow the on-screen instructions to enter your name and mobile phone number.
-3. Set your login password.
-4. Once the password is verified, the user information setup is complete. Click “Continue” to automatically proceed to the Sample Scenario Loading page.
+## Enter Account Information
+
+1. On the page displayed, enter your name, phone number, position, and password.
+
+   :::note
+
+   - Your password must be 8 to 20 characters long. 
+   - Your password must contain each of the following character types: letters, digits, and special characters.
+   - The following special characters are supported: `. ~ ! @ # $ ^ & *`
+
+   :::
+
+1. (Optional) Select a profile picture for your account. JPG and PNG files under 1 MB are supported.
+
+1. Click **Continue**.
