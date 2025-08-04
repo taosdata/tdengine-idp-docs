@@ -62,6 +62,18 @@ TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+, 在安装 TDengine IDMP 
 
 </Tabs>
 
+:::tip
+IDMP 的正常运行，依赖指定版本的 Python 和 Java 环境。在安装过程中，安装脚本会对依赖进行检查。常见错误如下，以 Java 为例：
+
+1. 安装过程中，如果遇到以下错误 "Java Version 21+ is required, but not found at: ...", 应该如何解决？
+   - Java 没有安装，请安装 Java 21 或更高版本。
+   - Java 已安装，但安装程序没有找到，可以通过创建软链接的方式来解决，例如：`ln -s /path/to/your-java-executable /usr/local/bin/java`.
+
+2. 安装过程中，如果遇到以下错误 "Java Version 21+ is required, but version X is found at: ...", 应该如何解决？ 
+   - Java 版本过低，请安装 Java 21 或更高版本。
+   - 满足要求的 Java 已安装，但安装程序没有找到，可以通过创建软链接的方式来解决，例如：`ln -s /path/to/your-java-executable /usr/local/bin/java`, 如果系统中存在多个 Java 版本，请注意 PATH 的优先级。在以上报错信息中，会打印 PATH 的搜索路径，请您确保满足要求的 Java 可执行文件在 PATH 中的优先级最高。
+:::
+
 ## 配置
 
 TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+. 在启动 TDengine IDMP 之前，请配置 TDengine TSDB 连接。用编辑器打开 TDengine IDMP 的配置文件，默认位于 `/usr/local/taos/idmp/config/application.yml`。在 `tda.default-connection` 下，配置 TDengine TSDB 的连接信息，示例如下：
