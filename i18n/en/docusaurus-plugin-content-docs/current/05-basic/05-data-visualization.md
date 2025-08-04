@@ -2,48 +2,61 @@
 title: Data Visualization
 ---
 
-IDMP comes with a built-in Grafana-style data visualization module, which provides panels and dashboards. Dashboards consist of a series of panels, all managed via drag-and-drop operations, making the process simple and intuitive—so this document does not go into further detail on how to use them.
+TDengine IDMP provides panels and dashboards for visualizing data. Every element in the system can have its own panels and dashboards.
 
-Every element in the system can have its own panels and dashboards. In the tree structure, elements at different levels focus on different metrics based on their position in the hierarchy. For example, at the power group level, the dashboard might focus on total power generation and overall cost, while at the wind turbine level, it might focus on operational status and generation efficiency of a specific turbine. This design in IDMP aligns well with enterprise management structures.
+Elements at different levels typically focus on different metrics depending on their position in the tree hierarchy. For example, a dashboard for the entire power company might focus on total power generation and overall cost, while a dashboard for a wind turbine might display the operational status and generation efficiency of a specific turbine.
 
-## Basic Panel Operations
+### Basic Panel Operations
 
-IDMP panels support a variety of visualization types, including trend charts, bar charts, pie charts, gauges, statistical values, rich text, and tables. Future updates will also support scatter plots, maps, SCADA views, heatmaps, and event analysis charts.
+TDengine IDMP panels support the following types of visualization:
 
-When viewing a panel, you can click the icons in the action bar at the top of the panel to perform actions such as: edit, favorite, set the time range, adjust refresh frequency, download as an image, zoom in on a specific display area, or enter full-screen mode. Below the panel is a legend, where clicking an item will toggle the visibility of that metric.
+- Trend charts
+- Bar charts
+- Pie charts
+- Gauge charts
+- Tables
+- Rich text
+- Stat values
 
-Click the edit button to enter panel editing mode. The following section provides a more detailed explanation of panel editing operations.
+When viewing a panel, you can click the icons in the action bar to edit the panel, set it as a favorite, specify the time range, zoom out, adjust refresh frequency, download the panel as an image, zoom in on a specific display area, or enter full-screen mode. Below the panel is a legend, where clicking a label will toggle the visibility of that metric.
 
-## Types of Data Displayed in Panels
+Click the Edit (pencil) button to enter editing mode. The following section provides a more detailed explanation of panel editing operations.
 
-Each element contains many attributes that can be displayed in a panel. In addition, an element may have multiple child elements, and those children may also have their own children. Aggregated calculations across these child elements can generate new metrics, which can also be visualized. When creating a panel for an element, the left-side tree structure allows you to choose from:
+### Types of Data Displayed in Panels
 
-1. Element: You can select attributes of the current element, or attributes of its child elements, to use as display metrics. The system only lists attributes whose data reference type is TDengine Metric, as only these represent time-series data that is meaningful to visualize.
-1. Child Element Aggregation: You can select a child element template from the children of the current element, then choose which attribute of that template to aggregate. You can also select one or more dimension metrics for grouping.
+When creating a panel for an element, you can choose the following from the sidebar:
 
-The default option is "Element". In the left-hand tree, simply double-click on a specific attribute or tag to select it.
+1. **Element:** You can select attributes of the current element or of its child elements to use as display metrics. The system only lists attributes whose data reference type is TDengine Metric, as only these represent time-series data that is meaningful to visualize.
+2. **Child Element Grouping:** You can select a child element template from the children of the current element, then choose which attribute of that template to aggregate. You can also select one or more dimension metrics for grouping.
 
-## Panel Metric Configuration
+The default option is **Element**. In the sidebar, double-click on an attribute to add it to the panel and visualize it.
 
-For each selected metric, you can configure the following options:
+### Panel Metric Configuration
 
-1. Name: This is the name displayed on the panel for the metric. By default, it uses the attribute name.
-1. Expression: IDMP allows you to apply expressions to the selected attribute, or even perform calculations across multiple attributes.
-1. Function: When a time window is set or dimension-based grouping is applied, this specifies the aggregation function, with the default being AVG.
-1. Conditions: These are filter conditions applied to the raw data, allowing you to refine which data points are used.
-1. Time Shift: Offsets the timestamps of the displayed metric, useful for comparing trends across different time periods. For example, setting it to -1d means the panel will show data from the same time one day earlier.
-1. Prediction: Click to configure time-series forecasting for the selected metric.
-1. Order By: Click to apply sorting to the metric. By default, no sorting is applied.
+For each metric, you can configure the following options:
+
+1. **Name**: Name displayed on the panel for the metric. The attribute name is used by default.
+2. **Expression:** Expression applied to the selected attribute or across multiple attributes.
+3. **Function:** Aggregation function when a time window is set or dimension-based grouping is applied. The default value is `AVG`.
+4. **Conditions**: Filter conditions applied to the raw data to refine which data points are visualized.
+5. **Time Shift**: Offset for the timestamps of the metric. This is used to compare trends across different time periods. For example, setting it to `-1d` means the panel will show data from the same time one day earlier.
+6. **Prediction:** Time-series forecasting for the selected metric.
+7. **Order By:** Sorting for the metric. By default, no sorting is applied.
 
 For all displayed metrics, you can also configure the following options in the top-right corner of the metric list:
 
-1. Window: Applies a sliding window aggregation to the metric. You can set both the slide interval and the window duration. By default, no window is applied.
-1. Limit: Sets a maximum number of data points to be displayed for the metric.
+1. **Limit:** Maximum number of data points displayed for the metric.
+2. **Window:** Sliding window aggregation to the metric. You can set the interval and the window duration.
 
-## Panel Dimensions Configuration
+### Panel Dimension Configuration
 
-TBD
+In the sidebar, double-click on a dimension to select it. For each selected dimension, you can configure the following options:
 
-## Panel Visualization Settings
+1. **Name**: Name displayed on the panel for the dimension. By default, it uses the attribute name.
+2. **Conditions**: Filter conditions applied to the dimension.
+3. **Group By:** Aggregates data by dimension. Enabled by default.
+4. **Order By:** Sorting for the dimension. By default, no sorting is applied.
 
-While a panel is in edit mode, you can click the rightmost button in the panel’s action bar to access various display configuration options. The visualization settings for each panel type are highly consistent with Grafana, and since any changes you make are immediately reflected in the preview (what-you-see-is-what-you-get), this document does not provide a detailed walkthrough of these settings.
+### Panel Display Settings
+
+While a panel is in edit mode, you can modify the display settings for the panel on the right sidebar. Any changes you make are immediately reflected in the main area for you to preview.

@@ -1,35 +1,52 @@
+---
+title: Get Started with TDengine Cloud
+sidebar_label: TDengine Cloud
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Getstarted from './_get_started.md';
 
-# Get Started with TDengine Cloud
+TDengine IDMP is offered as a fully managed cloud service in TDengine Cloud. You can create a TDengine Cloud account for free and test TDengine services without entering payment information.
 
-TDengine IDMP is offered as a fully managed cloud service. With just a few simple steps, you can complete the registration process. After importing sample scenario data, you can easily explore key features such as element browsing, AI-generated dashboards, and AI-powered analytics.
+## Create a TDengine Cloud Account
 
-## Registration
+To create a TDengine Cloud account, perform the following steps:
 
-To get started with TDengine Cloud for the first time, please follow these steps:
+1. In a web browser, access the [TDengine Cloud website](https://cloud.tdengine.com).
+1. Under **Sign Up**, enter your email address and organization name.
+1. Click **Get Confirmation Code** and enter the code sent to your email address.
+1. Read the Terms of Service and Privacy Policy and click **Sign up for TDengine Cloud**.
 
-1. Visit the official [TDengine Cloud website](https://cloud.tdengine.com).
-1. Click the “Register for Free” button on the page.
-1. Enter your email and organization name, then click “Get Verification Code”. A registration email will be sent to your address. Enter the verification code from the email.
-1. After reading the Terms of Service and Privacy Policy, check the box to indicate your agreement.
-1. Click the “Register” button to complete your registration for TDengine Cloud Service.
+## Enter Account Information
 
-## Configure User Information
+1. On the page displayed, enter your name, phone number, and password.
 
-1. After completing your cloud service registration, you will be directed to the user information configuration page, where the system will prompt you to enter personal details such as your name.
-1. After entering your name, provide a valid mobile phone number and click “Get Verification Code”. A verification SMS will be sent to the number you entered—please enter the code from the message.
-1. Set your login password.
-1. Once both the SMS verification code and password are confirmed, your user information setup is complete.
+   :::note
+   
+   - Your password must be 8 to 20 characters long. 
+   - Your password must contain each of the following character types: letters, digits, and special characters.
+   - The following special characters are supported: `. ~ ! @ # $ ^ & *`
+   
+   :::
+
+1. (Optional) Select a profile picture for your account. JPG and PNG files under 1 MB are supported.
+1. Click **Continue**.
 
 ## Create an Instance
 
-1. After configuring your user information, click the “Continue” button. A dialog box will appear prompting you to select the TDengine instance type.
-1. In the instance type selection dialog, choose “IDMP (Industrial Data Management Platform)”. The page will automatically redirect to the instance configuration screen.
-1. On the instance configuration page, specify names and billing plans for both the IDMP and TSDB instances.
-1. After reviewing the TDengine Cloud Service Agreement, check the box to indicate your agreement.
-1. After reviewing the TDengine Cloud Service Agreement, check the box to indicate your agreement.
+1. In the dialog box displayed, select **IDMP** as your instance type and click **OK**.
 
-import Getstarted from './_get_started.md'
+   Note that a TDengine TSDB instance will also be created during this process.
 
-<Getstarted />
+1. Enter a name for your TDengine IDMP instance and select a price plan.
+
+1. Enter a name for your TDengine TSDB instance and select a price plan.
+
+1. Specify whether you want to create a high-availability TDengine TSDB instance.
+
+1. Click **Create**.
+
+Your TDengine IDMP and TDengine TSDB instances are created and started. This process may take some time.
+
+<Getstarted />	

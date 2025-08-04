@@ -1,5 +1,9 @@
 ---
-title: Operations Manual
+title: Operations and Maintenance
 ---
 
-TBD
+import DocCardList from '@theme/DocCardList';
+
+This document is an operations guide for TDengine IDMP administrators.
+
+<DocCardList />

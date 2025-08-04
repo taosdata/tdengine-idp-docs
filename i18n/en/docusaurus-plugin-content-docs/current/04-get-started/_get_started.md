@@ -1,49 +1,73 @@
-## Load Example Scenarios
+## Load Sample Scenarios
 
-To help you get started quickly, TDengine IDMP comes with the following seven built-in example scenarios. You can load these datasets to explore the powerful capabilities of the system.
+To help you get started quickly, TDengine IDMP comes with built-in sample scenarios. Select at least one sample scenario to continue:
 
-1. Utilities: Smart electricity meters and water meters
+:::important
 
-1. Vehicle Management: Fleet management for logistics companies
-1. Photovoltaic: Power generation monitoring for solar power stations
-1. Oil Wells: Production monitoring of oil wells in oilfields
-1. Wastewater Treatment: Aeration process in wastewater treatment plants
-1. Renewable Energy: Centralized monitoring of renewable energy sources
+You must load only one sample scenario at a time. Do not attempt to load a second sample scenario until the previous scenario has finished loading.
 
-In the following example, we will use data from the "Utilities" scenario for demonstration. Please select the "Utilities" scenario and click the Confirm button. The system will automatically load the scenario data. This process may take a few minutes—thank you for your patience.
+:::
+
+- Utilities: A smart meter monitoring system that collects real-time data from electricity and water meters to enable precise energy management and anomaly detection.
+- Logistics: A fleet tracking and management system that monitors vehicle location, speed, routes, and overspeed alerts in real time, combining this with mileage analysis to enhance transport safety and operational efficiency.
+- Solar Power: A solar power monitoring system that collects real-time data from inverters and environmental sensors to provide a clear view of plant operations and enable intelligent analysis.
+- Renewable Energy: A centralized control system for renewable energy that brings together data from wind, solar, and energy storage sources to enable unified monitoring and intelligent dispatch across regional energy sites.
+- Wastewater Treatment: A wastewater treatment monitoring system that collects real-time data from bioreactors, membrane tanks, and influent/effluent water quality sensors to visualize the treatment process and enable intelligent control.
+- Oil Field: An oilfield production monitoring system that collects real-time data on well output, pressure, and water cut to enable precise, end-to-end management of field operations.
+
+:::tip
+
+The following sections use the data from the Utilities scenario to demonstrate the features of TDengine IDMP. To follow along, select the Utilities scenario and click **Confirm**.
+
+:::
+
+## UI Tour Guide
+
+The Tour Guide opens automatically when you first log in to your TDengine IDMP instance. Click **Next** to move through the guide and see an overview of the TDengine IDMP user interface.
+
+You can click the close (x) button at any time to stop the tour. If you want to go through the tour again, click your profile in the top right and select **Tour Guide**.
 
 ## View Element Information
 
-After loading the demo scenario, you will be taken to the main web interface of TDengine IDMP. By default, you’ll land on the Element Browser page, where you can view and manage the imported element data.
+After you have completed the tour, the **Explorer** page is displayed. You can view information about your elements on this page.
 
-1. In the sidebar, select Elements. Once the "Utilities" scenario is fully loaded, you’ll be able to browse the specific element data under it.
-1. The "Utilities" scenario includes electricity and water meter data from California, Georgia, New York, and their respective cities or counties. You can explore different geographical locations via the tree structure on the left.
-1. Select the element California > San Diego County > Chula Vista > em-10, which represents electricity meter number 10 in Chula Vista, California. Click the dropdown in the breadcrumb navigation bar at the top and select General to view its general information, including its description. Then select Attributes from the dropdown to view its attribute data such as current and voltage.
+1. In the sidebar, click **Elements**. You can see the various elements in the sample scenario displayed in a tree hierarchy.
+1. Select **Utilities** > **California** > **San Diego County** > **Chula Vista** > **em-10**. This element represents electricity meter number 10 in Chula Vista, California.
+1. From the path bar, select **General** to view the description and other basic information about this electricity meter.
+1. Then select **Attributes** to view its attributes, such as current and voltage.
 
-![attributes](/docs-img/get-started/attributes.png)
+![attributes](../assets/get-started-01.png)
 
 ## Try AI-Generated Panels
 
 One of the most powerful features in TDengine IDMP is the ability to automatically generate data panels using AI.
 
-1. Select the element California > San Diego County > Chula Vista > em-10, then use the dropdown in the breadcrumb navigation at the top and choose Panel.
-1. If AI Recommendations is enabled, you’ll see a set of AI-recommended panels on the Panel page. Click the + More Recommendations button to generate additional panel suggestions.
-1. You can also describe the panel you want in natural language using the input box below the recommendations. For example, you might enter: “Show a line chart of the voltage and current changes every minute for electricity meter em-10 over the past 24 hours.” Then click Ask Me, and the AI will automatically generate the panel you described.
+1. Select the element **Utilities** > **California** > **San Diego County** > **Chula Vista** > **em-10**.
 
-![panels](/docs-img/get-started/panels.png)
+1. From the path bar, select **Panels**. Five AI-recommended panels are displayed. You can click **+ More Suggestions** button to generate additional panels.
+
+1. You can also describe the panel you want in natural language using the input box below the recommendations.
+
+   For example, you could enter: "Show a line chart of the voltage and current changes every minute for electricity meter em-10 over the past 24 hours." Then click **Ask AI** to generate the panel you described.
+
+![panels](../assets/get-started-02.png)
 
 ## Try AI-Powered Analysis
 
-TDengine IDMP’s AI Analysis feature helps you detect data changes in real time. When anomalies occur, the system can automatically generate related events and trigger alert notifications.
+TDengine IDMP provides AI analysis to help you detect data changes in real time. When anomalies occur, the system can automatically generate events and trigger alert notifications.
 
-1. Select the element California > San Diego County > Chula Vista > em-10, then use the dropdown in the breadcrumb navigation at the top and choose Analysis.
-1. If AI Recommendations is enabled, you’ll see a set of AI-recommended analyses on the Analysis page. Click the + More Recommendations button to generate additional suggestions.
-1. If you're interested in a specific suggestion, click the link to open the analysis creation page. There, you can fine-tune the AI-generated configuration. Once ready, click Save to complete the setup.
+1. Select the element **Utilities** > **California** > **San Diego County** > **Chula Vista** > **em-10**.
+
+1. From the path bar, select **Analyses**. Three AI-recommended questions are displayed.
+
+1. To load one of the AI suggestions, click the link. On the page displayed, you can fine-tune the AI-generated configuration. Click **Save** to complete the setup.
+
 1. You can also describe your analysis in natural language using the input box next to the recommendations.
-   For example: “If power fluctuation for electricity meter em-10 exceeds ±20% for 30 minutes, generate a ‘warning’ level alert and calculate the fluctuation range.” Press Enter, and the AI will automatically generate the desired analysis for you.
 
-![analysis](/docs-img/get-started/analysis.png)
+   For example, you could enter "If power fluctuation for electricity meter em-10 exceeds plus or minus 20% for 30 minutes, generate a 'warning' level alert and calculate the fluctuation range." Then press **Enter** to generate the analysis you described.
+
+![analysis](../assets/get-started-03.png)
 
 ## What to Do Next
 
-At this point, you’ve successfully explored how to view element data and use AI to automatically generate dashboards and perform analysis using the sample dataset. Next, we encourage you to dive deeper into TDengine IDMP’s full capabilities and best practices to make the most of its powerful data management and analytics features.
+You’ve explored how to view element data and use AI to automatically generate panels and analyses using the sample dataset. Next, you're encouraged to dive deeper into TDengine IDMP’s capabilities and best practices to make the most of its powerful data management and analytics features.

@@ -1,5 +1,9 @@
 ---
-title: Installing TDengine IDMP
+title: Deploying TDengine IDMP
 ---
 
-TBD
+import DocCardList from '@theme/DocCardList';
+
+This document describes how to deploy TDengine IDMP.
+
+<DocCardList />
