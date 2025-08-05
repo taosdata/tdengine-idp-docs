@@ -2,7 +2,7 @@
 title: Data Standardization
 ---
 
-TDengine IDMP can handle heterogeneous data from disparate sources and databases, apart from TDengine TSDB. Considering the lack of unified standards for data collection, data standardization is an essential process.
+TDengine IDMP can handle heterogeneous data from disparate sources and databases, apart from TDengine TSDB-Enterprise. Considering the lack of unified standards for data collection, data standardization is an essential process.
 
 TDengine IDMP provides standardization through the following approaches:
 

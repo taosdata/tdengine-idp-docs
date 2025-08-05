@@ -183,7 +183,7 @@ class TopRight extends React.Component {
                     <Translate>产品</Translate>
                   </div>
                   <div className={styles.marginTop10}>
-                    <div className={styles.headlineText}><a href="https://www.taosdata.com/tdengine-enterprise"><Translate>TDengine TSDB</Translate></a></div>
+                    <div className={styles.headlineText}><a href="https://www.taosdata.com/tdengine-enterprise"><Translate>TDengine TSDB-Enterprise</Translate></a></div>
                     <div className={styles.headlineText}><a href="https://cloud.taosdata.com/"><Translate>TDengine Cloud</Translate></a></div>
                   </div>
                 </div>

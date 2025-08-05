@@ -1,6 +1,6 @@
 import Tip from './_tip.md';
 
-Once TDengine TSDB and TDengine IDMP are running, you can access TDengine IDMP in your web browser at `http://localhost:6042`. Adjust this address accordingly if you have modified the port number or are running TDengine IDMP on a remote machine.
+Once TDengine TSDB-Enterprise and TDengine IDMP are running, you can access TDengine IDMP in your web browser at `http://localhost:6042`. Adjust this address accordingly if you have modified the port number or are running TDengine IDMP on a remote machine.
 
 ## Activate TDengine IDMP
 

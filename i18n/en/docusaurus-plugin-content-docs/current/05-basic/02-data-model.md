@@ -44,6 +44,6 @@ To define an attribute, hover over an existing element in the sidebar and click 
 
 Click the New Attribute (+) icon at the top right of the main area to create an attribute for the selected element. You can specify the name, categories, data type, default value, and description of the attribute, as well as custom properties. For numeric data types, you can also set limits and time-series forecasting options. All attributes can be set as constants, hidden, or excluded as needed.
 
-Most importantly, attributes can be configured with a data reference. The reference can point to a TDengine metric or TDengine tag, indicating that the attribute is mapped to a specific column or tag value in a table within TDengine TSDB. The value of the attribute is then retrieved from the data source at access time.
+Most importantly, attributes can be configured with a data reference. The reference can point to a TDengine metric or TDengine tag, indicating that the attribute is mapped to a specific column or tag value in a table within TDengine TSDB-Enterprise. The value of the attribute is then retrieved from the data source at access time.
 
 After you create an attribute, you can modify, delete, copy, and paste it.

@@ -30,7 +30,7 @@
 
 ## 收集后端日志
 
-请按照以下步骤，收集 TDengine IDMP 和 TDengine TSDB 的日志：
+请按照以下步骤，收集 TDengine IDMP 和 TDengine TSDB-Enterprise 的日志：
 
 ## 本地安装方式
 
@@ -40,7 +40,7 @@
 |-----------|---------------------------------------|
 | TDengine IDMP 日志 | /var/log/taos/tda.log          |
 | TDengine IDMP 错误日志 | /var/log/taos/tda-error.log |
-| TDengine TSDB 日志 | /var/log/taos/taosdlog.*      |
+| TDengine TSDB-Enterprise 日志 | /var/log/taos/taosdlog.*      |
 
 ## 容器化部署方式
 

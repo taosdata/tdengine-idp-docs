@@ -24,13 +24,13 @@ Note that element may have more than one parent. For more information, see [Elem
 
 ## Attributes
 
-You can assign **attributes** to elements. These attributes can be metrics or tags referenced from TDengine TSDB, results data generated from analyses, or custom values stored within TDengine IDMP.
+You can assign **attributes** to elements. These attributes can be metrics or tags referenced from TDengine TSDB-Enterprise, results data generated from analyses, or custom values stored within TDengine IDMP.
 
 For attributes referenced from TDengine metrics, you can also configure limits and forecasting.
 
 ## Analyses
 
-You can create **analyses** for elements. These analyses are performed in real time by using the stream processing component of TDengine TSDB. Analyses can be triggered by any of the following:
+You can create **analyses** for elements. These analyses are performed in real time by using the stream processing component of TDengine TSDB-Enterprise. Analyses can be triggered by any of the following:
 
 - Sliding windows
 - Event windows

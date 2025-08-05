@@ -10,7 +10,7 @@ This document describes how to install TDengine IDMP on your local machine.
 ## Prerequisites
 
 - Ensure that your local machine meets the minimum requirements for TDengine IDMP. For details, see [Planning Your Deployment](../01-planning.md).
-- Install TDengine TSDB-Enterprise version 3.3.7.0 or higher. For instructions, see [Deploy TDengine TSDB Enterprise](https://docs.tdengine.com/get-started/deploy-enterprise-edition/).
+- Install TDengine TSDB-Enterprise version 3.3.7.0 or higher. For instructions, see [Deploy TDengine TSDB-Enterprise Enterprise](https://docs.tdengine.com/get-started/deploy-enterprise-edition/).
 - Install Java 21 or later.
 - Install glibc 2.25 or later.
 - On Debian and Ubuntu systems, install the `python3-venv` package.
@@ -33,17 +33,17 @@ Your machine must be connected to the internet when you install TDengine IDMP. D
 
 :::important
 
-Do not start TDengine IDMP until you have configured the TDengine TSDB connection as described in the following section.
+Do not start TDengine IDMP until you have configured the TDengine TSDB-Enterprise connection as described in the following section.
 
 :::
 
 ## Configure TSDB Connection
 
-1. Configure the TDengine TSDB connection in TDengine IDMP:
+1. Configure the TDengine TSDB-Enterprise connection in TDengine IDMP:
 
    1. Open the TDengine IDMP configuration file with a text editor. The default location is `/usr/local/taos/idmp/config/application.yml`.
 
-   1. Under the `tda.default-connection` section, set the TDengine TSDB connection details as shown in the following example:
+   1. Under the `tda.default-connection` section, set the TDengine TSDB-Enterprise connection details as shown in the following example:
 
       ```yaml
       tda:
@@ -57,11 +57,11 @@ Do not start TDengine IDMP until you have configured the TDengine TSDB connectio
       
       - **url:** Specify the URL and port number of your taosAdapter instance.
       
-      - **username:** Enter a TDengine TSDB user.
+      - **username:** Enter a TDengine TSDB-Enterprise user.
       
-      - **password:** Enter the password for the TDengine TSDB user.
+      - **password:** Enter the password for the TDengine TSDB-Enterprise user.
 
-1. (Optional) Run the following command to test the connection to TDengine TSDB:
+1. (Optional) Run the following command to test the connection to TDengine TSDB-Enterprise:
 
    ```bash
    curl --request POST \
@@ -70,7 +70,7 @@ Do not start TDengine IDMP until you have configured the TDengine TSDB connectio
      --data 'show databases;'
    ```
 
-   If the connection is successful, the list of databases in TDengine TSDB will be displayed.
+   If the connection is successful, the list of databases in TDengine TSDB-Enterprise will be displayed.
 
 ## Start TDengine IDMP
 

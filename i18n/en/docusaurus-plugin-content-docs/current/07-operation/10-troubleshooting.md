@@ -32,7 +32,7 @@ Please follow the steps below to gather error messages and network request detai
 
 ## Collecting Backend Logs
 
-Please follow the steps below to collect logs from TDengine IDMP and TDengine TSDB:
+Please follow the steps below to collect logs from TDengine IDMP and TDengine TSDB-Enterprise:
 
 ## Local Installation
 
@@ -42,7 +42,7 @@ If you deployed TDengine IDMP via local installation, log files can be found in 
 |-----------|---------------------------------------|
 | TDengine IDMP logs | /var/log/taos/tda.log          |
 | TDengine IDMP error logs | /var/log/taos/tda-error.log |
-| TDengine TSDB logs | /var/log/taos/taosdlog.*      |
+| TDengine TSDB-Enterprise logs | /var/log/taos/taosdlog.*      |
 
 ## Containerized Deployment
 

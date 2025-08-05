@@ -21,7 +21,7 @@ IDMP 充分利用 AI 技术，基于采集的数据智能感知应用场景，�
 
 ### 特别提示
 
-1. TDengine IDMP 内部不保留任何时序数据，全部依赖外部的 TDengine TSDB 或其他数据库。但 TDengine IDMP 为支持数据字典和一些元数据的查询，会提供自己保存的二维表，也可以从外部关系库动态获得二维表。
+1. TDengine IDMP 内部不保留任何时序数据，全部依赖外部的 TDengine TSDB-Enterprise 或其他数据库。但 TDengine IDMP 为支持数据字典和一些元数据的查询，会提供自己保存的二维表，也可以从外部关系库动态获得二维表。
 2. TDengine IDMP 只是一数据管理平台，帮助用户洞察系统的运行，不是完整的物联网或工业互联网平台，因此它不提供控制命令下发、设备连接管理、固件更新等功能。但它能与工业互联网平台无缝集成。
 3. TDengine IDMP 不提供企业管理所需的人员、排班、维修工单管理等功能，但支持通过 SDK 与这些系统实现无缝集成，或直接对接相关系统的数据库获取元数据。
 
@@ -64,17 +64,17 @@ TDengine IDMP 能广泛应用于物联网、工业等各个领域，它包括：
 
 它涵盖了智能制造、发电、电网、石油、石化、汽车、矿山、新能源、制药、IT 设施等众多领域。
 
-## 与 TDengine TSDB 的关系
+## 与 TDengine TSDB-Enterprise 的关系
 
-TDengine TSDB 是一高效、具有水平扩展能力的时序数据库，虽然支持多达 128 个标签，但无法全面的支持各种企业运营中的元数据，比如某一列时序数据的测量单位、上限、下限、目标值等，而且提供的流式计算也缺少一种好的管理，更不提供可视化、报警等功能。
+TDengine TSDB-Enterprise 是一高效、具有水平扩展能力的时序数据库，虽然支持多达 128 个标签，但无法全面的支持各种企业运营中的元数据，比如某一列时序数据的测量单位、上限、下限、目标值等，而且提供的流式计算也缺少一种好的管理，更不提供可视化、报警等功能。
 
-TDengine IDMP 是对 TDengine TSDB 的一个补充，它完善了元数据的管理，提供了数据标准化、情景化的处理能力，让数据平台成为 AI-Ready 的数据平台，因此具备“无问智推”“智能问数”的能力。它还将 TDengine 超强的流计算能力通过简单易用的用户交互发挥出来，是建筑在其上的应用系统。
+TDengine IDMP 是对 TDengine TSDB-Enterprise 的一个补充，它完善了元数据的管理，提供了数据标准化、情景化的处理能力，让数据平台成为 AI-Ready 的数据平台，因此具备“无问智推”“智能问数”的能力。它还将 TDengine 超强的流计算能力通过简单易用的用户交互发挥出来，是建筑在其上的应用系统。
 
-TDengine IDMP 计划支持其他时序数据库，但与 TDengine TSDB 的集成更加高效。
+TDengine IDMP 计划支持其他时序数据库，但与 TDengine TSDB-Enterprise 的集成更加高效。
 
 ## 与其他产品的对比
 
-单纯从功能上看，TDengine IDMP 与 PI System 中的 PI Asset Framework + PI Vision 对应。TDengine TSDB + TDengine IDMP 相当于 PI System (包含 PI Interface + PI Data Archive + PI Asset Framework + PI Vision)。**我们把 TDengine TSDB + TDengine IDMP 的组合简单的称之为 TDengine**。
+单纯从功能上看，TDengine IDMP 与 PI System 中的 PI Asset Framework + PI Vision 对应。TDengine TSDB-Enterprise + TDengine IDMP 相当于 PI System (包含 PI Interface + PI Data Archive + PI Asset Framework + PI Vision)。**我们把 TDengine TSDB-Enterprise + TDengine IDMP 的组合简单的称之为 TDengine**。
 
 市场上很多实时库也是对标 PI System。**与 PI System 以及其他实时数据库相比**，TDengine 的优势是：
 

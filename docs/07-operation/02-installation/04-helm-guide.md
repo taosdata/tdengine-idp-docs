@@ -30,7 +30,7 @@ cd tdengine-idmp-deployment/helm
 
 :::info
 
-> 如需部署 TDengine TSDB 服务，请参考官方文档：  
+> 如需部署 TDengine TSDB-Enterprise 服务，请参考官方文档：  
 > [使用 Helm 部署 TDengine 集群](https://docs.taosdata.com/operation/deployment/#%E4%BD%BF%E7%94%A8-helm-%E9%83%A8%E7%BD%B2-tdengine-%E9%9B%86%E7%BE%A4)
 
 :::

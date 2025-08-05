@@ -52,7 +52,7 @@ Security Tip: This deployment approach uses ansible-vault to manage sensitive in
    ansible_ssh_pass={{ vault_ssh_password }}
    ```
 
-   - `tdengine_idmp_servers]` and `[tdengine_servers]`: Define host groups for TDengine IDMP services and TDengine TSDB services, respectively.
+   - `tdengine_idmp_servers]` and `[tdengine_servers]`: Define host groups for TDengine IDMP services and TDengine TSDB-Enterprise services, respectively.
 
      `idmp_server1`, `idmp_server2`, `tsdb_server1`, and `tsdb_server2` are host aliases, while ansible_host specifies the actual IP address.
    - `[tdengine_idmp_servers:vars]` and `[tdengine_servers:vars]`: Define variables for each host group.
@@ -79,7 +79,7 @@ Security Tip: This deployment approach uses ansible-vault to manage sensitive in
 
    :::
 
-4. Install TDengine TSDB and TDengine IDMP
+4. Install TDengine TSDB-Enterprise and TDengine IDMP
 
    Run the following command to install TDengine IDMP only:
 
@@ -87,7 +87,7 @@ Security Tip: This deployment approach uses ansible-vault to manage sensitive in
    ansible-playbook playbooks/tdengine-idmp.yml --ask-vault-pass
    ```
 
-   Run the following command to install TDengine TSDB and IDMP:
+   Run the following command to install TDengine TSDB-Enterprise and IDMP:
 
    ```bash
    ansible-playbook playbooks/tdengine-idmp.yml --ask-vault-pass -e deploy_tdengine=true

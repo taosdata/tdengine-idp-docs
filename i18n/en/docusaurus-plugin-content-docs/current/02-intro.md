@@ -24,7 +24,7 @@ TDengine IDMP leverages AI technology to intelligently perceive application scen
 
 ### Notes
 
-1. TDengine IDMP does not store any time-series data internally. It fully relies on external sources such as TDengine TSDB or other databases. However, to support data dictionaries and some metadata queries, IDMP maintains its own two-dimensional tables and can also dynamically retrieve them from external relational databases.
+1. TDengine IDMP does not store any time-series data internally. It fully relies on external sources such as TDengine TSDB-Enterprise or other databases. However, to support data dictionaries and some metadata queries, IDMP maintains its own two-dimensional tables and can also dynamically retrieve them from external relational databases.
 2. TDengine IDMP is a data management platform, designed to help users gain insights into system operations. It is not a full-fledged IoT or Industrial Internet platform—therefore, it does not offer features such as command dispatching, device connection management, or firmware updates. However, it can integrate seamlessly with industrial internet platforms.
 3. TDengine IDMP does not include personnel management, shift scheduling, or maintenance work order features typically needed for enterprise management. However, it supports seamless integration with such systems through SDKs or by directly accessing their databases for metadata.
 
@@ -82,15 +82,15 @@ TDengine IDMP can be widely applied across IoT, industrial, and other domains, i
 
 TDengine IDMP serves a wide range of industries including smart manufacturing, power generation, electric grids, oil and petrochemicals, automotive, mining, renewable energy, pharmaceuticals, and IT infrastructure.
 
-## Relationship with TDengine TSDB
+## Relationship with TDengine TSDB-Enterprise
 
-TDengine TSDB is a high-performance, horizontally scalable time-series database. While it supports up to 128 tags, it does not fully handle the diverse types of metadata required in enterprise operations, such as units of measurement, upper and lower limits, or target values of specific time-series columns.
+TDengine TSDB-Enterprise is a high-performance, horizontally scalable time-series database. While it supports up to 128 tags, it does not fully handle the diverse types of metadata required in enterprise operations, such as units of measurement, upper and lower limits, or target values of specific time-series columns.
 
-TDengine IDMP serves as a complement to TDengine TSDB. It enhances metadata management and provides data standardization and contextualization capabilities, transforming the data platform into an AI-ready system with Chat BI and insights pushed by AI. It also brings TDengine’s powerful stream processing capabilities to life through an intuitive user interface, acting as an application layer built on top of the TSDB.
+TDengine IDMP serves as a complement to TDengine TSDB-Enterprise. It enhances metadata management and provides data standardization and contextualization capabilities, transforming the data platform into an AI-ready system with Chat BI and insights pushed by AI. It also brings TDengine’s powerful stream processing capabilities to life through an intuitive user interface, acting as an application layer built on top of the TSDB.
 
 ## Comparison with Similar Products
 
-In terms of functionality, TDengine IDMP is comparable to the combination of PI Asset Framework and PI Vision in the PI System. The combination of TDengine TSDB + TDengine IDMP is equivalent to the full PI System, including PI Interface, PI Data Archive, PI Asset Framework, and PI Vision. We refer to the combination of TDengine TSDB and TDengine IDMP simply as TDengine.
+In terms of functionality, TDengine IDMP is comparable to the combination of PI Asset Framework and PI Vision in the PI System. The combination of TDengine TSDB-Enterprise + TDengine IDMP is equivalent to the full PI System, including PI Interface, PI Data Archive, PI Asset Framework, and PI Vision. We refer to the combination of TDengine TSDB-Enterprise and TDengine IDMP simply as TDengine.
 
 Many real-time data platforms on the market are positioned as alternatives to the PI System. Compared with the PI System and other real-time databases, TDengine offers the following advantages:
 

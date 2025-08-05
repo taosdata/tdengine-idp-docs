@@ -13,7 +13,7 @@ You can install TDengine IDMP locally on a Linux or macOS machine. In this docum
 ## Prerequisites
 
 - Ensure that your local machine meets the minimum requirements for TDengine IDMP. For details, see [Planning Your Deployment](../07-operation/01-planning.md).
-- Install TDengine TSDB-Enterprise version 3.3.7.0 or higher. For instructions, see [Deploy TDengine TSDB Enterprise](https://docs.tdengine.com/get-started/deploy-enterprise-edition/).
+- Install TDengine TSDB-Enterprise version 3.3.7.0 or higher. For instructions, see [Deploy TDengine TSDB-Enterprise Enterprise](https://docs.tdengine.com/get-started/deploy-enterprise-edition/).
 - Install Java 21 or later.
 - Install glibc 2.25 or later.
 - On Debian and Ubuntu systems, install the `python3-venv` package.
@@ -32,10 +32,10 @@ You can install TDengine IDMP locally on a Linux or macOS machine. In this docum
 
    :::
 
-1. Configure the TDengine TSDB connection in TDengine IDMP:
+1. Configure the TDengine TSDB-Enterprise connection in TDengine IDMP:
 
    1. Open the TDengine IDMP configuration file with a text editor. The default location is `/usr/local/taos/idmp/config/application.yml`.
-   1. Under the `tda.default-connection` section, set the TDengine TSDB connection details as shown in the following example:
+   1. Under the `tda.default-connection` section, set the TDengine TSDB-Enterprise connection details as shown in the following example:
 
       ```yaml
       tda:
@@ -47,7 +47,7 @@ You can install TDengine IDMP locally on a Linux or macOS machine. In this docum
           password: taosdata
       ```
 
-1. (Optional) Run the following command to test the connection to TDengine TSDB:
+1. (Optional) Run the following command to test the connection to TDengine TSDB-Enterprise:
 
    ```bash
    curl --request POST \
@@ -55,7 +55,7 @@ You can install TDengine IDMP locally on a Linux or macOS machine. In this docum
      --url http://localhost:6041/rest/sql \
      --data 'show databases;'
    ```
-   If the connection is successful, the list of databases in TDengine TSDB will be displayed.
+   If the connection is successful, the list of databases in TDengine TSDB-Enterprise will be displayed.
 
 1. Start TDengine IDMP.
    ```bash
