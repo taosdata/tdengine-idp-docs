@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 import Init from './_init.md';
 import Getstarted from './_get_started.md';
 
-TDengine IDMP is offered as a Docker image, and a Docker Compose setup is also provided to make deployment easy. This Docker Compose setup installs TDengine TSDB along with TDengine IDMP and automatically establishes a connection between them.
+TDengine IDMP is offered as a Docker image, and a Docker Compose setup is also provided to make deployment easy. This Docker Compose setup installs TDengine TSDB-Enterprise along with TDengine IDMP and automatically establishes a connection between them.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ TDengine IDMP is offered as a Docker image, and a Docker Compose setup is also p
    docker compose up -d
    ```
 
-   This command will automatically pull the required images and start both the TDengine IDMP service and TDengine TSDB service in detached mode.
+   This command will automatically pull the required images and start both the TDengine IDMP service and TDengine TSDB-Enterprise service in detached mode.
 
    :::note
 

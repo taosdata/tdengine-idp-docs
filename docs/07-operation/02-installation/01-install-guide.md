@@ -6,10 +6,10 @@ import TabItem from '@theme/TabItem';
 ## 先决条件
 
 :::warning
-TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+, 在安装 TDengine IDMP 前，请确保您已安装并启动了 TDengine TSDB 服务。
+TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+, 在安装 TDengine IDMP 前，请确保您已安装并启动了 TDengine TSDB-Enterprise 服务。
 :::
 
-除了 TDengine TSDB 以外，TDengine IDMP 的运行还需要满足以下先决条件：
+除了 TDengine TSDB-Enterprise 以外，TDengine IDMP 的运行还需要满足以下先决条件：
 
 1. Python: 3.10-3.12 版本
 1. Java: 21 及以上版本
@@ -76,7 +76,7 @@ IDMP 的正常运行，依赖指定版本的 Python 和 Java 环境。在安装�
 
 ## 配置
 
-TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+. 在启动 TDengine IDMP 之前，请配置 TDengine TSDB 连接。用编辑器打开 TDengine IDMP 的配置文件，默认位于 `/usr/local/taos/idmp/config/application.yml`。在 `tda.default-connection` 下，配置 TDengine TSDB 的连接信息，示例如下：
+TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+. 在启动 TDengine IDMP 之前，请配置 TDengine TSDB-Enterprise 连接。用编辑器打开 TDengine IDMP 的配置文件，默认位于 `/usr/local/taos/idmp/config/application.yml`。在 `tda.default-connection` 下，配置 TDengine TSDB-Enterprise 的连接信息，示例如下：
 
 ```yaml
 tda:
@@ -90,8 +90,8 @@ tda:
 
 其中：
    - auth-type: 认证方式，支持 UserPassword 和 Token 两种方式，默认为方式 UserPassword
-   - url: 为 TDengine TSDB 中 taosAdapter 组件的 IP 地址和端口号，端口号默认为 6041
-   - username 和 password: 为 TDengine TSDB 的用户名和密码，默认为 root 和 taosdata
+   - url: 为 TDengine TSDB-Enterprise 中 taosAdapter 组件的 IP 地址和端口号，端口号默认为 6041
+   - username 和 password: 为 TDengine TSDB-Enterprise 的用户名和密码，默认为 root 和 taosdata
 
 完成以上配置后，就可以启动 TDengine IDMP 服务了。
 

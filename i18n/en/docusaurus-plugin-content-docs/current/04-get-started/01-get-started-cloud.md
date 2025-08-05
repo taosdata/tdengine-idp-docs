@@ -37,16 +37,16 @@ To create a TDengine Cloud account, perform the following steps:
 
 1. In the dialog box displayed, select **IDMP** as your instance type and click **OK**.
 
-   Note that a TDengine TSDB instance will also be created during this process.
+   Note that a TDengine TSDB-Enterprise instance will also be created during this process.
 
 1. Enter a name for your TDengine IDMP instance and select a price plan.
 
-1. Enter a name for your TDengine TSDB instance and select a price plan.
+1. Enter a name for your TDengine TSDB-Enterprise instance and select a price plan.
 
-1. Specify whether you want to create a high-availability TDengine TSDB instance.
+1. Specify whether you want to create a high-availability TDengine TSDB-Enterprise instance.
 
 1. Click **Create**.
 
-Your TDengine IDMP and TDengine TSDB instances are created and started. This process may take some time.
+Your TDengine IDMP and TDengine TSDB-Enterprise instances are created and started. This process may take some time.
 
 <Getstarted />	

@@ -1,13 +1,13 @@
 # 使用 Docker 部署
 
-本指南介绍如何使用 Docker/Docker Compose 的方式，实现 TDengine IDMP 和 TDengine TSDB 服务的搭建。
+本指南介绍如何使用 Docker/Docker Compose 的方式，实现 TDengine IDMP 和 TDengine TSDB-Enterprise 服务的搭建。
 
 ## 前置条件
 
 1. 本文适用 Docker 20.10 以上版本
 1. 本文适用 Docker Compose v1.29.2 以上版本
 
-## 部署 TDengine TSDB 和 TDengine IDMP 服务
+## 部署 TDengine TSDB-Enterprise 和 TDengine IDMP 服务
 
 ### 1. 克隆部署仓库
 
@@ -57,7 +57,7 @@ docker compose down -v
 TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+
 :::
 
-如果您的环境中已存在满足要求的 TDengine TSDB 实例，您可以只启动 TDengine IDMP 容器，并将其连接至该 TDengine TSDB 实例。
+如果您的环境中已存在满足要求的 TDengine TSDB-Enterprise 实例，您可以只启动 TDengine IDMP 容器，并将其连接至该 TDengine TSDB-Enterprise 实例。
 
 ### 1. 拉取 TDengine  IDMP 镜像
 
@@ -114,12 +114,12 @@ tda:
         - WINDOW_CLOSE
 ```
 
-在 `tda.default-connection` 下，配置 TDengine TSDB 的连接信息，其中：
+在 `tda.default-connection` 下，配置 TDengine TSDB-Enterprise 的连接信息，其中：
 - auth-type: 认证方式，支持 UserPassword 和 Token 两种方式，默认为方式 UserPassword
-- url: 为 TDengine TSDB 中 taosAdapter 组件的 IP 地址和端口号，端口号默认为 6041
-- username 和 password: 为 TDengine TSDB 的用户名和密码，默认为 root 和 taosdata
+- url: 为 TDengine TSDB-Enterprise 中 taosAdapter 组件的 IP 地址和端口号，端口号默认为 6041
+- username 和 password: 为 TDengine TSDB-Enterprise 的用户名和密码，默认为 root 和 taosdata
 
-在 `tda.analysis` 下，`envent.urls` 为 TDengine TSDB 访问 IDMP 服务的 WebSocket 地址。
+在 `tda.analysis` 下，`envent.urls` 为 TDengine TSDB-Enterprise 访问 IDMP 服务的 WebSocket 地址。
 
 ### 2. 启动 TDengine IDMP 容器
 

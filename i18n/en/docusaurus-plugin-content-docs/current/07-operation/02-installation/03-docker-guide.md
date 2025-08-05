@@ -2,7 +2,7 @@
 title: Docker Deployment
 ---
 
-This guide explains how to install TDengine IDMP and TDengine TSDB using Docker and Docker Compose.
+This guide explains how to install TDengine IDMP and TDengine TSDB-Enterprise using Docker and Docker Compose.
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ This guide explains how to install TDengine IDMP and TDengine TSDB using Docker 
 1. Install Docker Compose 1.29.2 or later on your local machine. For instructions, see [Overview of installing Docker Compose](https://docs.docker.com/compose/install/) in the Docker documentation.
 1. Install Git on your local machine. For more information, see the [Git website](https://git-scm.com/).
 
-## Install TDengine TSDB and TDengine IDMP
+## Install TDengine TSDB-Enterprise and TDengine IDMP
 
 1. Clone the repository:
 
@@ -18,7 +18,7 @@ This guide explains how to install TDengine IDMP and TDengine TSDB using Docker 
    git clone https://github.com/taosdata/tdengine-idmp-deployment.git
    ```
 
-   This repository includes the Docker Compose file to deploy TDengine IDMP and TDengine TSDB.
+   This repository includes the Docker Compose file to deploy TDengine IDMP and TDengine TSDB-Enterprise.
 
 2. Start the service
 
@@ -60,7 +60,7 @@ This guide explains how to install TDengine IDMP and TDengine TSDB using Docker 
 
 :::important
 
-TDengine IDMP requires TDengine TSDB-Enterprise 3.3.7.0 or later. If your environment already has a TDengine TSDB instance that meets the requirements, you can connect TDengine IDMP to the existing TSDB instance.
+TDengine IDMP requires TDengine TSDB-Enterprise 3.3.7.0 or later. If your environment already has a TDengine TSDB-Enterprise instance that meets the requirements, you can connect TDengine IDMP to the existing TSDB instance.
 
 :::
 
@@ -119,12 +119,12 @@ TDengine IDMP requires TDengine TSDB-Enterprise 3.3.7.0 or later. If your enviro
            - WINDOW_CLOSE
    ```
 
-   Under the `tda.default-connection` section, set the TDengine TSDB connection as follows:
+   Under the `tda.default-connection` section, set the TDengine TSDB-Enterprise connection as follows:
    - auth-type: Authentication method. Supports UserPassword (default) and Token.
-   - url: The IP address and port of the taosAdapter component in TDengine TSDB. The default port is 6041.
-   - username and password: Credentials for accessing TDengine TSDB. Default values are root and taosdata.
+   - url: The IP address and port of the taosAdapter component in TDengine TSDB-Enterprise. The default port is 6041.
+   - username and password: Credentials for accessing TDengine TSDB-Enterprise. Default values are root and taosdata.
 
-   Under `tda.analysis`, `event.urls` specifies the WebSocket address through which TDengine TSDB accesses the IDMP service.
+   Under `tda.analysis`, `event.urls` specifies the WebSocket address through which TDengine TSDB-Enterprise accesses the IDMP service.
 
 2. Start the TDengine IDMP container
 

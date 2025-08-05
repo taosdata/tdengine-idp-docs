@@ -32,7 +32,7 @@ cd tdengine-idmp-deployment/helm
 
 :::info
 
-To install TDengine TSDB, refer to the following document: [Deploy TDengine with Helm](https://docs.tdengine.com/operations-and-maintenance/deploy-your-cluster/kubernetes-deployment/#deploy-tdengine-with-helm)
+To install TDengine TSDB-Enterprise, refer to the following document: [Deploy TDengine with Helm](https://docs.tdengine.com/operations-and-maintenance/deploy-your-cluster/kubernetes-deployment/#deploy-tdengine-with-helm)
 
 :::
 

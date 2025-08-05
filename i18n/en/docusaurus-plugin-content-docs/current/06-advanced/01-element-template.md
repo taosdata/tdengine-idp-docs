@@ -58,7 +58,7 @@ The configuration options are described as follows:
 
 Once you have created an element template, you can define attribute templates within it. Hover over your element template in the sidebar, click the three-dot menu, and select **Attribute Template**. Click the New Attribute Template (+) icon to create a template.
 
-First, fill in the attribute name, category, data type, unit of measurement, default value, and description fields. Then set the data reference type. If you select **TDengine Tag** or **TDengine Metric**, this attribute maps to a specific column in a table within a TDengine TSDB database. Because templates are reusable, you cannot hardcode table or column names, as that would cause every element created from the template to point to the same location. Instead, you use placeholder variables.
+First, fill in the attribute name, category, data type, unit of measurement, default value, and description fields. Then set the data reference type. If you select **TDengine Tag** or **TDengine Metric**, this attribute maps to a specific column in a table within a TDengine TSDB-Enterprise database. Because templates are reusable, you cannot hardcode table or column names, as that would cause every element created from the template to point to the same location. Instead, you use placeholder variables.
 
 When configuring the data reference, a dialog box is displayed where you choose the database connection and select the database. Then enter the table name pattern and click + to insert or define placeholders. Finally, enter the column name, which can also include placeholder variables. Click **Check** to verify your configuration and Confirm to save it.
 
@@ -70,7 +70,7 @@ The process of creating these templates is identical to creating panels, analyse
 
 ## Example Element Template
 
-Suppose we have a TDengine TSDB database `smdb` with a supertable called `smeter`, which contains two metrics, `current` and `voltage`, and a tag column `model`. This supertable has subtables named `smeter-1`, `smeter-2`, and so on. In TDengine IDMP, we want to create an element template called `Smart Meters`, with three attributes: `Current`, `Voltage`, and `Model`, and we want each subtable in the supertable `smeter` to correspond to one element in TDengine IDMP based on the `Smart Meter` template. Also, we want the element naming rule to follow the pattern `DEV-<subtable-name>`.
+Suppose we have a TDengine TSDB-Enterprise database `smdb` with a supertable called `smeter`, which contains two metrics, `current` and `voltage`, and a tag column `model`. This supertable has subtables named `smeter-1`, `smeter-2`, and so on. In TDengine IDMP, we want to create an element template called `Smart Meters`, with three attributes: `Current`, `Voltage`, and `Model`, and we want each subtable in the supertable `smeter` to correspond to one element in TDengine IDMP based on the `Smart Meter` template. Also, we want the element naming rule to follow the pattern `DEV-<subtable-name>`.
 
 To achieve this, we use a custom placeholder keyword representing the subtable name. When creating the element template, we  proceed as follows:
 
@@ -80,7 +80,7 @@ To achieve this, we use a custom placeholder keyword representing the subtable n
 4. After creating the general element template “Smart Meter”, create its attribute templates. We’ll use `Current` as an example:
    1. Set the attribute name to `Current` and choose a data type consistent with the TSDB, in this case `float`.
    2. Set the data reference type to **TDengine Metric** and click the **Data Reference Expression** field.
-   3. Select the connection to TDengine TSDB and choose the `smdb` database.
+   3. Select the connection to TDengine TSDB-Enterprise and choose the `smdb` database.
    4. In the **Table Name Pattern** field, click the + button and select `KEYWORD1`.
    5. In the **Column** field, enter `current`.
    6. Click **Check** and enter the name of an existing subtable. If everything is correct, the validation should pass.
@@ -88,10 +88,10 @@ To achieve this, we use a custom placeholder keyword representing the subtable n
 5. Repeat step 2 to create the `Voltage` attribute template.
 6. For the `Model` attribute template, set the data reference type to **TDengine Tag**. All other configurations are the same as in step 2.
 
-The element template and its associated attribute templates have been successfully created. When you create a new element based on the `Smart Meters` template, the system displays a prompt asking for `kEYWORD1`, with the input field showing the hint `Subtable name from smeter supertable in smdb database`. If you enter a subtable that exists in TDengine TSDB, such as `smeter-1`, the element is automatically created with the name `DEV-smeter-1`. If you check its three attributes, their data reference configurations are as follows:
+The element template and its associated attribute templates have been successfully created. When you create a new element based on the `Smart Meters` template, the system displays a prompt asking for `kEYWORD1`, with the input field showing the hint `Subtable name from smeter supertable in smdb database`. If you enter a subtable that exists in TDengine TSDB-Enterprise, such as `smeter-1`, the element is automatically created with the name `DEV-smeter-1`. If you check its three attributes, their data reference configurations are as follows:
 
 - Current: `connections['TDengine']/databases['smdb']/smeter-1/columns[current]`
 - Voltage: `connections['TDengine']/databases['smdb']/smeter-1/columns[voltage]`
 - Model: `connections['TDengine']/databases['smdb']/smeter-1/columns[model]`
 
-The custom placeholder mechanism provided by TDengine IDMP is highly flexible and powerful, making it easy automatically and efficiently to map data from TDengine TSDB into TDengine IDMP in bulk.
+The custom placeholder mechanism provided by TDengine IDMP is highly flexible and powerful, making it easy automatically and efficiently to map data from TDengine TSDB-Enterprise into TDengine IDMP in bulk.

@@ -2,9 +2,9 @@
 title: Real-Time Analysis
 ---
 
-TDengine IDMP allows you to create real-time analyses for elements. This functionality is built on the stream processing component of TDengine TSDB but is configured through the TDengine IDMP user interface.
+TDengine IDMP allows you to create real-time analyses for elements. This functionality is built on the stream processing component of TDengine TSDB-Enterprise but is configured through the TDengine IDMP user interface.
 
-Real-time analysis runs in the background on TDengine TSDB. It can generate new data and write it back to TDengine TSDB, or it can trigger events in TDengine IDMP. You can stop and restart analyses as needed.
+Real-time analysis runs in the background on TDengine TSDB-Enterprise. It can generate new data and write it back to TDengine TSDB-Enterprise, or it can trigger events in TDengine IDMP. You can stop and restart analyses as needed.
 
 At its core, an analysis is simply a SQL query that runs based on a specific business need, and the query result is the analysis output. For real-time analysis, these queries are executed automatically based on defined trigger conditions. TDengine decouples the trigger mechanism from the analysis logic, providing a high degree of flexibility.
 
@@ -77,4 +77,4 @@ If the computation is performed on child elements, the system aggregates data fr
 1. If time window aggregation has not been selected, the aggregation is performed on a snapshot of the qualifying child elements at the trigger time. For example, you might calculate the maximum or average power output of all wind turbines at a specific moment.
 2. If time window aggregation has been selected, the aggregation is applied to data from the qualifying child elements over a defined time window. For example, you might calculate the average power output over the past 10 minutes for all wind turbines.
 
-The analysis itself is executed within the TDengine TSDB stream processing engine, so it does not consume compute resources in TDengine IDMP.
+The analysis itself is executed within the TDengine TSDB-Enterprise stream processing engine, so it does not consume compute resources in TDengine IDMP.

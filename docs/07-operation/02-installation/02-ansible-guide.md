@@ -50,7 +50,7 @@ ansible_user={{ ansible_ssh_user }}
 ansible_ssh_pass={{ vault_ssh_password }}
 ```
 
-- `[tdengine_idmp_servers]` 和 `[tdengine_servers]`：分别定义 TDengine IDMP 服务和 TDengine TSDB 服务的主机组。
+- `[tdengine_idmp_servers]` 和 `[tdengine_servers]`：分别定义 TDengine IDMP 服务和 TDengine TSDB-Enterprise 服务的主机组。
  `idmp_server1`、`idmp_server2`、`tsdb_server1`、`tsdb_server2` 为主机别名，`ansible_host` 指定实际 IP。
 
 - `[tdengine_idmp_servers:vars]` 和 `[tdengine_servers:vars]`：为主机组定义变量。
@@ -77,7 +77,7 @@ ansible-vault edit inventory/group_vars/public.yml
 
 :::
 
-### 4. 部署 TDengine TSDB 与 IDMP 服务
+### 4. 部署 TDengine TSDB-Enterprise 与 IDMP 服务
 
 运行以下命令，目标服务器上仅安装并部署 TDengine IDMP 服务：
 
@@ -85,7 +85,7 @@ ansible-vault edit inventory/group_vars/public.yml
 ansible-playbook playbooks/tdengine-idmp.yml --ask-vault-pass
 ```
 
-或运行以下命令，目标服务器上就会部署 TDengine TSDB 与 IDMP 服务：
+或运行以下命令，目标服务器上就会部署 TDengine TSDB-Enterprise 与 IDMP 服务：
 
 ```bash
 ansible-playbook playbooks/tdengine-idmp.yml --ask-vault-pass -e deploy_tdengine=true
