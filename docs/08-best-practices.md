@@ -20,3 +20,4 @@ TDengine TSDB-Enterprise 里的 taosX 模块，在读取这些采集的数据时
 1. [TDengine IDMP 应用场景：烟草制丝](https://www.taosdata.com/tobacco-autonomous-monitoring)
 1. [TDengine IDMP 应用场景：工业锅炉监控](https://www.taosdata.com/industrial-boiler-autopilot)
 1. [TDengine IDMP 应用场景：IT 系统监控](https://www.taosdata.com/telegraf-tdengine-idmp-monitoring)
+1. [TDengine IDMP 应用场景：电动汽车](https://www.taosdata.com/ev-autonomous-monitoring)
