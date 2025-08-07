@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # 通过 Docker 快速体验
 
-TDengine IDMP 提供了丰富的功能，本文档将带领您通过 Docker Compose 的方式启动 TDengine IDMP 服务。在导入示例场景数据后，即可轻松体验元素浏览、AI 面板生成和 AI 分析等功能。
+TDengine IDMP 提供了丰富的功能，本文档将带领您通过 Docker Compose 的方式启动 TDengine IDMP 服务。如果您不熟悉 Docker，请参考[通过安装包快速体验](./get-started-installer)。在导入示例场景数据后，即可轻松体验元素浏览、AI 面板生成和 AI 分析等功能。
 
 ## 启动
 
