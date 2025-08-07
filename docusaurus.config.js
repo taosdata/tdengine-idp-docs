@@ -112,7 +112,7 @@ const config = {
           title: "",
           logo: {
               alt: "",
-              src: "/img/tdengine.svg",
+              src: "/img/tdengine-idmp.svg",
           },
           items: [
               {
