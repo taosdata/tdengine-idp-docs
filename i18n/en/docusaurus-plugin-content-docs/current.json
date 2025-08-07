@@ -42,5 +42,17 @@
   "sidebar.defaultSidebar.category.Release History": {
     "message": "Release History",
     "description": "The label for category Release History in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Operations and Maintenance": {
+    "message": "Operations and Maintenance",
+    "description": "The label for category Operations and Maintenance in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Deploying TDengine IDMP": {
+    "message": "Deploying TDengine IDMP",
+    "description": "The label for category Deploying TDengine IDMP in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.release-history": {
+    "message": "release-history",
+    "description": "The label for category release-history in sidebar defaultSidebar"
   }
 }
