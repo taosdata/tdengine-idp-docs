@@ -14,6 +14,9 @@ TDengine IDMP 提供了丰富的功能，本文档将带领您通过 Docker Comp
 ```bash
 docker load -i tdengine-tsdb-enterprise-docker-<version>-linux-x64.tar.gz
 docker load -i tdengine-idmp-enterprise-docker-<version>-linux-generic.tar.gz
+
+docker tag tdengine/tsdb-ee-<arch>:<version> tdengine/tsdb-ee:latest
+docker tag tdengine/idmp-ee-<arch>:<version> tdengine/idmp-ee:latest
 ```
 
 镜像导入成功后，再继续执行以下命令启动服务。
