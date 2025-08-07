@@ -183,14 +183,16 @@ class TopRight extends React.Component {
                     <Translate>产品</Translate>
                   </div>
                   <div className={styles.marginTop10}>
-                    <div className={styles.headlineText}><a href="https://www.taosdata.com/tdengine-enterprise"><Translate>TDengine TSDB-Enterprise</Translate></a></div>
+                    <div className={styles.headlineText}><a href="https://www.taosdata.com/tsdb"><Translate>TDengine TSDB</Translate></a></div>
+                    <div className={styles.headlineText}><a href="https://www.taosdata.com/idmp"><Translate>TDengine IDMP</Translate></a></div>
                     <div className={styles.headlineText}><a href="https://cloud.taosdata.com/"><Translate>TDengine Cloud</Translate></a></div>
                   </div>
                 </div>
                 <div className={styles.paddingTop20}>
                   <div className={styles.headlineText}><Translate>学习</Translate></div>
                   <div className="gb-container">
-                    <div className={styles.headlineText}><a href="https://docs.taosdata.com/"><Translate>文档</Translate></a></div>
+                    <div className={styles.headlineText}><a href="https://docs.taosdata.com/"><Translate>TSDB 文档</Translate></a></div>
+                    <div className={styles.headlineText}><a href="https://idmpdocs.taosdata.com/"><Translate>IDMP 文档</Translate></a></div>
                     <div className={styles.headlineText}><a href="https://www.taosdata.com/blog"><Translate>博客</Translate></a></div>
                     <div className={styles.headlineText}><a href="https://www.taosdata.com/tdengine-resources"><Translate>资源</Translate></a></div>
                   </div>
@@ -228,7 +230,7 @@ class TopRight extends React.Component {
                     <div className={styles.headlineText}><a href="https://www.taosdata.com/finance"><Translate>金融</Translate></a></div>
                   </div>
                   <div style={{ paddingTop: '10px' }}>
-                    <a className={styles.gbButton} href="https://tdengine.com/" rel="nofollow">EN</a>
+                    <a className={styles.gbButton} href="https://tdengine.com/idmp" rel="nofollow">EN</a>
                   </div>
                 </div>
               </div>
@@ -290,7 +292,8 @@ const EnglishFooter = React.memo(() => (
             </div>
             <div className={enstyles.firstBottom}>
               <div className={enstyles.headline}>Resources</div>
-              <a href="https://docs.tdengine.com/">Docs</a>
+              <a href="https://docs.tdengine.com/">TSDB Docs</a>
+              <a href="https://idmpdocs.tdengine.com/">IDMP Docs</a>
               <a href="https://tdengine.com/blog/">Blog</a>
               <a href="https://tdengine.com/webinars/">Webinars</a>
             </div>
@@ -332,7 +335,7 @@ const EnglishFooter = React.memo(() => (
                 <YouTubeIcon />
               </span>
               <span>YouTube</span></a>
-            <a className={enstyles.langIcon} href="https://www.taosdata.com">中</a>
+            <a className={enstyles.langIcon} href="https://www.taosdata.com/idmp">中</a>
           </div>
         </div>
       </div>

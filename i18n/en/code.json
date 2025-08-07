@@ -611,5 +611,14 @@
   },
   "TDengine TSDB": {
     "message": "TDengine TSDB"
+  },
+  "TDengine IDMP": {
+    "message": "TDengine IDMP"
+  },
+  "TSDB 文档": {
+    "message": "TSDB Docs"
+  },
+  "IDMP 文档": {
+    "message": "IDMP Docs"
   }
 }
