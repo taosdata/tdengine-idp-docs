@@ -7,6 +7,18 @@ TDengine IDMP 提供了丰富的功能，本文档将带领您通过 Docker Comp
 
 ## 启动
 
+:::tip
+
+使用 Docker 的方式体验 TDengine IDMP, 需要从 Docker Hub 拉取镜像。如果您无法正常访问 Docker Hub，可以从 TDengine 产品[下载中心](https://www.taosdata.com/download/)手动下载容器镜像文件，然后执行以下命令分别加载 TDengine TSDB 和 TDengine IDMP 的镜像文件：
+
+```bash
+docker load -i tdengine-tsdb-enterprise-docker-<version>-linux-x64.tar.gz
+docker load -i tdengine-idmp-enterprise-docker-<version>-linux-generic.tar.gz
+```
+
+镜像导入成功后，再继续执行以下命令启动服务。
+:::
+
 TDengine IDMP 提供了 Docker 镜像，用户可以通过 Docker Compose 快速启动 TDengine IDMP 服务。具体步骤如下：
 
 1. 克隆 [tdengine-idmp-deployment](https://github.com/taosdata/tdengine-idmp-deployment) 仓库
