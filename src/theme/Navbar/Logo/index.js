@@ -12,8 +12,8 @@ export default function Logo() {
   if (!logo?.src) return null;
 
   const localeUrlMapping = {  
-    en: 'https://www.tdengine.com',  
-    default: 'https://www.taosdata.com',  
+    en: 'https://www.tdengine.com/idmp',  
+    default: 'https://www.taosdata.com/idmp',  
   };  
   const href = localeUrlMapping[locale] || localeUrlMapping.default;  
 
