@@ -98,7 +98,7 @@ class TopLeft extends React.Component {
         </div>
         <div className={styles.tdengine}>
           <Translate>
-            TDengine 专为物联网IoT平台、工业大数据平台设计。其中，TDengine TSDB 是一款高性能、分布式的时序数据库（Time Series Database），同时它还带有内建的缓存、流式计算、数据订阅等系统功能；TDengine IDMP 是一款AI原生工业数据管理平台，它通过树状层次结构建立数据目录，对数据进行标准化、情景化，并通过 AI 提供实时分析、可视化、事件管理与报警等功能。
+            TDengine 专为物联网 IoT 平台、工业大数据平台设计。其中，TDengine TSDB 是一款高性能、分布式的时序数据库（Time Series Database），同时它还带有内建的缓存、流式计算、数据订阅等系统功能；TDengine IDMP 是一款AI原生工业数据管理平台，它通过树状层次结构建立数据目录，对数据进行标准化、情景化，并通过 AI 提供实时分析、可视化、事件管理与报警等功能。
           </Translate>
         </div>
         <div className={styles.social}>
