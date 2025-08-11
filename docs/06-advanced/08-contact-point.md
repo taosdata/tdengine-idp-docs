@@ -27,7 +27,7 @@
 :::warning 提示
 添加飞书通知途径前，您需要先在飞书创建自定义机器人，将机器人加入群聊中，并获取机器人的 Webhook 地址。
 
-请�飞书文档 - 自定义机器人使用指南指南](https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN)。
+请参考飞书文档 - 自定义机器人使用指南指南](https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN)。
 :::
 
 配置飞书通知途径的步骤：
