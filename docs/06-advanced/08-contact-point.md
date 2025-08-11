@@ -25,7 +25,7 @@
 飞书通知功能可在事件触发时，向指定飞书群发送告警消息。
 
 :::warning 提示
-添加飞书通知途径前，您需要先在飞书创建自定义机器人，将机器人加入群聊中，并获取机器人的Webhook地址。
+添加飞书通知途径前，您需要先在飞书创建自定义机器人，将机器人加入群聊中，并获取机器人的 Webhook 地址。
 
 请参考[飞书文档-自定义机器人使用指南](https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN)。
 :::
