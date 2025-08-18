@@ -19,7 +19,7 @@ Configuration steps:
 
 Once configured, the contact point will appear in the notification rule contact point selection list.
 
-### Feishu Notifications
+### Feishu and Webhook Notifications
 
 Feishu notifications send alerts to specified Feishu groups when events are triggered.
 
