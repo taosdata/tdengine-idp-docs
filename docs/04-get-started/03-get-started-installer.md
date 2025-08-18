@@ -14,9 +14,9 @@ TDengine IDMP 支持多种安装、部署方式，在不同的操作系统和架
 2. 如果您期望体验时序数据预测的功能，则需要安装 TDgpt, 请参考：[安装包部署 TDgpt](https://docs.taosdata.com/advanced/TDgpt/tutorial/#%E5%AE%89%E8%A3%85%E5%8C%85%E9%83%A8%E7%BD%B2-tdgpt).
 :::
 
-1. 前往 TDengine 下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面。
-1. 选择最新版本的 `.tar.gz` 类型的装包下载。
-1. 解压并执行安装脚本，以完成安装：
+1. 前往 TDengine 下载中心的 [TDengine IDMP - Linux Generic](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise&platform=Linux-Generic) 页面。
+1. 获取下载地址：选择与安装环境匹配的架构 x64 或 arm64, 然后点击“下载”按钮，在弹出的对话框中，填写您的邮箱，我们会将下载链接发送到您的邮箱。
+1. 下载并安装：下载完成后，执行以下命令，解压并根据终端的提示完成安装：
    ```bash
    mkdir tdengine-idmp-enterprise
    tar xvf tdengine-idmp-enterprise-*.tar.gz \
@@ -25,7 +25,7 @@ TDengine IDMP 支持多种安装、部署方式，在不同的操作系统和架
    cd tdengine-idmp-enterprise
    ./install.sh
    ```
-1. 配置 TDengine TSDB-Enterprise 连接。用编辑器打开 TDengine IDMP 的配置文件，默认位于 `/usr/local/taos/idmp/config/application.yml`，在 `tda.default-connection` 下，配置 TDengine TSDB-Enterprise 的连接信息，示例如下：
+1. 配置 TDengine TSDB-Enterprise 连接：用编辑器打开 TDengine IDMP 的配置文件，默认位于 `/usr/local/taos/idmp/config/application.yml`，在 `tda.default-connection` 下，配置 TDengine TSDB-Enterprise 的连接信息，示例如下：
    ```yaml
    tda:
      default-connection:
@@ -39,7 +39,7 @@ TDengine IDMP 支持多种安装、部署方式，在不同的操作系统和架
      - auth-type: 认证方式，支持 UserPassword 和 Token 两种方式，默认为方式 UserPassword
      - url: 为 TDengine TSDB-Enterprise 中 taosAdapter 组件的 IP 地址和端口号，端口号默认为 6041
      - username 和 password: 为 TDengine TSDB-Enterprise 的用户名和密码，默认为 root 和 taosdata
-1. 测试 TDengine TSDB-Enterprise 连接。在终端中，可以使用 `curl` 命令测试 TDengine TSDB-Enterprise 连接的连通性，示例如下：
+1. 测试 TDengine TSDB-Enterprise 连接：在终端中，可以使用 `curl` 命令测试 TDengine TSDB-Enterprise 连接的连通性，示例如下：
    ```bash
    curl --request POST \
      --user root:taosdata \
