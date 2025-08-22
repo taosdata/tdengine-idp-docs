@@ -17,62 +17,9 @@ TDengine IDMP 依赖 TDengine TSDB-Enterprise 3.3.7.0+, 在安装 TDengine IDMP 
 
 ## 安装
 
-请根据您的操作系统类型，选择合适的安装方式，安装 TDengine IDMP。以下是不同安装方式的详细步骤：
+请根据您的操作系统类型，选择合适的安装方式，安装 TDengine IDMP。参见通过[安装包快速体验](../../get-started/get-started-installer)。
 
-<Tabs>
 
-<TabItem label="tar.gz 安装" value="tar">
-1. 从 TDengine 产品下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面下载获得最新的 `.tar.gz` 安装包
-1. 执行以下命令，解压并安装，请将 `<version>` 替换为实际版本号
-   ```bash
-   tar zxvf tdengine-idmp-enterprise-<version>-linux-generic.tar.gz
-   cd tdengine-idmp-enterprise-<version>
-   ./install.sh
-   ```
-1. TDengine IDMP 的默认安装路径为 `/usr/local/taos/idmp`, 安装成功后，可以看到终端展示 "TDengine IDMP has been installed successfully!".
-1. 可以通过以下命令查看更多安装选项
-   ```bash
-   ./install.sh -h
-   ```
-</TabItem>
-
-<TabItem label="deb 安装" value="deb">
-1. 从 TDengine 产品下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面下载获得最新的 `.deb` 安装包
-1. 执行以下命令，安装 deb 包，请将 `<version>` 替换为实际版本号
-   ```bash
-   dpkg -i tdengine-idmp-enterprise-<version>-linux-generic.deb
-   ```
-1. TDengine IDMP 的默认安装路径为 `/usr/local/taos/idmp`, 安装成功后，可以看到终端展示 "TDengine IDMP has been installed successfully!".
-</TabItem>
-
-<TabItem label="rpm 安装" value="rpm">
-1. 从 TDengine 产品下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面下载获得最新的 `.rpm` 安装包
-1. 执行以下命令，安装 rpm 包，请将 `<version>` 替换为实际版本号
-   ```bash
-   rpm -ivh --nodeps tdengine-idmp-enterprise-<version>-linux-generic.rpm
-   ```
-1. TDengine IDMP 的默认安装路径为 `/usr/local/taos/idmp`, 安装成功后，可以看到终端展示 "TDengine IDMP has been installed successfully!".
-</TabItem>
-
-<TabItem label="macOS 安装" value="macos">
-1. 从 TDengine 产品下载中心的 [TDengine IDMP](https://www.taosdata.com/download-center?product=TDengine+IDMP-Enterprise) 页面下载获得最新的 macOS 安装包 (.pkg)
-1. 双击安装包，按照提示完成安装
-1. TDengine IDMP 的默认安装路径为 `/usr/local/taos/idmp`
-</TabItem>
-
-</Tabs>
-
-:::tip
-IDMP 的正常运行，依赖指定版本的 Python 和 Java 环境。在安装过程中，安装脚本会对依赖进行检查。常见错误如下，以 Java 为例：
-
-1. 安装过程中，如果遇到以下错误 "Java Version 21+ is required, but not found at: ...", 应该如何解决？
-   - Java 没有安装，请安装 Java 21 或更高版本。
-   - Java 已安装，但安装程序没有找到，可以通过创建软链接的方式来解决，例如：`ln -s /path/to/your-java-executable /usr/local/bin/java`.
-
-2. 安装过程中，如果遇到以下错误 "Java Version 21+ is required, but version X is found at: ...", 应该如何解决？ 
-   - Java 版本过低，请安装 Java 21 或更高版本。
-   - 满足要求的 Java 已安装，但安装程序没有找到，可以通过创建软链接的方式来解决，例如：`ln -s /path/to/your-java-executable /usr/local/bin/java`, 如果系统中存在多个 Java 版本，请注意 PATH 的优先级。在以上报错信息中，会打印 PATH 的搜索路径，请您确保满足要求的 Java 可执行文件在 PATH 中的优先级最高。
-:::
 
 ## 配置
 
