@@ -72,7 +72,7 @@ IDMP 还提供元素拷贝、粘贴的功能，便于您创建类型相近的元
 这一节详细介绍如何配置属性的数据引用。所有数据引用都是通过一个字符串来设置的。在编辑属性的页面点击数据引用类型下面的输入框可进入数据引用编辑弹窗。
 
 #### TDengine 指标和 TDengine 标签
-TDengine 指标引用TDengine TSDB-Enterprise 里一张表的某一列；TDengine 标签引用TDengine TSDB-Enterprise 里一张表的标签值。它们的设置格式是：
+TDengine 指标引用 TDengine TSDB-Enterprise 里一张表的某一列；TDengine 标签引用 TDengine TSDB-Enterprise 里一张表的标签值。它们的设置格式是：
 ```
 连接名/数据库名/表名/列名(或标签名)
 ```
