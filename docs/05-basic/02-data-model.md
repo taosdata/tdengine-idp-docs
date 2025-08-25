@@ -80,7 +80,7 @@ TDengine 指标引用 TDengine TSDB-Enterprise 里一张表的某一列；TDengi
 ```
 TDengine/idmp_sample_utility/em-17/location
 ```
-其中 TDengine 是连接名， idmp_sample_utility 是数据库名, em-17 是表名， location 是标签名。
+其中 TDengine 是连接名，idmp_sample_utility 是数据库名，em-17 是表名，location 是标签名。
 
 #### 公式
 公式引用的设置是一个表达式。它最终会被转换成 TDengine 的 SQL 表达式通过 TDengien TSDB 执行。公式引用表达式是属性、操作符、替换参数、常量和函数的组合。它引用的属性的类型必须是数值类型，它的输出也必须是数值。例如：
