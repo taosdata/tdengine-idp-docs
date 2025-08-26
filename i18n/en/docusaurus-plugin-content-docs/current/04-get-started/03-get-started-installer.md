@@ -71,7 +71,7 @@ You can install TDengine IDMP locally on a Linux or macOS machine. In this docum
 Once you’ve completed your evaluation, you can uninstall TDengine IDMP by running the following command:
 
 ```bash
-sudo rmtdengine-idmp
+sudo rmidmp
 ```
 
 For more detailed instructions on starting and stopping the service, see [Local Deployment](../07-operation/02-installation/01-install-guide.md).
