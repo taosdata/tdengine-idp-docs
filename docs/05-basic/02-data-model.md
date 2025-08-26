@@ -72,7 +72,7 @@ IDMP 还提供元素拷贝、粘贴的功能，便于您创建类型相近的元
 这一节详细介绍如何配置属性的数据引用。所有数据引用都是通过一个字符串来设置的。在编辑属性的页面点击数据引用类型下面的输入框可进入数据引用编辑弹窗。
 
 #### TDengine 指标和 TDengine 标签
-TDengine 指标引用TDengine TSDB-Enterprise 里一张表的某一列；TDengine 标签引用TDengine TSDB-Enterprise 里一张表的标签值。它们的设置格式是：
+TDengine 指标引用 TDengine TSDB-Enterprise 里一张表的某一列；TDengine 标签引用 TDengine TSDB-Enterprise 里一张表的标签值。它们的设置格式是：
 ```
 连接名/数据库名/表名/列名(或标签名)
 ```
@@ -80,7 +80,7 @@ TDengine 指标引用TDengine TSDB-Enterprise 里一张表的某一列；TDengin
 ```
 TDengine/idmp_sample_utility/em-17/location
 ```
-其中 TDengine 是连接名， idmp_sample_utility 是数据库名, em-17 是表名， location 是标签名。
+其中 TDengine 是连接名，idmp_sample_utility 是数据库名，em-17 是表名，location 是标签名。
 
 #### 公式
 公式引用的设置是一个表达式。它最终会被转换成 TDengine 的 SQL 表达式通过 TDengien TSDB 执行。公式引用表达式是属性、操作符、替换参数、常量和函数的组合。它引用的属性的类型必须是数值类型，它的输出也必须是数值。例如：
@@ -108,7 +108,7 @@ log(current) * voltage +10 + TIME
 字符串生成器可用的替换参数也比较丰富，除了时间类替换参数，还有名称类替换参数，例如：当前元素名、当前属性名、当前元素使用的模板名。
 
 :::note
-不能使用加号拼接字符串，如果要拼接字符串请用公式编辑器界面右侧的 CONCAT 函数, CONCAT 函数的每一个参数也必须是字符串类型。如果要把数值类型的属性拼接到字符串,请先使用 CAST 函数转换，例如：CONCAT(地址, ‘-’, CAST(电压 as varchar))
+不能使用加号拼接字符串，如果要拼接字符串请用公式编辑器界面右侧的 CONCAT 函数，CONCAT 函数的每一个参数也必须是字符串类型。如果要把数值类型的属性拼接到字符串，请先使用 CAST 函数转换，例如：CONCAT(地址，‘-’, CAST(电压 as varchar))
 :::
 
 下图是一个字符串生成器引用的设置示例：
