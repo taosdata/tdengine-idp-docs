@@ -47,6 +47,9 @@ Click the New Attribute (+) icon at the top right of the main area to create an 
 
 Most importantly, attributes can be configured with a data reference. The reference can point to a TDengine metric or TDengine tag, indicating that the attribute is mapped to a specific column or tag value in a table within TDengine TSDB-Enterprise. The value of the attribute is then retrieved from the data source at access time.
 
+The data reference for attributes also supports calculation formulas and string builders, making data references more flexible to support data standardization. A calculation formula means the attribute is calculated based on the values of other attributes. For example, the power attribute of a smart meter is obtained by multiplying the current attribute by the voltage attribute. We only need to configure the calculation expression. A string builder specifies a rule for generating a string, constructing a new string based on several input strings.
+
+In the future, the data reference for attributes will not only be able to reference data from TDengine TSDB-Enterprise but also from other time-series databases or relational databases.
 After you create an attribute, you can modify, delete, copy, and paste it.
 
 ## Configuring Data References
