@@ -32,7 +32,7 @@ IDMP 的正常运行，依赖指定版本的 Java 和 Python 环境。在安装�
 3. 安装过程中，如果遇到以下错误 "Failed to install TDengine IDMP dependencies from /usr/local/taos/idmp/chat/requirements.txt", 应该如何解决？
     - IDMP 安装过程中，需要访问互联网，以安装 AI 相关的 Python 依赖，请确保您的系统已连接互联网。
     - 网络连接正常的情况下，请确保 PyPI 仓库可以正常访问。在国内的网络中，建议配置 PyPI 镜像源来加速下载，例如：[清华大学的 PyPI 镜像源](https://pypi.tuna.tsinghua.edu.cn/)，具体命令如下：`pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple`
-    - 更详细的安装日志，请参考：/tmp/tdengine_chat_dep_install.log
+    - 更详细的安装日志，请参考：/tmp/tdengine-chat-dep-install.log
 
 ## 配置
 
