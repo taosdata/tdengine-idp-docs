@@ -38,9 +38,10 @@
 
 | 组件       | 日志文件路径                            |
 |-----------|---------------------------------------|
-| TDengine IDMP 日志 | /var/log/taos/tda.log          |
+| TDengine IDMP 日志 | /var/log/taos/tda.log |
 | TDengine IDMP 错误日志 | /var/log/taos/tda-error.log |
-| TDengine TSDB-Enterprise 日志 | /var/log/taos/taosdlog.*      |
+| TDengine IDMP AI 模块日志 | /var/log/taos/ai-default.log |
+| TDengine TSDB-Enterprise 日志 | /var/log/taos/taosdlog.* |
 
 ## 容器化部署方式
 
