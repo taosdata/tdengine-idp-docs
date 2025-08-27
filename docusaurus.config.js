@@ -222,9 +222,6 @@ const config = {
   ],
   stylesheets: [
     "/fonts/css/ibm-plex.min.css"
-  ],
-  scripts: [
-      { src: 'https://hm.baidu.com/hm.js?36af43fc308ee9444604d82ec053c128', async: true }
   ]
 };
 export default config;
