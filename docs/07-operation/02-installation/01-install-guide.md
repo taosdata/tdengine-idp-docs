@@ -134,13 +134,13 @@ TDengine IDMP 正常启动后，包括以下三个服务：
 1. 在 Linux/macOS 系统，可以通过如下命令卸载 TDengine IDMP 服务：
 
 ```bash
-rmtdengine-idmp -e yes
+rmidmp -e yes
 ```
 
 如果期望保留数据、日志和配置等，可以执行：
 
 ```bash
-rmtdengine-idmp -e no
+rmidmp -e no
 ```
 
 2. 在 Linux 系统，如果是通过 rpm 方式安装，请使用如下命令卸载：

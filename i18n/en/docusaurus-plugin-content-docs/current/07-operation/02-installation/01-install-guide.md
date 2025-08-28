@@ -155,7 +155,7 @@ Once TDengine IDMP starts successfully, it includes the following three services
 Run the following command to uninstall TDengine IDMP:
 
 ```bash
-rmtdengine-idmp -e [yes | no]
+rmidmp -e [yes | no]
 ```
 To retain data, log, and configuration files, specify `no`. To delete these files, specify `yes`.
 
@@ -181,7 +181,7 @@ dpkg -r tdengine-idmp
 Run the following command to uninstall TDengine IDMP:
 
 ```bash
-rmtdengine-idmp -e [yes | no]
+rmidmp -e [yes | no]
 ```
 To retain data, log, and configuration files, specify `no`. To delete these files, specify `yes`.
 
