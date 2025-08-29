@@ -64,6 +64,9 @@ const config = {
           //   'https://github.com/taosdata/tdasset-docs/tree/main',
           // editLocalizedFiles: true,
         },
+        googleTagManager: {
+          containerId: getGTMID()
+        },
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
@@ -88,9 +91,6 @@ const config = {
           hideable: true,
           autoCollapseCategories: true,
         }
-      },
-      googleTagManager: {
-        containerId: getGTMID()
       },
       algolia: {
         appId: "FP08SIOFZ3",
