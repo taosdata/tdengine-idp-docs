@@ -37,7 +37,7 @@ TDengine IDMP 的运行还需要满足以下先决条件：
 
 <TabItem label="Debian/Ubuntu - deb 安装" value="deb">
 1.从列表中下载获得最新 `.deb` 安装包。请在弹出的对话框中，填写您的邮箱地址，我们会将下载链接发送到您的邮箱。
-    <PkgListV37 productName="TDengine IDMP-Enterprise" version="3.3.7.5" platform="Linux-Ubuntu" arch="x64" pkgType="Server"/>
+    <PkgListV37 productName="TDengine IDMP-Enterprise" version="3.3.7.5" platform="Linux-Ubuntu" arch="x64" pkgType="Server" jsonPath="/version-json/product-data.json"/>
 1. 执行以下命令，安装 deb 包：
     ```bash
     dpkg -i tdengine-idmp-enterprise-1.0.2.3-linux-generic.deb
