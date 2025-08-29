@@ -68,7 +68,7 @@ class SubScription extends React.Component {
       email_value: cookie.load('email') ? cookie.load('email') : '',
       message: '',
       showMessage: false,
-      sucessMsg: "成功把链接发到您的邮箱",
+      sucessMsg: "已成功把下载链接发送到您的邮箱，请查收。",
       lang: 'cn',
       can_contact: true,
       show_notice: false
@@ -110,7 +110,7 @@ class SubScription extends React.Component {
     for (let key in postData) {
       formData.append(key, postData[key])
     }
-    this.props.isShowSuccess("Please wait...");
+    this.props.isShowSuccess("邮件正在发送，请稍候...");
 
     fetch('https://docs.taosdata.com/assets/globalscripts//generatelink_v3_download_center.php', {
       method: 'post',
