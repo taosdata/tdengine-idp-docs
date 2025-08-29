@@ -129,7 +129,6 @@ class SubScription extends React.Component {
       "email": email,
       'phone': this.state.phone.value,
       'company': this.state.company.value,
-      "pkg": this.props.pkg,
       "lang": this.state.lang,
       "can_contact": this.state.can_contact,
       "pkg": pkgField,
